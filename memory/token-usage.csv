@@ -1,2 +1,3 @@
 date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-19,on-chain-monitor,claude-opus-4-7,9,1417,151720,17445
+2026-05-19,heartbeat,claude-opus-4-7,12,4764,306008,30262
