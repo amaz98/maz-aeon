@@ -1,18 +1,20 @@
-All heartbeat checks passed. No notification sent (nothing needs attention).
+All checks green — no notification needed.
 
 ## Summary
 
-**HEARTBEAT_OK · STATUS_PAGE=OK**
+Ran the heartbeat skill for the 2026-05-24 14:00 UTC slot (executed 15:17 UTC).
 
-- **P0 (failed/stuck skills):** None. `on-chain-monitor` has success_rate=0.5 but only 2 runs (<5, not chronic), is disabled in aeon.yml, and last status was success. Heartbeat self-check OK (last success ~12.6h ago, well under 36h).
-- **P1 (stalled PRs / urgent issues):** None — `gh pr list` and `gh issue list` both empty.
-- **P2 (flagged memory):** None.
-- **P3 (missing scheduled skills):** Only `heartbeat` is enabled; entry present and recent.
-- **Token pulse:** No `articles/token-report-*.md` exists → section omitted.
-- **Open issues:** 0.
+**Checks:**
+- **P0** — No failed/stuck skills. `on-chain-monitor` shows success_rate=0.5 but total_runs=2 (<5, not chronic) and is disabled; consecutive_failures=0. Heartbeat self-check OK (last success ~5.7h ago).
+- **P1** — No open PRs, no open/urgent issues.
+- **P2** — No flagged memory items.
+- **P3** — Only `heartbeat` is enabled; its state entry is present and recent. No missing skills.
+- **Token pulse** — No `articles/token-report-*.md` present, so the section was omitted.
+
+**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=OK`
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟢 OK, updated 2026-05-24 09:33 UTC, next run heartbeat at 14:00 UTC)
-- `memory/logs/2026-05-24.md` — created with this run's log entry
+- `docs/status.md` — regenerated (Overall 🟢 OK, updated 15:17 UTC, next run 20:00 UTC)
+- `memory/logs/2026-05-24.md` — appended this run's log entry
 
-No follow-up actions needed. The status page and log land on `main` via the workflow's auto-commit step.
+No follow-up actions needed.
