@@ -1,7 +1,14 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-- All priority checks clean: no failed/stuck skills, no PRs, no urgent issues, no flagged memory, no missing scheduled skills.
-- Regenerated `docs/status.md` with overall 🟢 OK, heartbeat last run 2026-05-25 20:43 UTC, 100% success rate.
-- Appended log entry to `memory/logs/2026-05-26.md`.
-- No notification sent (nothing needs attention).
+
+Ran heartbeat checks — nothing required notification.
+
+- **P0**: No failed or stuck skills. Heartbeat self-check OK (last_success ~6h ago). on-chain-monitor success_rate=0.5 but total_runs=2 (<5, not chronic) and disabled.
+- **P1**: No open PRs, no urgent issues.
+- **P2**: No flagged memory items.
+- **P3**: Only `heartbeat` enabled in aeon.yml; entry present and recent.
+
+**Files modified:**
+- `docs/status.md` — regenerated with Updated 2026-05-26 14:27 UTC, Next run 20:00 UTC
+- `memory/logs/2026-05-26.md` — appended 14:27 UTC log entry
