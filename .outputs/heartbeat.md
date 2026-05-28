@@ -1,15 +1,16 @@
-All checks green. No notification needed.
+HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-**HEARTBEAT_OK · STATUS_PAGE=OK**
+Ambient check ran clean — nothing needs attention.
 
-- **P0** — No failed/stuck skills. heartbeat self-check OK (last_success 2026-05-27 08:34 UTC, ~12h ago). `on-chain-monitor` shows success_rate=0.5 but total_runs=2 (<5, not chronic) and is disabled in `aeon.yml`.
-- **P1** — No open PRs, no urgent issues.
-- **P2** — No flagged memory items.
-- **P3** — Only `heartbeat` enabled; entry present and recent. The 14:00 UTC scheduled run appears to have been skipped, but the 20:00 run is firing now and remains within thresholds.
-- **Token pulse** — No `articles/token-report-*.md` files present → section omitted from status page.
+- **P0**: No failed or stuck skills. Self-check OK (heartbeat last_success ~17h ago, under 36h threshold). on-chain-monitor disabled and below the chronic-failure run count.
+- **P1**: No open PRs, no urgent issues.
+- **P2**: No flagged memory items.
+- **P3**: Only heartbeat enabled; 08:00 UTC slot today appears skipped, but the same pattern was already noted in the 2026-05-27 20:39 log (within 48h dedup window) — no notification.
 
-**Files modified:**
-- `docs/status.md` — regenerated with current overall verdict 🟢 OK and updated timestamp 2026-05-27 20:39 UTC.
-- `memory/logs/2026-05-27.md` — appended 20:39 UTC heartbeat entry.
+**Files written:**
+- `docs/status.md` — regenerated, 🟢 OK overall
+- `memory/logs/2026-05-28.md` — new daily log entry
+
+**Follow-up:** None. The intermittent skipped-slot pattern (08:00 UTC today, 14:00 UTC yesterday) is worth a closer look if it persists into a third day — currently within tolerance and self-dedups.
