@@ -1,15 +1,9 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
+All checks clean: no failed/stuck skills, no open PRs, no urgent issues, no flagged memory items. Self-check ~4.5h since last success (well under 36h). Wrote `docs/status.md` and appended log entry to `memory/logs/2026-05-30.md`. No notification sent.
+
 ## Summary
-
-Ran heartbeat checks (P0–P3): all green.
-- **P0:** no failed/stuck skills; heartbeat self-check fresh (~12h since last success).
-- **P1:** no open PRs, no urgent issues.
-- **P2:** no flagged memory items.
-- **P3:** only `heartbeat` is enabled in `aeon.yml` and is present in state. The 08:00 UTC slot is running ~1.5h late — same late-dispatch pattern logged 2026-05-29 (within 48h dedup, no new notification).
-
-**Files modified:**
-- `docs/status.md` — regenerated (Overall: 🟢 OK, next run 14:00 UTC).
-- `memory/logs/2026-05-30.md` — appended run log.
-
-No notification sent (nothing needs attention).
+- Ran all P0–P3 heartbeat checks against `memory/cron-state.json`, `aeon.yml`, `memory/MEMORY.md`, and GitHub.
+- Regenerated `docs/status.md` (🟢 OK, next run heartbeat at 20:00 UTC).
+- Appended 14:09 UTC entry to `memory/logs/2026-05-30.md`.
+- No follow-up needed.
