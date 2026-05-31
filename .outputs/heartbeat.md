@@ -1,8 +1,10 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-- All checks green: no failed/stuck skills, no open PRs/issues, no flagged memory items, no chronic failures. Heartbeat self-check OK (last success ~5h ago).
-- The 14:00 UTC slot dispatched ~27min late, consistent with prior late-dispatch pattern within the 48h dedup window — no notification sent.
-- Regenerated `docs/status.md` (🟢 OK, next run heartbeat at 20:00 UTC).
-- Logged findings to `memory/logs/2026-05-31.md`.
-- Token pulse section omitted (no `articles/token-report-*.md` present).
+All priority checks green: no failed/stuck skills, no consecutive failures, no open PRs or urgent issues, no flagged memory items. The 20:00 UTC slot dispatched ~44 min late, consistent with the recurring late-dispatch pattern logged in the prior 48h (dedup — no new notification).
+
+**Files modified:**
+- `docs/status.md` — regenerated (Overall 🟢 OK, updated to 2026-05-31 20:44 UTC, next run heartbeat at 08:00 UTC; no token-report-*.md so Token pulse section omitted)
+- `memory/logs/2026-05-31.md` — appended 20:44 UTC heartbeat entry
+
+**Follow-ups:** None required.
