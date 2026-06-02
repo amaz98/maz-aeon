@@ -1,0 +1,160 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat",
+        "description": "Self-check alert"
+      },
+      "children": [
+        "alert_section",
+        "sep1",
+        "timeline_section",
+        "sep2",
+        "status_section"
+      ]
+    },
+    "alert_section": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Scheduler Degradation Detected",
+        "message": "Heartbeat dispatch interrupted. Last successful run: 2026-05-31 20:45 UTC (~43h ago, exceeds >36h threshold). All three slots on 2026-06-01 and today's 08:00 UTC slot were skipped — scheduler did not dispatch heartbeat. Current run (14:00 UTC slot today, ~1h41m late) is the first in ~43h. Status page set to DEGRADED."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "timeline_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_timeline",
+        "timeline_grid"
+      ]
+    },
+    "heading_timeline": {
+      "type": "Heading",
+      "props": {
+        "text": "Timeline",
+        "level": "h3"
+      }
+    },
+    "timeline_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_last_run",
+        "stat_elapsed",
+        "stat_skipped",
+        "stat_current"
+      ]
+    },
+    "stat_last_run": {
+      "type": "Stat",
+      "props": {
+        "label": "Last successful run",
+        "value": "2026-05-31 20:45 UTC"
+      }
+    },
+    "stat_elapsed": {
+      "type": "Stat",
+      "props": {
+        "label": "Time elapsed",
+        "value": "~43 hours",
+        "delta": "exceeds 36h threshold",
+        "trend": "up"
+      }
+    },
+    "stat_skipped": {
+      "type": "Stat",
+      "props": {
+        "label": "Skipped slots",
+        "value": "4 total"
+      }
+    },
+    "stat_current": {
+      "type": "Stat",
+      "props": {
+        "label": "Current dispatch delay",
+        "value": "~1h 41m late"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_details",
+        "details_text",
+        "status_badge"
+      ]
+    },
+    "heading_details": {
+      "type": "Heading",
+      "props": {
+        "text": "Skipped Slots",
+        "level": "h3"
+      }
+    },
+    "details_text": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "detail1",
+        "detail2",
+        "detail3"
+      ]
+    },
+    "detail1": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-01: all 3 slots (scheduler did not dispatch)",
+        "variant": "body"
+      }
+    },
+    "detail2": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-02: 08:00 UTC slot (scheduler did not dispatch)",
+        "variant": "body"
+      }
+    },
+    "detail3": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-02: 14:00 UTC slot (current run — first in ~43h)",
+        "variant": "body"
+      }
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Status: DEGRADED",
+        "variant": "destructive"
+      }
+    }
+  }
+}
