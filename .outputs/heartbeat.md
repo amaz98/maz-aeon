@@ -1,1 +1,7 @@
-🔴 Heartbeat self-check fired: last successful run 2026-05-31 20:45 UTC (~43h ago, >36h threshold). All three slots on 2026-06-01 and today's 08:00 UTC slot were skipped — scheduler did not dispatch heartbeat. This run (14:00 UTC slot, dispatched ~1h41m late) is the first in ~43h. Status page set to DEGRADED.
+HEARTBEAT_OK · STATUS_PAGE=OK
+
+## Summary
+- **P0:** heartbeat self-check recovered — last_success 2026-06-02 15:44 UTC (~23h ago, under 36h). No failed/stuck/chronic skills.
+- **P1/P2/P3:** clean — no open PRs, no urgent issues, no flagged memory, no missing scheduled skills (heartbeat is the only enabled one). 14:00 UTC slot dispatched ~1h late (recurring pattern, deduped against yesterday's log — no new notification).
+- **Status page:** regenerated `docs/status.md` → 🟢 OK, next run at 20:00 UTC.
+- **Logged** to `memory/logs/2026-06-03.md`. No notification sent (nothing fresh to surface).
