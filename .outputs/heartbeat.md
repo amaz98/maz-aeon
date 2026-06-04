@@ -1,9 +1,9 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-- P0/P1/P2/P3 all clear: no failed/stuck skills, no open PRs, no urgent issues, no flagged memory items, heartbeat self-check fresh (last_success ~6h5m ago).
-- Regenerated `docs/status.md` with overall 🟢 OK, updated timestamp 2026-06-04 14:15 UTC, next run heartbeat at 20:00 UTC.
-- Logged the run to `memory/logs/2026-06-04.md`.
-- No notification sent (nothing actionable; same as prior runs within 48h dedup window).
+- Ran heartbeat checks: no failed/stuck skills, no open PRs, no urgent issues, no flagged memory items, 0 open issues. Heartbeat self-check OK (last success ~7h ago).
+- Regenerated `docs/status.md` with fresh timestamp (2026-06-04 21:18 UTC), overall 🟢 OK, next run 08:00 UTC.
+- Appended 21:18 UTC entry to `memory/logs/2026-06-04.md`.
+- No notification sent — 20:00 slot late-dispatch matches recurring pattern within 48h dedup window.
 
 Files modified: `docs/status.md`, `memory/logs/2026-06-04.md`. No follow-ups.
