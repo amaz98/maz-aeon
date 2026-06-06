@@ -1,7 +1,9 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-All checks green. No failed/stuck skills, no open PRs/urgent issues, no flagged memory items. The 20:00 UTC dispatch arrived ~31m late, matching the recurring late-dispatch pattern already logged within 48h — no notification.
+- All P0/P1/P2/P3 checks clean: no failed/stuck skills, no open PRs, no urgent issues, no flagged memory, only-enabled skill (heartbeat) is fresh.
+- Regenerated `docs/status.md` with overall 🟢 OK, updated timestamp 2026-06-06 08:13 UTC, heartbeat last-run 2026-06-05 20:32 UTC.
+- Appended run log to `memory/logs/2026-06-06.md`.
+- No notification sent (nothing flagged; late-dispatch pattern already within 48h dedup window).
 
-- Updated `docs/status.md` with 2026-06-05 20:31 UTC timestamp
-- Appended 20:31 UTC entry to `memory/logs/2026-06-05.md`
+Files modified: `docs/status.md`, `memory/logs/2026-06-06.md`.
