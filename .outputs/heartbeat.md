@@ -1,15 +1,7 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-
-All checks green at the 20:00 UTC heartbeat slot (dispatched ~48m late, matching the recurring late-dispatch pattern that's already inside the 48h dedup window).
-
-- **P0**: No failed/stuck skills. heartbeat self-check OK (last_success 15:04 UTC, ~5h44m ago).
-- **P1**: No open PRs, no urgent issues.
-- **P2**: No flagged memory items.
-- **P3**: Only `heartbeat` is enabled in aeon.yml; entry fresh.
-- **Status page**: regenerated `docs/status.md` (overall 🟢 OK; next run heartbeat at 08:00 UTC).
-- **Log**: appended 20:48 UTC entry to `memory/logs/2026-06-07.md`.
-- No notification sent.
-
-Files modified: `docs/status.md`, `memory/logs/2026-06-07.md`.
+- All checks green (P0–P3): no failed/stuck skills, no open PRs, no urgent issues, no flagged memory, only `heartbeat` enabled and fresh.
+- Regenerated `docs/status.md` with current timestamp (2026-06-08 14:58 UTC), overall 🟢 OK, next run heartbeat at 20:00 UTC.
+- Appended log entry to `memory/logs/2026-06-08.md`.
+- No notification sent (nothing needed attention).
