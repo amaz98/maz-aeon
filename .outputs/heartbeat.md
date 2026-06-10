@@ -1,8 +1,16 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-- P0 clean: no failed/stuck skills; heartbeat self-check OK (last success 2026-06-09 15:40 UTC).
-- P1/P2/P3 clean: no open PRs, no urgent issues, no flagged memory items; only `heartbeat` enabled and fresh. 20:00 UTC slot ran ~1h42m late — recurring pattern, deduped.
-- Regenerated `docs/status.md` (overall 🟢 OK, updated 21:42 UTC, next run 08:00 UTC).
-- Logged this run to `memory/logs/2026-06-09.md`.
-- No notification sent (nothing actionable).
+
+Ran the heartbeat skill. All checks green:
+- **P0:** no failed/stuck skills; heartbeat self-check fresh (last success ~24h ago).
+- **P1:** no open PRs or urgent issues.
+- **P2:** no flagged memory items.
+- **P3:** `heartbeat` is the only enabled skill; entry present and fresh.
+- **Issues:** 0 open.
+
+**Files modified:**
+- `docs/status.md` — refreshed to 2026-06-10 21:57 UTC, overall 🟢 OK.
+- `memory/logs/2026-06-10.md` — appended run entry.
+
+No notification sent (nothing needs attention).
