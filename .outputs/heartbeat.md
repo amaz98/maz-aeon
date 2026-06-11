@@ -1,16 +1,8 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
+All P0–P3 checks green. Only `heartbeat` is enabled; its cron-state entry is fresh (last success 2026-06-10 21:57 UTC, ~17h28m ago). No PRs/issues, no flagged memory items, no token report present (Token pulse section omitted). 14:00 UTC slot ran ~1h25m late — recurring pattern, deduped against prior logs, no notification sent.
 
-Ran the heartbeat skill. All checks green:
-- **P0:** no failed/stuck skills; heartbeat self-check fresh (last success ~24h ago).
-- **P1:** no open PRs or urgent issues.
-- **P2:** no flagged memory items.
-- **P3:** `heartbeat` is the only enabled skill; entry present and fresh.
-- **Issues:** 0 open.
-
-**Files modified:**
-- `docs/status.md` — refreshed to 2026-06-10 21:57 UTC, overall 🟢 OK.
-- `memory/logs/2026-06-10.md` — appended run entry.
-
-No notification sent (nothing needs attention).
+Files:
+- Wrote `docs/status.md` (overall 🟢 OK, next run 20:00 UTC)
+- Appended `memory/logs/2026-06-11.md`
