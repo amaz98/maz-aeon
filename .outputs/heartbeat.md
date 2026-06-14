@@ -1,8 +1,10 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-- P0 clean: no failed/stuck skills, heartbeat self-check fresh (last_success ~6h ago).
-- P1/P2/P3 clean: no open PRs, no urgent issues, no flagged memory items, only `heartbeat` enabled and fresh.
-- 0 open issues in INDEX.
-- 20:00 UTC slot dispatched ~23m late — matches recurring pattern, within 48h dedup window, no notification.
-- Files modified: `docs/status.md` (regenerated), `memory/logs/2026-06-13.md` (appended run log).
+All checks green. No failed/stuck skills, no open PRs, no urgent issues, no flagged memory items. Only `heartbeat` is enabled in `aeon.yml`; its entry is fresh (last_success ~12h ago). No `token-report-*.md` present, so Token pulse section omitted.
+
+**Files modified:**
+- `docs/status.md` — regenerated with current timestamp (2026-06-14 08:47 UTC), Overall 🟢 OK
+- `memory/logs/2026-06-14.md` — appended run log
+
+**Notification:** none (within 48h dedup window for the recurring late-dispatch pattern).
