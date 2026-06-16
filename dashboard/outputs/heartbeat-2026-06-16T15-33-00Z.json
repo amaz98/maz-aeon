@@ -1,0 +1,102 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Aeon Heartbeat Self-Check",
+        "description": "Scheduler monitoring and skill health status"
+      },
+      "children": [
+        "alert_status",
+        "separator_1",
+        "stack_metrics",
+        "separator_2",
+        "stack_details"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Scheduler Delay Detected",
+        "message": "Last successful run was 2026-06-14 21:24 UTC (~42 hours ago), past 36-hour threshold. Five scheduled slots were missed before current 15:31 UTC run resumed."
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_elapsed",
+        "stat_missed",
+        "stat_health"
+      ]
+    },
+    "stat_elapsed": {
+      "type": "Stat",
+      "props": {
+        "label": "Time Since Last Run",
+        "value": "~42h",
+        "delta": "+6h over threshold",
+        "trend": "down"
+      }
+    },
+    "stat_missed": {
+      "type": "Stat",
+      "props": {
+        "label": "Missed Scheduled Slots",
+        "value": "5"
+      }
+    },
+    "stat_health": {
+      "type": "Stat",
+      "props": {
+        "label": "Skill Success Rate",
+        "value": "57/57",
+        "delta": "100%",
+        "trend": "up"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_diagnosis",
+        "text_watch"
+      ]
+    },
+    "text_diagnosis": {
+      "type": "Text",
+      "props": {
+        "text": "Diagnosis: GitHub Actions scheduler delay/skip — not a skill failure. Skill itself remains healthy.",
+        "variant": "body"
+      }
+    },
+    "text_watch": {
+      "type": "Text",
+      "props": {
+        "text": "Monitoring next 20:00 UTC slot",
+        "variant": "muted"
+      }
+    }
+  }
+}
