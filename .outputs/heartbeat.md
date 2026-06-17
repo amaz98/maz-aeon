@@ -1,17 +1,10 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-
-Heartbeat ambient check complete — fleet is green.
-
-**Findings:**
-- **P0:** No failed/stuck skills. Heartbeat self-check OK (last success ~6h14m ago at 15:33 UTC, well under 36h). The 15:31 run reseeded the timer after yesterday's scheduler gap, and the scheduler has caught back up.
-- **P1:** No open PRs, no urgent issues.
-- **P2:** No flagged memory items.
-- **P3:** Only `heartbeat` enabled; 20:00 UTC slot dispatched ~1h47m late as this run — recurring late-dispatch pattern already in 48h dedup window (entries on 2026-06-13/14/16), no notification.
+All heartbeat checks clean — no failed/stuck skills, no open PRs or urgent issues, no flagged memory items, no chronic-failure conditions. The 14:00 UTC slot dispatched ~52m late (recurring scheduler pattern, within 48h dedup window — no notification). The 08:00 UTC slot today was skipped (jump from 06-16 21:47 → 06-17 14:52), still within 36h self-check tolerance.
 
 **Files modified:**
-- `docs/status.md` — regenerated, 🟢 OK, updated 21:47 UTC, next run 08:00 UTC.
-- `memory/logs/2026-06-16.md` — appended 21:47 UTC entry.
+- `docs/status.md` — refreshed (Overall 🟢 OK, Updated 2026-06-17 14:52 UTC, next run 20:00 UTC)
+- `memory/logs/2026-06-17.md` — new daily log with this run's findings
 
-No notification sent (no new conditions to surface).
+**Follow-up:** none.
