@@ -1,10 +1,8 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-All heartbeat checks clean — no failed/stuck skills, no open PRs or urgent issues, no flagged memory items, no chronic-failure conditions. The 14:00 UTC slot dispatched ~52m late (recurring scheduler pattern, within 48h dedup window — no notification). The 08:00 UTC slot today was skipped (jump from 06-16 21:47 → 06-17 14:52), still within 36h self-check tolerance.
+All checks green. No P0/P1/P2/P3 flags: heartbeat self-check fresh (~7h since last success), no open PRs/urgent issues, no flagged memory items, 0 open issues, on-chain-monitor disabled. The 20:00 UTC slot dispatched ~2h late matches the recurring late-dispatch pattern (within 48h dedup) — no notification sent.
 
 **Files modified:**
-- `docs/status.md` — refreshed (Overall 🟢 OK, Updated 2026-06-17 14:52 UTC, next run 20:00 UTC)
-- `memory/logs/2026-06-17.md` — new daily log with this run's findings
-
-**Follow-up:** none.
+- `docs/status.md` — refreshed with 🟢 OK verdict, Updated 2026-06-17 22:00 UTC, next run 08:00 UTC
+- `memory/logs/2026-06-17.md` — appended 22:00 UTC heartbeat log entry
