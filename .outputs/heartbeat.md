@@ -1,7 +1,1 @@
-HEARTBEAT_OK · STATUS_PAGE=OK
-
-## Summary
-- P0/P1/P2/P3: all clear. heartbeat self-check OK (last success ~16h ago), no failed/stuck skills, no PRs, no urgent issues, no flagged memory.
-- Regenerated `docs/status.md` (🟢 OK, next run at 20:00 UTC, heartbeat 100% success rate 61/61).
-- Appended log entry to `memory/logs/2026-06-18.md`.
-- No notification sent — nothing requires attention.
+🟡 WATCH — heartbeat last_success 2026-06-18 14:27 UTC (~30h ago), >2× the 8h cadence. Three slots skipped (06-18 20:00, 06-19 08:00, 06-19 14:00); 06-19 20:00 dispatching now. Scheduler is intermittently dropping ticks, not stalled.
