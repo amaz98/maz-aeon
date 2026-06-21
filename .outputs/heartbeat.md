@@ -1,17 +1,10 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
+All checks green. No failed/stuck skills, no open PRs or urgent issues, no flagged memory items. Only `heartbeat` is enabled; last success 12h41m ago (within tolerance). The 08:00 UTC slot ran ~1h late but well within bounds.
 
-Ran heartbeat checks. All clear:
-- **P0:** No failed/stuck skills. heartbeat self-check OK (last success 6h10m ago, well under 36h threshold). `on-chain-monitor` disabled and below the 5-run chronic-failure floor.
-- **P1:** No open PRs, no urgent issues.
-- **P2:** No flagged memory items.
-- **P3:** Only `heartbeat` is enabled; last success within tolerance.
-- **Token pulse:** Omitted — no `articles/token-report-*.md` exists.
-- **Issues:** 0 open.
-
-Files modified:
-- `docs/status.md` — refreshed (🟢 OK, updated 2026-06-20 20:24 UTC, next run heartbeat 08:00 UTC)
-- `memory/logs/2026-06-20.md` — appended 20:24 UTC entry
+Files updated:
+- `docs/status.md` — refreshed timestamp, next-run target (14:00 UTC), and last heartbeat row (2026-06-20 20:24 UTC)
+- `memory/logs/2026-06-21.md` — new daily log with run entry
 
 No notification sent (nothing needs attention).
