@@ -2,17 +2,11 @@ HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Ran all heartbeat checks — everything green.
+Ran the heartbeat skill — everything green.
 
-- **P0** (failed/stuck/chronic skills): clean. heartbeat self-check OK (last success 2026-06-22 14:50 UTC, ~6h36m ago).
-- **P1** (PRs/issues): no open PRs, no urgent issues.
-- **P2** (flagged memory): nothing flagged.
-- **P3** (missing scheduled runs): only `heartbeat` is enabled; last success ~6h36m ago, well within 16h tolerance. The 20:00 UTC slot dispatched ~1h26m late but ran.
-- **Token pulse**: omitted — no `articles/token-report-*.md` exists.
-- **Issues INDEX**: 0 open.
+- **P0–P3 checks:** all clear. heartbeat self-check OK (last_success ~10h54m ago). on-chain-monitor disabled and not chronic. No open PRs, no urgent issues, no flagged memory items. Only `heartbeat` is enabled in `aeon.yml` and within tolerance.
+- **Status page:** regenerated `docs/status.md` → 🟢 OK, 0 open issues, next run heartbeat at 14:00 UTC. Token pulse section omitted (no `articles/token-report-*.md`).
+- **Log:** appended `memory/logs/2026-06-23.md`.
+- **Notification:** none sent — no anomalies to report.
 
-**Files modified:**
-- `docs/status.md` — overall 🟢 OK, Updated 2026-06-22 21:26 UTC, next run 08:00 UTC.
-- `memory/logs/2026-06-22.md` — appended 21:26 UTC entry.
-
-No notification sent (nothing needs attention).
+Files modified: `docs/status.md`, `memory/logs/2026-06-23.md` (new).
