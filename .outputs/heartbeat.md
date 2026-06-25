@@ -2,16 +2,9 @@ HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Ran the heartbeat checks for the 20:13 UTC slot:
-- **P0**: no failed/stuck/chronic skills. Heartbeat self-check OK (last success ~11h29m ago, within 36h).
-- **P1**: no open PRs, no urgent issues.
-- **P2**: no flagged memory items.
-- **P3**: only `heartbeat` enabled; last success well within 2× the 8h interval.
-- No `articles/token-report-*.md` present → Token pulse section omitted.
-- Open issues: 0.
-
-**Files modified:**
-- `docs/status.md` — refreshed with 🟢 OK verdict, 2026-06-24 20:13 UTC timestamp, and next run at 08:00 UTC.
-- `memory/logs/2026-06-24.md` — appended 20:13 UTC heartbeat log entry.
-
-**Follow-up:** none — fleet is green.
+- **P0:** clean — no failed/stuck skills; heartbeat self-check OK (~11h52m since last success).
+- **P1:** no open PRs, no urgent issues.
+- **P2/P3:** no flagged memory items; `heartbeat` last ran within tolerance.
+- **Token pulse:** omitted (no `articles/token-report-*.md`).
+- **Files modified:** `docs/status.md` (timestamp 2026-06-25 08:05 UTC, next run 14:00 UTC), `memory/logs/2026-06-25.md` (new daily log).
+- No notification sent — nothing to flag.
