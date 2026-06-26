@@ -1,15 +1,9 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-
-All checks green — no notification needed.
-
-- **P0**: no failed/stuck skills; heartbeat self-check fresh (~13h25m since last success, well within 36h); on-chain-monitor disabled, not chronic.
-- **P1**: no open PRs, no urgent issues.
-- **P2**: no flagged items in MEMORY.md.
-- **P3**: only `heartbeat` enabled; last run within 2× overnight interval.
-- **Status page**: regenerated `docs/status.md` (Overall 🟢 OK, next run heartbeat at 14:00 UTC).
-
-Files written:
-- `docs/status.md` — refreshed
-- `memory/logs/2026-06-26.md` — created with run log
+- **P0–P3 checks:** all clear. heartbeat self-check OK (last success ~4h54m ago); no failed/stuck skills, no open PRs, no urgent issues, no flagged memory items, no overdue skills.
+- **Token pulse:** no `articles/token-report-*.md` present → section omitted.
+- **Issues INDEX:** 0 open.
+- **Files modified:** `docs/status.md` (refreshed with 14:49 UTC timestamp, next run 20:00 UTC), `memory/logs/2026-06-26.md` (appended 14:49 UTC entry).
+- **Notifications sent:** none (nothing needs attention).
+- **Follow-up:** none.
