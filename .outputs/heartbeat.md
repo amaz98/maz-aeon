@@ -1,16 +1,16 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-All heartbeat checks green at 14:01 UTC:
-- **P0:** no failed or stuck skills; heartbeat self-check OK (last_success ~5h48m ago)
-- **P1:** 0 open PRs, 0 urgent issues
-- **P2:** no flagged memory items
-- **P3:** only `heartbeat` enabled and within 2× schedule tolerance
-- **Issues INDEX:** 0 open
-- **Token pulse:** no `articles/token-report-*.md` present → section omitted
 
-Files modified:
-- `docs/status.md` — regenerated (Overall 🟢 OK, next run 20:00 UTC)
-- `memory/logs/2026-06-27.md` — appended 14:01 UTC run entry
+All checks green — no notification sent (per skill spec: silent when nothing needs attention).
 
-No notification sent (nothing needed attention).
+**P0 (state file):** no failed/stuck skills; heartbeat self-check OK (last success ~6h14m ago, within 36h); on-chain-monitor disabled with only 2 runs (not chronic).
+**P1:** no open PRs, no urgent issues.
+**P2:** no flagged items in MEMORY.md.
+**P3:** only `heartbeat` enabled; last success within 2× 6h tolerance.
+
+**Files modified:**
+- `docs/status.md` — overall 🟢 OK, updated 2026-06-27 20:15 UTC, next run heartbeat at 08:00 UTC, no token-report present (Token pulse section omitted), 0 open issues.
+- `memory/logs/2026-06-27.md` — appended 20:15 UTC heartbeat entry.
+
+**Follow-up:** none. Workflow's auto-commit step will land both changes on `main`.
