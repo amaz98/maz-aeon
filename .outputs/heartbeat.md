@@ -2,17 +2,10 @@ HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Nothing needs attention. All P0–P3 checks clean.
-
-- **P0**: no failed/stuck skills. heartbeat 87/87 success, self-check fresh (last success ~5h ago).
-- **P1**: no open PRs, no urgent issues.
-- **P2**: no flagged memory items.
-- **P3**: only heartbeat enabled; last run within 2× schedule interval.
-- **Token pulse**: no `articles/token-report-*.md` → section omitted.
-- **Open issues**: 0.
+Ran the heartbeat skill at 20:05 UTC (the 20:00 slot). Nothing requires attention — no failed/stuck skills, no open PRs, no urgent issues, no flagged memory, no chronic failures. Heartbeat self-check is healthy (last_success 2026-06-28 14:54 UTC, ~5h ago). No notification sent (nothing flagged).
 
 Files modified:
-- `docs/status.md` — regenerated (🟢 OK, updated 2026-06-28 14:54 UTC)
-- `memory/logs/2026-06-28.md` — appended 14:54 UTC heartbeat entry
+- `docs/status.md` — overall 🟢 OK, regenerated with updated timestamp (Token pulse section omitted; no `articles/token-report-*.md` present).
+- `memory/logs/2026-06-28.md` — appended 20:05 UTC heartbeat log entry.
 
-No notification sent (HEARTBEAT_OK). Workflow auto-commit will land both files on `main`.
+Follow-up: none.
