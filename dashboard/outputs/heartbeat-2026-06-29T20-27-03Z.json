@@ -1,0 +1,38 @@
+{
+  "root": "card_heartbeat",
+  "state": {},
+  "elements": {
+    "card_heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "alert_warning",
+        "text_dispatched",
+        "text_action"
+      ]
+    },
+    "alert_warning": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Today's 08:00 + 14:00 UTC slots skipped (last success ~24h ago)"
+      }
+    },
+    "text_dispatched": {
+      "type": "Text",
+      "props": {
+        "text": "20:00 slot dispatched on time",
+        "variant": "body"
+      }
+    },
+    "text_action": {
+      "type": "Text",
+      "props": {
+        "text": "Status page → WATCH",
+        "variant": "lead"
+      }
+    }
+  }
+}
