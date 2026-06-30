@@ -2,10 +2,17 @@ HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Ran heartbeat checks at 2026-06-30 08:19 UTC. All priority tiers clean: no failed/stuck/chronic skills (heartbeat self-check 11h52m since last success, well under 36h), no open PRs, no urgent issues, no flagged memory items, no missed-schedule flags. Yesterday's 20:25 P3 flag did not recur — the 08:00 UTC slot fired ~19m late but within tolerance.
+Executed heartbeat skill at 2026-06-30 20:20 UTC (20:00 slot, ~20m late).
 
-Files modified:
-- `docs/status.md` — regenerated; overall 🟢 OK
-- `memory/logs/2026-06-30.md` — created with this run's log entry
+**Findings:**
+- P0: clean — heartbeat self-check OK, no failed/stuck/chronic skills.
+- P1: 0 open PRs, 0 urgent issues.
+- P2: no flagged memory items.
+- P3: noted that the 14:00 UTC slot was skipped today (cron-state.json `last_dispatch` jumps from 08:19 → 20:20). 12h since last success is under the 24h strict threshold, so no flag fires. Dedup against yesterday's 20:25 notification suppresses a repeat notify. Pattern watch: 3 of last 6 slots skipped — if 2026-07-01 08:00 also skips, escalate to a filed issue.
 
-No notification sent (all-green run).
+**Files modified:**
+- `docs/status.md` — regenerated (🟢 OK, updated timestamp, next run 08:00 UTC).
+- `memory/logs/2026-06-30.md` — appended 20:20 entry.
+
+**Follow-up:**
+- Monitor 2026-07-01 08:00 UTC dispatch; if skipped, file a `config`/`unknown` issue in `memory/issues/` for the GitHub Actions scheduler reliability.
