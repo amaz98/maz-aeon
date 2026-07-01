@@ -1,0 +1,107 @@
+{
+  "root": "card_heartbeat",
+  "state": {},
+  "elements": {
+    "card_heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert_main",
+        "separator1",
+        "stack_details"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "5 of last 9 scheduled slots skipped (2026-06-29→07-01)",
+        "message": "44% dispatch rate"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "progress_dispatch",
+        "text_context",
+        "stack_issue",
+        "text_suggestion"
+      ]
+    },
+    "progress_dispatch": {
+      "type": "Progress",
+      "props": {
+        "value": 44,
+        "max": 100,
+        "label": "Dispatch Rate"
+      },
+      "children": []
+    },
+    "text_context": {
+      "type": "Text",
+      "props": {
+        "text": "GitHub Actions cron unreliable.",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "stack_issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_filed",
+        "badge_issue",
+        "badge_severity"
+      ]
+    },
+    "text_filed": {
+      "type": "Text",
+      "props": {
+        "text": "Filed:",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "badge_issue": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-001",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "medium/unknown",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "text_suggestion": {
+      "type": "Text",
+      "props": {
+        "text": "Consider adding a redundant cron entry or external ping fallback.",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}
