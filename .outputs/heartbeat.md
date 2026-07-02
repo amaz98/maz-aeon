@@ -1,7 +1,13 @@
-`HEARTBEAT_OK · STATUS_PAGE=OK`
+HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-- **P0–P3 all green.** No failed/stuck skills; heartbeat last_success 2026-07-02 08:34 UTC (~7h ago). No open PRs, no urgent issues, no flagged memory items.
-- **14:00 UTC slot fired ~94m late** (dispatched at 15:34 UTC). Full-skip pattern from 06-29 → 07-01 has broken (2 consecutive slots have fired, both late), but latency is growing — ISS-001 stays open through the 20:00 UTC slot before considering resolution.
-- **No notification sent** — no new flags, and ISS-001 was last notified 2026-07-01 20:15 UTC (well within the 48h dedup window).
-- **Files modified:** `docs/status.md` (regenerated with 15:34 timestamp, next-run = 20:00), `memory/logs/2026-07-02.md` (appended 15:34 entry).
+Ran heartbeat for the 2026-07-02 20:00 UTC slot (dispatched 20:16 UTC — 16m late, best latency of the day). All P0/P1/P2/P3 checks clean. **All 3 slots today dispatched** (33m → 94m → 16m late), breaking the 5/9 skipped pattern that triggered ISS-001. Continuing to monitor 2026-07-03 08:00 UTC per yesterday's commitment before resolving.
+
+Files modified:
+- `docs/status.md` — regenerated (Overall 🟢 OK, next run 2026-07-03 08:00 UTC)
+- `memory/logs/2026-07-02.md` — appended 20:16 UTC run entry
+
+No notification sent (dedup: ISS-001 last notified ~24h ago, still within 48h window, no user-facing change).
+
+Follow-ups:
+- Next heartbeat (2026-07-03 08:00 UTC) is the last slot in ISS-001 monitoring window; if it dispatches within ~2h, resolve ISS-001 as `permanent-limitation`.
