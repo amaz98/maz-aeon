@@ -1,13 +1,15 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-Ran heartbeat for the 2026-07-02 20:00 UTC slot (dispatched 20:16 UTC — 16m late, best latency of the day). All P0/P1/P2/P3 checks clean. **All 3 slots today dispatched** (33m → 94m → 16m late), breaking the 5/9 skipped pattern that triggered ISS-001. Continuing to monitor 2026-07-03 08:00 UTC per yesterday's commitment before resolving.
+
+All checks green. Today's 08:00 UTC slot dispatched at ~09:33 UTC (+93m) — within the 2h resolution window yesterday's log committed to.
+
+**Resolved ISS-001** as `permanent-limitation` (4/4 slots dispatched across the monitoring window; GitHub Actions best-effort scheduling on free-tier public repos, not a repo bug).
 
 Files modified:
-- `docs/status.md` — regenerated (Overall 🟢 OK, next run 2026-07-03 08:00 UTC)
-- `memory/logs/2026-07-02.md` — appended 20:16 UTC run entry
+- `memory/issues/ISS-001.md` — status → resolved, category → permanent-limitation, resolution notes added
+- `memory/issues/INDEX.md` — ISS-001 moved to Resolved table; Open table now empty
+- `docs/status.md` — regenerated (🟢 OK, 0 open issues, next run 14:00 UTC)
+- `memory/logs/2026-07-03.md` — new daily log with today's heartbeat entry
 
-No notification sent (dedup: ISS-001 last notified ~24h ago, still within 48h window, no user-facing change).
-
-Follow-ups:
-- Next heartbeat (2026-07-03 08:00 UTC) is the last slot in ISS-001 monitoring window; if it dispatches within ~2h, resolve ISS-001 as `permanent-limitation`.
+No notification sent (dedup: resolution is status-quo restoration, no new attention item).
