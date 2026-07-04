@@ -1,7 +1,15 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-- **P0-P3 all clean.** No failed/stuck skills, no open PRs, no urgent issues, no flagged memory items. 20:00 UTC slot dispatched ~13m late (within tolerance).
-- **Regenerated `docs/status.md`** with current timestamp, 🟢 OK overall, 0 open issues, next run at 2026-07-04 08:00 UTC.
-- **Appended log entry** to `memory/logs/2026-07-03.md` for the 20:13 UTC run.
-- **No notification sent** — dedup: no new attention-worthy items since the last notify (2026-07-01 20:15 UTC).
+
+Ran heartbeat checks at 08:02 UTC. All green:
+- **P0:** No failed/stuck skills; heartbeat self-check healthy (last success ~11h48m ago).
+- **P1:** No open PRs, no urgent issues.
+- **P2:** No flagged memory items.
+- **P3:** 08:00 UTC slot dispatched ~1m late — best latency since ISS-001 resolved.
+
+Files modified:
+- `docs/status.md` — regenerated with current fleet state (Overall: 🟢 OK).
+- `memory/logs/2026-07-04.md` — new log entry.
+
+No notification sent (no new attention items; dedup rule applies).
