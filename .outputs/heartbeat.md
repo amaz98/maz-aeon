@@ -1,18 +1,10 @@
-HEARTBEAT_OK · STATUS_PAGE=OK — wrote docs/status.md
+HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-
-Ran the heartbeat skill. All checks green:
-- **P0**: No failed/stuck skills. Self-check OK (last_success ~5.5h ago). heartbeat: 101 runs, 100% success rate, 0 consecutive failures.
-- **P1**: No open PRs, no urgent issues.
-- **P2**: No flagged memory items.
-- **P3**: 20:00 UTC slot dispatched ~16m late, well within tolerance.
-- **Open issues**: 0.
-- No `articles/token-report-*.md` file — Token pulse section omitted from status page.
-- Dedup: no notification sent — no new flags to surface (last notify 2026-07-01).
+All green. No failed, stuck, or chronic skills; heartbeat self-check healthy (last success ~12h ago). No open PRs, urgent issues, or flagged memory items. The 08:00 UTC slot fired at ~08:20 UTC (~20m late, well within tolerance). No token report exists, so Token pulse section omitted.
 
 **Files modified:**
-- `docs/status.md` — regenerated (overall 🟢 OK)
-- `memory/logs/2026-07-04.md` — appended 20:16 UTC entry
+- `docs/status.md` — regenerated (🟢 OK, next run 2026-07-05 14:00 UTC)
+- `memory/logs/2026-07-05.md` — created with today's first heartbeat entry
 
-**Follow-up:** none.
+**No notification sent** (dedup: nothing new to surface).
