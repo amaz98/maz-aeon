@@ -2,14 +2,8 @@ HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Executed heartbeat. All checks green:
-- **P0**: No failed/stuck skills. `heartbeat` self-check within 36h P0 threshold (18h22m stale — 08:00 UTC slot skipped by GitHub Actions cron, self-healed by this run). `on-chain-monitor` disabled, sub-threshold on runs.
-- **P1**: No open PRs, no urgent issues.
-- **P2**: No flagged memory items.
-- **P3**: Only enabled skill is `heartbeat`; missed 08:00 slot noted, 14:00 slot dispatched ~34m late (within tolerance).
-- **Status page**: Regenerated `docs/status.md` — verdict 🟢 OK, 0 open issues, next run 2026-07-06 20:00 UTC. No `articles/token-report-*.md` present → Token pulse section omitted.
-- **Notification**: Skipped (nothing user-facing; last notify ~114h ago).
+Ran heartbeat check across P0–P3. All green: no failed/stuck skills, no open PRs/urgent issues, no flagged memory items, only enabled skill (heartbeat) is current. The 20:00 UTC slot dispatched at 21:05 UTC (~65m late — mild upward drift in the latency trend, but within 2×interval tolerance and consistent with the known ISS-001 GA best-effort behavior).
 
-**Files modified**: `docs/status.md`, `memory/logs/2026-07-06.md` (new).
-
-**Follow-up**: None. Missed 08:00 UTC slot is a known GA cron best-effort characteristic; if it recurs on multiple days, worth revisiting ISS-001 context.
+- Modified: `docs/status.md` (regenerated — Overall 🟢 OK, next run 2026-07-07 08:00 UTC)
+- Modified: `memory/logs/2026-07-06.md` (appended 21:05 UTC heartbeat entry)
+- No notification sent (dedup — no new user-facing flags; last notify ~120h ago).
