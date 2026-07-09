@@ -2,17 +2,17 @@ HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Ran heartbeat checks — all clear.
+Executed the heartbeat skill for the 2026-07-09 08:00 UTC slot.
 
-- **P0**: No failed/stuck skills. heartbeat self-check OK (last_success ~4h34m ago); on-chain-monitor <5 runs (not chronic).
-- **P1**: No open PRs, no urgent issues.
-- **P2**: No flagged memory items.
-- **P3**: 20:00 UTC slot dispatched at ~20:12 UTC (~12m late — sharp drop from the two prior 97m runs; drift not sustained).
-- **Open issues**: 0.
-- **Token pulse**: no `articles/token-report-*.md` → section omitted.
+- **P0**: no failed/stuck skills. heartbeat self-check OK (last_success ~12h45m ago); on-chain-monitor disabled and not chronic (total_runs=2 <5).
+- **P1**: no open PRs, no urgent issues.
+- **P2**: no flagged memory items.
+- **P3**: 08:00 slot dispatched ~58m late — within 2×interval tolerance (ISS-001 context).
+- **Token pulse**: no `articles/token-report-*.md` present → section omitted from status page.
+- **Overall verdict**: 🟢 OK.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall: 🟢 OK, Updated 2026-07-08 20:12 UTC, next run 2026-07-09 08:00 UTC).
-- `memory/logs/2026-07-08.md` — appended 20:12 UTC entry.
+- `docs/status.md` — regenerated with 2026-07-09 08:58 UTC timestamp, next run 14:00 UTC.
+- `memory/logs/2026-07-09.md` — created with today's heartbeat log entry.
 
-No notification sent (nothing new requiring attention; dedup vs. last 48h logs). No follow-up actions.
+No notification sent (no new flags; dedup rule applied).
