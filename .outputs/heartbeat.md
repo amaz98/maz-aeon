@@ -1,18 +1,7 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-
-Ran heartbeat for the 2026-07-10 08:00 UTC slot (dispatched ~09:55 UTC, ~115m late — new latency high, still well under 12h threshold).
-
-- **P0:** no failed/stuck skills; heartbeat self-check OK (116/116 successes, last_success 13h ago)
-- **P1:** no open PRs, no urgent issues
-- **P2:** no flagged memory items
-- **P3:** no missing scheduled skills (heartbeat is the only enabled skill)
-- **Open issues:** 0
-- **Notification:** skipped — nothing new to surface
-
-Files touched:
-- `docs/status.md` — regenerated (🟢 OK, next run 14:00 UTC)
-- `memory/logs/2026-07-10.md` — created with today's first entry
-
-No follow-up needed.
+- **P0/P1/P2/P3:** all clean. No failed/stuck skills, no open PRs, no urgent issues, no flagged memory items. heartbeat self-check healthy (last success 5h20m ago, 117/117 runs).
+- **Latency:** 14:00 slot dispatched ~76m late; back to the mid-band after yesterday's 115m high. Consistent with the known GA best-effort pattern tracked in ISS-001 (resolved).
+- **Files updated:** `docs/status.md` (regenerated — 🟢 OK, next run 20:00 UTC), `memory/logs/2026-07-10.md` (appended run entry).
+- **Notification:** skipped — no new user-actionable flags; last notify was 211h ago per dedup rule.
