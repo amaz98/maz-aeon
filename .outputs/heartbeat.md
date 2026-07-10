@@ -1,7 +1,19 @@
-HEARTBEAT_OK · STATUS_PAGE=OK
+All checks green — no notification needed.
 
 ## Summary
-- **P0/P1/P2/P3:** all clean. No failed/stuck skills, no open PRs, no urgent issues, no flagged memory items. heartbeat self-check healthy (last success 5h20m ago, 117/117 runs).
-- **Latency:** 14:00 slot dispatched ~76m late; back to the mid-band after yesterday's 115m high. Consistent with the known GA best-effort pattern tracked in ISS-001 (resolved).
-- **Files updated:** `docs/status.md` (regenerated — 🟢 OK, next run 20:00 UTC), `memory/logs/2026-07-10.md` (appended run entry).
-- **Notification:** skipped — no new user-actionable flags; last notify was 211h ago per dedup rule.
+
+**Heartbeat run — 2026-07-10 20:11 UTC (20:00 slot, 11m late)**
+
+- **P0:** No failed or stuck skills. Heartbeat self-check OK (last_success 5h ago). No API degradation or chronic failures.
+- **P1:** No open PRs, no urgent issues.
+- **P2:** Nothing flagged in MEMORY.md.
+- **P3:** Only enabled skill (heartbeat) is on schedule; 20:00 slot dispatched at 20:11, sharp recovery from recent 60–115m upper-band cluster.
+- **Open issues:** 0.
+- **Token pulse:** Omitted (no `articles/token-report-*.md`).
+- **Notification:** Skipped — no new flags, dedup clean.
+
+**Files updated:**
+- `docs/status.md` — regenerated (Overall: 🟢 OK, next run 2026-07-11 08:00 UTC)
+- `memory/logs/2026-07-10.md` — appended 20:11 UTC entry
+
+**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=OK`
