@@ -1,19 +1,7 @@
-All checks green — no notification needed.
+HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-
-**Heartbeat run — 2026-07-10 20:11 UTC (20:00 slot, 11m late)**
-
-- **P0:** No failed or stuck skills. Heartbeat self-check OK (last_success 5h ago). No API degradation or chronic failures.
-- **P1:** No open PRs, no urgent issues.
-- **P2:** Nothing flagged in MEMORY.md.
-- **P3:** Only enabled skill (heartbeat) is on schedule; 20:00 slot dispatched at 20:11, sharp recovery from recent 60–115m upper-band cluster.
-- **Open issues:** 0.
-- **Token pulse:** Omitted (no `articles/token-report-*.md`).
-- **Notification:** Skipped — no new flags, dedup clean.
-
-**Files updated:**
-- `docs/status.md` — regenerated (Overall: 🟢 OK, next run 2026-07-11 08:00 UTC)
-- `memory/logs/2026-07-10.md` — appended 20:11 UTC entry
-
-**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=OK`
+- **P0/P1/P2/P3:** all green. No failed/stuck skills, no PRs/issues, no memory flags, no missing schedules. Heartbeat self-check OK (last_success ~12h15m ago).
+- **Dispatch latency:** 08:00 UTC slot fired at 08:27 UTC (~27m late) — sub-30m territory, no anomaly.
+- **Files written:** `docs/status.md` (regenerated), `memory/logs/2026-07-11.md` (new day log).
+- **Notification:** skipped — nothing new requires attention (per dedup rule).
