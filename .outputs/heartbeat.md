@@ -1,11 +1,20 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-Ran heartbeat checks — all green.
-- **P0:** No failed/stuck skills. heartbeat self-check OK (last_success 6h5m ago). No API degradation or chronic failures.
-- **P1:** No open PRs, no urgent issues.
-- **P2:** No flagged memory items.
-- **P3:** 20:00 UTC slot dispatched ~44m late — within tolerance.
-- **Status page:** rewrote `docs/status.md` with overall `🟢 OK`, next run at 2026-07-13 08:00 UTC.
-- **Dedup:** no notification (nothing new; last notify ~264h ago).
-- Log entry appended to `memory/logs/2026-07-12.md`.
+
+Ran the heartbeat skill for the 2026-07-13 08:00 UTC slot (dispatched ~08:01 UTC, 1m late).
+
+**Checks:**
+- **P0**: no failed/stuck/chronic skills; heartbeat self-check OK (last_success ~11h16m ago).
+- **P1**: no open PRs, no urgent issues.
+- **P2**: nothing flagged in MEMORY.md.
+- **P3**: only `heartbeat` is enabled; latest slot dispatched 1m late — well within tolerance.
+- **Issues**: 0 open.
+
+**Files modified:**
+- `docs/status.md` — regenerated (🟢 OK; heartbeat row shows 2026-07-12 20:45 UTC; next run 2026-07-13 14:00 UTC).
+- `memory/logs/2026-07-13.md` — appended today's heartbeat log entry.
+
+**Notifications:** none sent (no new flags; last notify was 2026-07-01, ~276h ago).
+
+**Follow-ups:** none.
