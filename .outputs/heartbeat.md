@@ -1,18 +1,19 @@
-HEARTBEAT_OK · STATUS_PAGE=OK
+Task list not applicable here — heartbeat is a linear ambient check with a small fixed sequence of steps.
 
 ## Summary
 
-Ran heartbeat for the 2026-07-14 14:00 UTC slot (dispatched at 14:54 UTC, ~54m late — within tolerance, per ISS-001).
+Heartbeat 20:01 UTC — all clear.
 
-- **P0:** clean — heartbeat's own self-check green (last_success 08:02 UTC, ~6h52m ago); no failed/stuck skills; only enabled skill is heartbeat.
-- **P1:** no open PRs, no urgent issues.
-- **P2:** no flagged memory items.
-- **P3:** 14:00 slot dispatched ~54m late; well within 2×interval tolerance.
-- **Open issues:** 0.
-- **Notification:** skipped (nothing new — dedup vs. last notify 2026-07-01).
+- **P0**: no failed/stuck skills. Heartbeat self-check OK (last success 2026-07-14 14:54 UTC, ~5h07m ago). No consecutive failures, 100% success over 129 runs.
+- **P1**: no open PRs, no urgent issues.
+- **P2**: no flagged memory items.
+- **P3**: 20:00 UTC slot dispatched at 20:01 UTC (~1m late, well within tolerance). Only `heartbeat` is enabled in aeon.yml.
+- **Open issues**: 0.
+- **Token pulse**: no `articles/token-report-*.md` → section omitted from status page.
+- **Dedup**: no notification sent — no new flags; last notify ~311h ago.
 
-**Files modified:**
-- `docs/status.md` — regenerated (Overall 🟢 OK, Updated 14:54 UTC, next run 20:00 UTC)
-- `memory/logs/2026-07-14.md` — appended 14:54 UTC entry
+**Files modified**:
+- `docs/status.md` — refreshed Updated timestamp, Next scheduled run (→ 2026-07-15 08:00 UTC), and heartbeat's last run row.
+- `memory/logs/2026-07-14.md` — appended 20:01 UTC log entry.
 
-No follow-up needed.
+**HEARTBEAT_OK · STATUS_PAGE=OK — wrote docs/status.md**
