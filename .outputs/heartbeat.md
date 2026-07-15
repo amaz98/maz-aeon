@@ -1,19 +1,16 @@
-Task list not applicable here — heartbeat is a linear ambient check with a small fixed sequence of steps.
+HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Heartbeat 20:01 UTC — all clear.
-
-- **P0**: no failed/stuck skills. Heartbeat self-check OK (last success 2026-07-14 14:54 UTC, ~5h07m ago). No consecutive failures, 100% success over 129 runs.
-- **P1**: no open PRs, no urgent issues.
-- **P2**: no flagged memory items.
-- **P3**: 20:00 UTC slot dispatched at 20:01 UTC (~1m late, well within tolerance). Only `heartbeat` is enabled in aeon.yml.
+Ran the heartbeat skill for the 2026-07-15 08:00 UTC slot. All priority checks clean:
+- **P0**: No failed/stuck skills; heartbeat self-check healthy (last_success ~12h27m ago, 130/130 success rate).
+- **P1**: No open PRs, no urgent issues.
+- **P2**: No flagged memory items.
+- **P3**: Dispatched ~29m late — within tolerance; consistent with known GA scheduling variance (ISS-001).
 - **Open issues**: 0.
-- **Token pulse**: no `articles/token-report-*.md` → section omitted from status page.
-- **Dedup**: no notification sent — no new flags; last notify ~311h ago.
 
-**Files modified**:
-- `docs/status.md` — refreshed Updated timestamp, Next scheduled run (→ 2026-07-15 08:00 UTC), and heartbeat's last run row.
-- `memory/logs/2026-07-14.md` — appended 20:01 UTC log entry.
+**Files modified:**
+- `docs/status.md` — regenerated (🟢 OK, updated 08:29 UTC, next run 14:00 UTC)
+- `memory/logs/2026-07-15.md` — new daily log with heartbeat entry
 
-**HEARTBEAT_OK · STATUS_PAGE=OK — wrote docs/status.md**
+No notification sent (dedup: no new attention-worthy flags).
