@@ -1,16 +1,8 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-
-Ran the heartbeat skill for the 2026-07-15 08:00 UTC slot. All priority checks clean:
-- **P0**: No failed/stuck skills; heartbeat self-check healthy (last_success ~12h27m ago, 130/130 success rate).
-- **P1**: No open PRs, no urgent issues.
-- **P2**: No flagged memory items.
-- **P3**: Dispatched ~29m late — within tolerance; consistent with known GA scheduling variance (ISS-001).
-- **Open issues**: 0.
-
-**Files modified:**
-- `docs/status.md` — regenerated (🟢 OK, updated 08:29 UTC, next run 14:00 UTC)
-- `memory/logs/2026-07-15.md` — new daily log with heartbeat entry
-
-No notification sent (dedup: no new attention-worthy flags).
+- P0/P1/P2/P3 all clean: no failed/stuck skills, no open PRs, no urgent issues, no flagged memory items. Only enabled scheduled skill is heartbeat itself (success_rate 1.0 over 131 runs, consecutive_failures 0).
+- 14:00 UTC slot dispatched ~4m late — within tolerance, extends recent low-latency cluster.
+- No notification sent (nothing new for the operator).
+- Files modified: `docs/status.md` (regenerated: 🟢 OK, next run 20:00 UTC), `memory/logs/2026-07-15.md` (appended 14:04 entry).
+- No follow-ups.
