@@ -1,10 +1,19 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-Ran heartbeat checks. All green: no failed/stuck skills, no open PRs, no urgent issues, no MEMORY flags, no open issues. The 14:00 UTC slot dispatched ~69m late (within tolerance). No notification sent (dedup — nothing new).
 
-Files modified:
-- `docs/status.md` — regenerated with overall 🟢 OK, updated timestamp, next run at 20:00 UTC
-- `memory/logs/2026-07-16.md` — appended 15:09 UTC entry
+Ran heartbeat check at 2026-07-16 20:15 UTC (20:00 slot dispatched ~15m late).
 
-Follow-up: none.
+- **P0 (skills):** All green. heartbeat success_rate=1.0 over 135 runs, self-check OK (~5h since last success).
+- **P1 (PRs/issues):** No open PRs, no urgent issues.
+- **P2 (memory):** No flagged items.
+- **P3 (schedule):** Only enabled scheduled skill is `heartbeat`; running on cadence.
+- **Open issues:** 0.
+- **Token pulse:** No `articles/token-report-*.md` present → section omitted.
+- **Notification:** Skipped (no new flags; dedup against last notify ~360h ago).
+
+**Files modified:**
+- `docs/status.md` — regenerated (Overall: 🟢 OK)
+- `memory/logs/2026-07-16.md` — appended 20:15 UTC run entry
+
+**Follow-up:** None.
