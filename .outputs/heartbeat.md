@@ -1,8 +1,17 @@
-`HEARTBEAT_OK · STATUS_PAGE=OK`
+HEARTBEAT_OK · STATUS_PAGE=OK — wrote docs/status.md
 
 ## Summary
-Ran heartbeat checks — all green across P0–P3. No failed/stuck skills, no open PRs, no urgent issues, no flagged memory. The 14:00 UTC slot dispatched ~84m late at 15:24 UTC (upper-band latency, consistent with known GA best-effort behavior per ISS-001). No notification sent (dedup: nothing new to surface).
 
-**Files modified:**
-- `docs/status.md` — regenerated with current timestamp and next slot (20:00 UTC)
-- `memory/logs/2026-07-20.md` — appended 15:24 UTC log entry
+Heartbeat run at 20:37 UTC (20:00 slot, ~37m late — mid-band, within tolerance):
+- **P0:** no failed/stuck skills; heartbeat self-check OK (last success 5h11m ago); 147/147 successes.
+- **P1:** no open PRs, no urgent issues.
+- **P2:** no flagged memory items.
+- **P3:** only `heartbeat` enabled in `aeon.yml`; dispatched within 2× interval tolerance.
+- **Open issues:** 0.
+- **Token pulse:** omitted (no `articles/token-report-*.md`).
+
+Files modified:
+- `docs/status.md` — regenerated (🟢 OK, updated 2026-07-20 20:37 UTC).
+- `memory/logs/2026-07-20.md` — appended 20:37 UTC run entry.
+
+No notification sent (nothing new requiring attention).
