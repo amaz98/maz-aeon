@@ -1,9 +1,8 @@
-HEARTBEAT_OK · STATUS_PAGE=OK
+`HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-- P0: heartbeat healthy (145/145 runs, last success ~11h28m ago). No failed/stuck skills.
-- P1: no open PRs, no urgent issues.
-- P2: no flagged memory items.
-- P3: 08:00 UTC slot dispatched ~8m late — well within tolerance.
-- Files updated: `docs/status.md` (regenerated, overall 🟢 OK), `memory/logs/2026-07-20.md` (new log entry).
-- No notification sent (dedup rules — no new attention-worthy findings).
+Ran heartbeat checks — all green across P0–P3. No failed/stuck skills, no open PRs, no urgent issues, no flagged memory. The 14:00 UTC slot dispatched ~84m late at 15:24 UTC (upper-band latency, consistent with known GA best-effort behavior per ISS-001). No notification sent (dedup: nothing new to surface).
+
+**Files modified:**
+- `docs/status.md` — regenerated with current timestamp and next slot (20:00 UTC)
+- `memory/logs/2026-07-20.md` — appended 15:24 UTC log entry
