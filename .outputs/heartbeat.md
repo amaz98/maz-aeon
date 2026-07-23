@@ -2,14 +2,16 @@ HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Heartbeat check for 2026-07-23 14:12 UTC — all green, no notification sent.
+Ran heartbeat 20:00 UTC slot at 20:10 UTC (10m late — low-band, second in a row after 14:12's 12m).
 
-**Findings:**
-- P0: no failed/stuck skills. heartbeat 155/155 successes, self-check fresh (~4h15m since last success).
-- P1: no open PRs, no urgent issues.
-- P2: no flagged memory items.
-- P3: 14:00 UTC slot dispatched ~12m late — snap back to low-band after prior 116m outlier. Well within 2×interval tolerance.
+- **P0**: no failed/stuck skills; heartbeat self-check OK (5h57m since last success); no chronic failures.
+- **P1**: no open PRs, no urgent issues.
+- **P2**: nothing flagged in MEMORY.md.
+- **P3**: 20:00 slot dispatched 10m late — well within 2× interval tolerance.
+- **Issues**: 0 open.
 
-**Files modified:**
-- `docs/status.md` — regenerated (Overall 🟢 OK, next run 20:00 UTC).
-- `memory/logs/2026-07-23.md` — prepended 14:12 UTC log entry.
+Files modified:
+- `docs/status.md` — regenerated (🟢 OK, updated 2026-07-23 20:10 UTC, next run 2026-07-24 08:00 UTC).
+- `memory/logs/2026-07-23.md` — appended 20:10 UTC entry.
+
+No notification sent (dedup: nothing new to flag).
