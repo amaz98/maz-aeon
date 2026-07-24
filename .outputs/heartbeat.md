@@ -2,16 +2,17 @@ HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Ran heartbeat 20:00 UTC slot at 20:10 UTC (10m late — low-band, second in a row after 14:12's 12m).
+Ran the heartbeat skill at 2026-07-24 09:36 UTC.
 
-- **P0**: no failed/stuck skills; heartbeat self-check OK (5h57m since last success); no chronic failures.
-- **P1**: no open PRs, no urgent issues.
-- **P2**: nothing flagged in MEMORY.md.
-- **P3**: 20:00 slot dispatched 10m late — well within 2× interval tolerance.
-- **Issues**: 0 open.
+- **P0**: No failed or stuck skills. Heartbeat self-check healthy (last success ~13h26m ago, well under 36h).
+- **P1**: No open PRs, no urgent issues.
+- **P2**: No flagged memory items.
+- **P3**: 08:00 UTC slot dispatched ~96m late — upper-band print after a brief low-band pair, still within 2× interval tolerance. Matches ISS-001 (resolved) best-effort GA dispatch pattern.
+- **Open issues**: 0.
+- **Token pulse**: omitted (no `articles/token-report-*.md`).
 
-Files modified:
-- `docs/status.md` — regenerated (🟢 OK, updated 2026-07-23 20:10 UTC, next run 2026-07-24 08:00 UTC).
-- `memory/logs/2026-07-23.md` — appended 20:10 UTC entry.
+**Files modified**
+- `docs/status.md` — regenerated (🟢 OK, next run 2026-07-24 14:00 UTC).
+- `memory/logs/2026-07-24.md` — created with today's heartbeat entry.
 
-No notification sent (dedup: nothing new to flag).
+**Follow-ups**: None. No notification sent (nothing new for the user).
