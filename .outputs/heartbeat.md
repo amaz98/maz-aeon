@@ -2,17 +2,16 @@ HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Ran the heartbeat skill at 2026-07-24 09:36 UTC.
-
-- **P0**: No failed or stuck skills. Heartbeat self-check healthy (last success ~13h26m ago, well under 36h).
+Ran the heartbeat skill. All checks green:
+- **P0**: No failed/stuck skills; heartbeat self-check OK (last success ~5h25m ago); on-chain-monitor is disabled with only 2 runs (< chronic threshold).
 - **P1**: No open PRs, no urgent issues.
 - **P2**: No flagged memory items.
-- **P3**: 08:00 UTC slot dispatched ~96m late — upper-band print after a brief low-band pair, still within 2× interval tolerance. Matches ISS-001 (resolved) best-effort GA dispatch pattern.
+- **P3**: 14:00 UTC slot dispatched at ~15:02 UTC (~62m late — mid-band, well within 2×interval tolerance; consistent with ISS-001 best-effort GA dispatch pattern).
 - **Open issues**: 0.
-- **Token pulse**: omitted (no `articles/token-report-*.md`).
+- No `articles/token-report-*.md` found → Token pulse section omitted.
 
-**Files modified**
-- `docs/status.md` — regenerated (🟢 OK, next run 2026-07-24 14:00 UTC).
-- `memory/logs/2026-07-24.md` — created with today's heartbeat entry.
+**Files modified:**
+- `docs/status.md` — regenerated (🟢 OK, next run 2026-07-24 20:00 UTC)
+- `memory/logs/2026-07-24.md` — appended run entry
 
-**Follow-ups**: None. No notification sent (nothing new for the user).
+**Notification:** skipped (no new flags; last notify 2026-07-01 20:15 UTC).
