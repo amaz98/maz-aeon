@@ -1,7 +1,14 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-- **P0/P1/P2/P3:** all green. No failed/stuck skills, no open PRs, no urgent issues, no flagged memory items. 20:00 UTC slot dispatched ~57m late (mid-band, within tolerance).
-- **Status page:** regenerated `docs/status.md` (Overall 🟢 OK, Updated 2026-07-24 20:57 UTC, next run 2026-07-25 08:00 UTC).
-- **Log:** appended entry to `memory/logs/2026-07-24.md`.
-- **Notification:** skipped — nothing new to surface.
+Ran heartbeat checks — all green.
+- **P0:** No failed/stuck skills. heartbeat self-check OK (last_success ~11h54m ago). heartbeat consecutive_failures=0, success_rate=1.0 over 160 runs.
+- **P1:** No open PRs, no urgent issues.
+- **P2:** No flagged memory items.
+- **P3:** 08:00 UTC slot dispatched ~51m late (mid-band, within tolerance; ISS-001 context).
+- **Open issues:** 0.
+- Regenerated `docs/status.md` (🟢 OK; next run: heartbeat at 2026-07-25 14:00 UTC).
+- Appended log entry to `memory/logs/2026-07-25.md`.
+- No notification sent (dedup — no new flags).
+
+Files modified: `docs/status.md`, `memory/logs/2026-07-25.md` (new).
