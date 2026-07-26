@@ -1,12 +1,7 @@
-HEARTBEAT_OK · STATUS_PAGE=OK
+HEARTBEAT_OK · STATUS_PAGE=OK — wrote docs/status.md
 
 ## Summary
-All checks green. P0: no failed/stuck skills; heartbeat self-check healthy (last_success ~12h ago, 163/163 runs). P1/P2/P3: no open PRs, no urgent issues, no flagged memory items, only enabled skill (heartbeat itself) is on schedule (~65m late, well within 12h tolerance).
-
-**Files modified:**
-- `docs/status.md` — regenerated (🟢 OK)
-- `memory/logs/2026-07-26.md` — created with run entry
-
-**No notification sent** (dedup: no new flags since last notify 2026-07-01).
-
-**Follow-ups:** none.
+- **P0/P1/P2/P3:** all green. No failed/stuck skills, no open PRs, no urgent issues, no flagged memory items. heartbeat self-check OK (last success ~5h49m ago).
+- **Status page:** regenerated `docs/status.md` — Overall 🟢 OK, next run heartbeat 20:00 UTC, 0 open issues, Token pulse omitted (no token-report-*.md).
+- **Log:** appended 14:55 UTC entry to `memory/logs/2026-07-26.md`.
+- **Notify:** skipped (nothing needs attention).
