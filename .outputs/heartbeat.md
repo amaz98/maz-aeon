@@ -1,18 +1,12 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-
-Ran the heartbeat skill for the 2026-07-25 20:00 UTC slot (dispatched at 21:04 UTC, ~64m late — within 2×interval tolerance).
-
-**Checks:**
-- **P0:** No failed/stuck skills. Heartbeat self-check OK (last_success 6h41m ago). on-chain-monitor still disabled.
-- **P1:** No open PRs, no urgent issues.
-- **P2:** No flagged memory items.
-- **P3:** No missing scheduled skills (heartbeat is the only enabled one).
-- **Open issues:** 0.
+All checks green. P0: no failed/stuck skills; heartbeat self-check healthy (last_success ~12h ago, 163/163 runs). P1/P2/P3: no open PRs, no urgent issues, no flagged memory items, only enabled skill (heartbeat itself) is on schedule (~65m late, well within 12h tolerance).
 
 **Files modified:**
-- `docs/status.md` — regenerated (🟢 OK, next run 2026-07-26 08:00 UTC).
-- `memory/logs/2026-07-25.md` — appended 21:04 UTC entry.
+- `docs/status.md` — regenerated (🟢 OK)
+- `memory/logs/2026-07-26.md` — created with run entry
 
-No notification sent (nothing new needing attention; dedup honored).
+**No notification sent** (dedup: no new flags since last notify 2026-07-01).
+
+**Follow-ups:** none.
