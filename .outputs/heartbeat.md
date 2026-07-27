@@ -1,14 +1,15 @@
-HEARTBEAT_OK · STATUS_PAGE=OK
+HEARTBEAT_OK · STATUS_PAGE=OK — wrote docs/status.md
 
 ## Summary
-Ran heartbeat checks — everything clean.
 
-- **P0:** no failed/stuck skills; heartbeat self-check OK (last success ~12h ago, well under 36h); success_rate=1.0 over 166 runs.
-- **P1:** no open PRs, no urgent issues.
-- **P2:** no flagged memory items.
-- **P3:** heartbeat 08:00 UTC slot dispatched ~47m late (within tolerance, ISS-001 context).
-- **Status page:** regenerated `docs/status.md` — 🟢 OK, 0 open issues.
-- **Notify:** skipped (no new flags; last notify ~636h ago).
+All checks green — no notification sent.
 
-**Files modified:** `docs/status.md`, `memory/logs/2026-07-27.md`.
-**Follow-ups:** none.
+- **P0**: no failed/stuck skills; heartbeat self-check OK (last_success ~6h22m ago, 167/167 success rate).
+- **P1**: no open PRs, no urgent issues.
+- **P2**: no flagged memory items.
+- **P3**: 14:00 UTC slot dispatched at ~15:09 UTC — 69m late, within tolerance and consistent with ISS-001 latency cluster.
+- **Open issues**: 0. No token-report-*.md → Token pulse section omitted.
+
+**Files modified**: `docs/status.md` (regenerated, Overall 🟢 OK), `memory/logs/2026-07-27.md` (appended 15:09 UTC entry).
+
+**Follow-up**: none.
