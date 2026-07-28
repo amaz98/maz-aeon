@@ -1,9 +1,7 @@
+HEARTBEAT_OK · STATUS_PAGE=OK
+
 ## Summary
-
-Ran heartbeat. All checks green — no failed/stuck skills, no PRs, no urgent issues, no open issues. Heartbeat self-check healthy (last success ~18h24m ago). Today's 08:00 UTC slot was missed but 18h24m elapsed is under the 24h tolerance (2× the 12h longest scheduled interval), so no P3 flag — consistent with resolved ISS-001 best-effort GA dispatch noise. Current 14:00 slot dispatched at ~14:36 UTC (~36m late, normal band).
-
-**Files modified:**
-- `docs/status.md` — regenerated (Overall: 🟢 OK)
-- `memory/logs/2026-07-28.md` — created with today's entry
-
-**HEARTBEAT_OK · STATUS_PAGE=OK**
+- P0/P1/P2/P3 all clean: no failed/stuck skills, no open PRs, no urgent issues, no flagged memory items, no missed-slot flags (heartbeat self-check 6h1m stale, well under 36h; 20:00 UTC slot fired ~38m late — normal GA dispatch jitter per ISS-001).
+- Regenerated `docs/status.md` with 20:38 UTC timestamp and next-slot pointer (2026-07-29 08:00 UTC). Token pulse section omitted (no `articles/token-report-*.md` present).
+- Appended `### heartbeat (20:38 UTC)` entry to `memory/logs/2026-07-28.md`.
+- No notification sent (dedup: nothing new needing attention; last notify ~672h ago).
