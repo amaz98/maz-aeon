@@ -1,17 +1,8 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-
-All heartbeat checks passed for the 2026-07-30 14:00 UTC slot (dispatched ~81m late at 15:21 UTC, consistent with ISS-001 best-effort GA dispatch pattern).
-
-- **P0**: No failed/stuck skills. heartbeat self-check OK (last_success 6h14m ago, well under 36h). heartbeat: 174/174 successful runs, 0 consecutive failures.
-- **P1**: No open PRs, no urgent issues.
-- **P2**: No flagged memory items.
-- **P3**: Only enabled skill is heartbeat; last_success within 2×interval tolerance.
-- **Open issues**: 0.
-
-**Files modified:**
-- `docs/status.md` — regenerated (🟢 OK, updated 15:21 UTC, next run 20:00 UTC)
-- `memory/logs/2026-07-30.md` — appended heartbeat entry
-
-**No notification sent** — dedup: no new flags for user attention (last notify ~715h ago).
+- **P0/P1/P2/P3:** all clear. No failed/stuck skills, no open PRs, no urgent issues, no flagged memory items. Only enabled cron skill is heartbeat itself (dispatched ~3m late — tightest print in the recent latency cluster; well under 2×interval).
+- **Self-check:** heartbeat last_success 2026-07-30 15:21 UTC (~4h42m ago), success_rate 100% over 175 runs.
+- **Status page:** regenerated `docs/status.md` → 🟢 OK, next scheduled run `heartbeat at 2026-07-31 08:00 UTC`. No `articles/token-report-*.md` present → Token pulse section omitted.
+- **Notification:** skipped (dedup — nothing new since last notify 2026-07-01 20:15 UTC).
+- **Files modified:** `docs/status.md`, `memory/logs/2026-07-30.md` (appended 20:03 UTC entry).
