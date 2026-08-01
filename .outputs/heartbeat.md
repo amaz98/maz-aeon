@@ -2,16 +2,17 @@ HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Ran heartbeat checks — everything green.
+Ran the heartbeat skill at 15:03 UTC.
 
-- **P0:** no failed/stuck skills; heartbeat self-check OK (last_success ~12h9m ago, well under 36h); on-chain-monitor disabled, total_runs=2 <5 so not chronic.
-- **P1:** no open PRs, no urgent issues.
-- **P2:** no flagged memory items.
-- **P3:** 08:00 UTC slot dispatched at ~09:25 UTC (~85m late); consistent with the recent GA best-effort dispatch cluster; well under 2×interval tolerance.
-- **Open issues:** 0.
+- **P0** — no failed/stuck skills. heartbeat self-check green (last success ~5h37m ago, well under 36h). on-chain-monitor total_runs=2 <5 → not chronic.
+- **P1** — no open PRs, no urgent issues.
+- **P2** — no flagged memory items.
+- **P3** — 14:00 UTC slot dispatched ~62m late, mid-band inside the recent 3–85m latency cluster. Within tolerance (ISS-001 context).
+- **Open issues:** 0. No token-report-*.md → Token pulse section omitted.
+- **No notification sent** — nothing needs operator attention.
 
-**Files written:**
-- `docs/status.md` — 🟢 OK, updated 2026-08-01 09:25 UTC, next run heartbeat at 14:00 UTC
-- `memory/logs/2026-08-01.md` — new day, first heartbeat entry
+Files modified:
+- `docs/status.md` — regenerated (🟢 OK, heartbeat last run 09:26 UTC, next run 20:00 UTC).
+- `memory/logs/2026-08-01.md` — appended 15:03 UTC heartbeat entry.
 
-No notification sent (nothing new needs attention).
+No follow-up needed.
