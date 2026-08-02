@@ -2,17 +2,15 @@ HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Heartbeat run at 2026-08-02 09:31 UTC completed cleanly across all priority tiers.
+Ran the heartbeat skill for the 2026-08-02 14:00 UTC slot. All four priority tiers cleared:
 
-**Checks:**
-- **P0** — no failed or stuck skills; heartbeat self-check OK (last success 12h57m ago, well under 36h; 181/181 success)
-- **P1** — no open PRs, no urgent issues
-- **P2** — no flagged memory items
-- **P3** — 08:00 UTC slot dispatched ~91m late (new high in recent 3–85m cluster, but well within 12h→24h tolerance; consistent with ISS-001 best-effort GA dispatch)
-- **Open issues:** 0
+- **P0** — No failed or stuck skills. heartbeat self-check healthy (last_success 4h30m ago, 100% over 182 runs).
+- **P1** — No open PRs, no urgent issues.
+- **P2** — No flagged memory items.
+- **P3** — 14:00 slot dispatched at 14:01 UTC (~1m late, cleanest print in months). Only one enabled skill (heartbeat) — no missing runs.
 
 **Files modified:**
-- `docs/status.md` — regenerated with fresh timestamp, 🟢 OK verdict, next run 14:00 UTC
-- `memory/logs/2026-08-02.md` — appended today's heartbeat entry
+- `docs/status.md` — regenerated (🟢 OK, next run at 20:00 UTC)
+- `memory/logs/2026-08-02.md` — appended run entry
 
-**No notification sent** — nothing new to surface (dedup: nothing in last 48h logs warrants re-notify).
+**Follow-ups:** None. No notification sent (nothing new requiring operator attention; dedup guard held).
