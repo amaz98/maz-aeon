@@ -2,16 +2,15 @@ HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Ran heartbeat checks at 15:09 UTC (14:00 slot, ~69m late — within tolerance).
+All checks green for the 2026-08-03 20:37 UTC heartbeat run.
 
-- **P0**: no failed/stuck skills. Heartbeat self-check OK (last_success 6h40m ago).
-- **P1**: no open PRs, no urgent issues.
-- **P2**: no flagged memory items.
-- **P3**: 14:00 slot ran late but well within 2×interval tolerance.
-- **Open issues**: 0.
+- **P0** — cron-state.json clean: no failed, stuck, or chronic-failure skills; heartbeat self-check fine (last_success ~5h27m ago, 100% over 186 runs).
+- **P1** — `gh pr list` and `gh issue list --label urgent` both empty.
+- **P2** — no flagged items in MEMORY.md.
+- **P3** — only heartbeat is enabled in aeon.yml; nothing missing.
+- No `articles/token-report-*.md` present → Token pulse section omitted.
+- No notification sent (nothing new to surface; last notify 2026-07-01).
 
-Files modified:
-- `docs/status.md` — regenerated (🟢 OK, next run 20:00 UTC)
-- `memory/logs/2026-08-03.md` — appended 15:09 UTC entry
-
-No notification sent — nothing new for the operator's attention.
+**Files modified**
+- `docs/status.md` — regenerated (🟢 OK, updated timestamp, next run 2026-08-04 08:00 UTC).
+- `memory/logs/2026-08-03.md` — appended 20:37 UTC entry.
