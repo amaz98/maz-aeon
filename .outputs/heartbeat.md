@@ -1,9 +1,19 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-- All checks green: no failed/stuck skills, no open PRs, no urgent issues, no flagged memory items, no open issues.
-- P0 self-check: heartbeat last_success 2026-08-04 08:07 UTC (~7h13m ago), 188/188 successes, 0 consecutive failures.
-- P3: 14:00 UTC slot fired ~81m late (upper end of recent 7–91m latency cluster); still within tolerance.
-- Regenerated `docs/status.md` with 🟢 OK verdict, Updated 15:21 UTC, next run 20:00 UTC.
-- Appended run entry to `memory/logs/2026-08-04.md`.
-- No notification sent — nothing new to surface (last notify ~835h ago).
+
+Ran the heartbeat skill for the 2026-08-04 20:00 UTC slot (dispatched ~20:27 UTC, ~27m latency).
+
+**Checks:**
+- **P0** — no failed/stuck skills; heartbeat self-check OK (last success 5h06m ago, well under 36h); success rate 100% over 189 runs.
+- **P1** — no open PRs; no urgent GitHub issues.
+- **P2** — no flagged memory items.
+- **P3** — heartbeat is the only enabled scheduled skill; on schedule within tolerance.
+
+**Overall status:** 🟢 OK — no notification sent (nothing new needs attention).
+
+**Files modified:**
+- `docs/status.md` — regenerated (Updated 2026-08-04 20:27 UTC, next run 2026-08-05 08:00 UTC)
+- `memory/logs/2026-08-04.md` — appended 20:27 UTC heartbeat entry
+
+**Follow-ups:** none.
