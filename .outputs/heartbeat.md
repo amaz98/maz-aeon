@@ -1,15 +1,14 @@
-HEARTBEAT_OK · STATUS_PAGE=OK
+HEARTBEAT_OK · STATUS_PAGE=OK — wrote docs/status.md
 
 ## Summary
 
 Ran heartbeat checks — all tiers green:
-- **P0**: heartbeat healthy (191/191 runs, last success 6h25m ago). on-chain-monitor disabled and below the 5-run chronic threshold.
-- **P1**: no open PRs, no urgent issues.
-- **P2**: no flagged memory items.
-- **P3**: 14:00 UTC slot dispatched ~92m late (new upper bound of the 7–91m recent cluster) but well within 2×interval tolerance.
+- **P0:** No failed or stuck skills. heartbeat self-check OK (last_success ~4h46m ago). on-chain-monitor disabled and below chronic threshold.
+- **P1:** No open PRs, no urgent issues.
+- **P2:** No flagged memory items.
+- **P3:** 20:00 UTC slot dispatched at ~20:19 UTC (~19m late, low band). Only heartbeat is enabled and it's healthy.
+- **Open issues:** 0.
+- No token-report present → Token pulse section omitted.
+- Dedup: no notification needed (nothing new to surface).
 
-**Files modified:**
-- `docs/status.md` — regenerated with 🟢 OK verdict, updated timestamps, next run set to 20:00 UTC.
-- `memory/logs/2026-08-05.md` — appended 15:32 UTC entry.
-
-No notification sent (dedup — no new flags).
+Files modified: `docs/status.md`, `memory/logs/2026-08-05.md`.
