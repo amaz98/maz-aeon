@@ -2,18 +2,19 @@ HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Ran the heartbeat skill for the 2026-08-04 20:00 UTC slot (dispatched ~20:27 UTC, ~27m latency).
+Ran the heartbeat check for 2026-08-05 08:00 UTC slot (dispatched ~09:06 UTC, ~66m late — within tolerance).
 
-**Checks:**
-- **P0** — no failed/stuck skills; heartbeat self-check OK (last success 5h06m ago, well under 36h); success rate 100% over 189 runs.
-- **P1** — no open PRs; no urgent GitHub issues.
-- **P2** — no flagged memory items.
-- **P3** — heartbeat is the only enabled scheduled skill; on schedule within tolerance.
-
-**Overall status:** 🟢 OK — no notification sent (nothing new needs attention).
+**Findings:**
+- **P0:** No failed/stuck skills. heartbeat self-check OK (last_success 12h38m ago, well under 36h). 190/190 successes, 0 consecutive failures.
+- **P1:** No open PRs, no urgent issues.
+- **P2:** No flagged memory items.
+- **P3:** All enabled skills current; only heartbeat is enabled in aeon.yml.
+- **Open issues:** 0.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Updated 2026-08-04 20:27 UTC, next run 2026-08-05 08:00 UTC)
-- `memory/logs/2026-08-04.md` — appended 20:27 UTC heartbeat entry
+- `docs/status.md` — regenerated (Overall: 🟢 OK, Updated 2026-08-05 09:06 UTC, next run 14:00 UTC).
+- `memory/logs/2026-08-05.md` — new daily log with heartbeat entry.
 
-**Follow-ups:** none.
+**Notification:** skipped (nothing needs attention; last notify ~853h ago).
+
+**Follow-up:** none.
