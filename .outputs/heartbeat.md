@@ -1,14 +1,10 @@
-HEARTBEAT_OK · STATUS_PAGE=OK — wrote docs/status.md
+HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
+Ran the heartbeat skill. No P0/P1/P2/P3 flags requiring notification — heartbeat self-check green (last success ~18h ago), no failed/stuck skills, no PRs, no urgent issues, no open memory issues. The 2026-08-06 08:00 UTC slot dispatched ~6h41m late (new latency outlier vs. the recent 1–92m cluster), but still well within the 24h tolerance for a 12h interval so it doesn't warrant a notify.
 
-Ran heartbeat checks — all tiers green:
-- **P0:** No failed or stuck skills. heartbeat self-check OK (last_success ~4h46m ago). on-chain-monitor disabled and below chronic threshold.
-- **P1:** No open PRs, no urgent issues.
-- **P2:** No flagged memory items.
-- **P3:** 20:00 UTC slot dispatched at ~20:19 UTC (~19m late, low band). Only heartbeat is enabled and it's healthy.
-- **Open issues:** 0.
-- No token-report present → Token pulse section omitted.
-- Dedup: no notification needed (nothing new to surface).
+Files modified:
+- `docs/status.md` — regenerated (🟢 OK, updated 2026-08-06 14:41 UTC, next run 20:00 UTC)
+- `memory/logs/2026-08-06.md` — created with today's heartbeat log entry
 
-Files modified: `docs/status.md`, `memory/logs/2026-08-05.md`.
+Follow-up: monitor whether the ~6h latency outlier repeats — if 2+ consecutive slots print >3h late, worth investigating scheduler backlog.
