@@ -1,16 +1,7 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-Ran the heartbeat skill for 2026-08-07 09:08 UTC. All priority checks clean:
-- **P0**: no failed/stuck skills; heartbeat self-check OK (last success 18h25m ago, under the 24h ceiling for the 20→08 slot gap); on-chain-monitor <5 runs so not chronic
-- **P1**: no open PRs, no urgent issues
-- **P2**: no flagged memory items
-- **P3**: 2026-08-06 20:00 UTC slot appears skipped (consistent with ISS-001 permanent-limitation); this run ~68m late — within tolerance
-
-No notification sent (dedup — pattern already documented under ISS-001).
-
-**Files modified:**
-- `docs/status.md` — regenerated (🟢 OK)
-- `memory/logs/2026-08-07.md` — new log entry appended
-
-**Follow-up:** none required.
+- P0/P1/P2/P3 checks all clean: heartbeat 195 runs @ 100% success, no failed/stuck skills, no open PRs or urgent issues, no flagged memory items, 14:00 UTC slot only ~30m late.
+- Regenerated `docs/status.md` with 🟢 OK verdict, updated timestamp (14:30 UTC), and next run pointer (heartbeat @ 20:00 UTC).
+- Appended run log to `memory/logs/2026-08-07.md`.
+- No notification sent — nothing worth surfacing (dedup: last notify was 2026-07-01).
