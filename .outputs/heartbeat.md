@@ -1,10 +1,16 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-Ran the heartbeat skill. No P0/P1/P2/P3 flags requiring notification — heartbeat self-check green (last success ~18h ago), no failed/stuck skills, no PRs, no urgent issues, no open memory issues. The 2026-08-06 08:00 UTC slot dispatched ~6h41m late (new latency outlier vs. the recent 1–92m cluster), but still well within the 24h tolerance for a 12h interval so it doesn't warrant a notify.
+Ran the heartbeat skill for 2026-08-07 09:08 UTC. All priority checks clean:
+- **P0**: no failed/stuck skills; heartbeat self-check OK (last success 18h25m ago, under the 24h ceiling for the 20→08 slot gap); on-chain-monitor <5 runs so not chronic
+- **P1**: no open PRs, no urgent issues
+- **P2**: no flagged memory items
+- **P3**: 2026-08-06 20:00 UTC slot appears skipped (consistent with ISS-001 permanent-limitation); this run ~68m late — within tolerance
 
-Files modified:
-- `docs/status.md` — regenerated (🟢 OK, updated 2026-08-06 14:41 UTC, next run 20:00 UTC)
-- `memory/logs/2026-08-06.md` — created with today's heartbeat log entry
+No notification sent (dedup — pattern already documented under ISS-001).
 
-Follow-up: monitor whether the ~6h latency outlier repeats — if 2+ consecutive slots print >3h late, worth investigating scheduler backlog.
+**Files modified:**
+- `docs/status.md` — regenerated (🟢 OK)
+- `memory/logs/2026-08-07.md` — new log entry appended
+
+**Follow-up:** none required.
