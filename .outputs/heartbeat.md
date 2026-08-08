@@ -1,18 +1,16 @@
-HEARTBEAT_OK · STATUS_PAGE=OK — wrote docs/status.md
+HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Ran the heartbeat skill for the 2026-08-07 20:00 UTC slot (dispatched ~17m late, well inside recent latency band).
+Ran heartbeat checks — all clear:
+- **P0**: No failed/stuck skills. heartbeat self-check OK (last success ~12h28m ago, well under 36h). on-chain-monitor disabled and only 2 total runs, not chronic.
+- **P1**: No open PRs, no urgent issues.
+- **P2**: No flagged memory items.
+- **P3**: 08:00 UTC slot dispatched at 08:46 UTC (~46m late, within recent latency band).
+- **Open issues**: 0.
 
-- **P0 (failed/stuck skills):** clean — heartbeat self-check OK (last_success 5h47m ago, well under 36h); success_rate 1.0 over 196 runs; on-chain-monitor disabled and below the 5-run threshold for chronic-failure flagging.
-- **P1 (PRs/urgent issues):** none open.
-- **P2 (memory flags):** none.
-- **P3 (missing scheduled skills):** only heartbeat is enabled and it's on-cadence.
-- **Open issues:** 0.
-- **Token pulse:** omitted — no `articles/token-report-*.md`.
+Files modified:
+- `docs/status.md` — regenerated (Overall: 🟢 OK)
+- `memory/logs/2026-08-08.md` — created log entry
 
-Files updated:
-- `docs/status.md` — regenerated with overall 🟢 OK, updated timestamp 2026-08-07 20:17 UTC, next run 2026-08-08 08:00 UTC.
-- `memory/logs/2026-08-07.md` — appended run entry.
-
-No notification sent (dedup: nothing new to surface).
+No notification sent (dedup: clean run, nothing new to report).
