@@ -1,18 +1,8 @@
-`HEARTBEAT_OK · STATUS_PAGE=OK`
+HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-
-Ran the heartbeat skill for the 2026-08-09 08:00 UTC slot (dispatched ~08:23 UTC, ~23m late — within normal latency band).
-
-**Checks:**
-- **P0:** No failed/stuck skills. heartbeat self-check OK — last success 2026-08-08 20:05 UTC (~12h18m ago). `consecutive_failures=0`, `success_rate=1.0` over 200 runs.
-- **P1:** No open PRs, no urgent issues.
-- **P2:** No flagged memory items.
-- **P3:** No missing scheduled skills — only heartbeat is enabled.
-- **Open issues:** 0.
-
-**Files modified:**
-- `docs/status.md` — regenerated (Overall 🟢 OK, Updated 2026-08-09 08:23 UTC)
-- `memory/logs/2026-08-09.md` — created with today's heartbeat entry
-
-**No notification sent** — clean run, nothing warranting operator attention.
+- All checks clean: no failed/stuck skills, no open PRs, no urgent issues, no flagged memory items, no open issues.
+- P3: 14:00 UTC slot dispatched at ~14:17 UTC (~17m late) — within recent latency band.
+- Regenerated `docs/status.md` with current timestamp (14:17 UTC), next scheduled run 20:00 UTC.
+- Appended log entry to `memory/logs/2026-08-09.md`.
+- No notification sent (dedup: same clean state as prior runs; last notify ~954h ago).
