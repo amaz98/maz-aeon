@@ -1,8 +1,7 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-- All checks clean: no failed/stuck skills, no open PRs, no urgent issues, no flagged memory items, no open issues.
-- P3: 14:00 UTC slot dispatched at ~14:17 UTC (~17m late) — within recent latency band.
-- Regenerated `docs/status.md` with current timestamp (14:17 UTC), next scheduled run 20:00 UTC.
-- Appended log entry to `memory/logs/2026-08-09.md`.
-- No notification sent (dedup: same clean state as prior runs; last notify ~954h ago).
+- P0/P1/P2/P3 checks all clean: no failed/stuck skills, no PRs/urgent issues, no flagged memory items, 20:00 UTC slot dispatched on time (~3m late).
+- Regenerated `docs/status.md` — overall 🟢 OK, heartbeat last success 14:18 UTC, 0 open issues.
+- Appended run entry to `memory/logs/2026-08-09.md`.
+- No notification sent (dedup: no new items).
