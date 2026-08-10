@@ -1,7 +1,11 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-- P0/P1/P2/P3 checks all clean: no failed/stuck skills, no PRs/urgent issues, no flagged memory items, 20:00 UTC slot dispatched on time (~3m late).
-- Regenerated `docs/status.md` — overall 🟢 OK, heartbeat last success 14:18 UTC, 0 open issues.
-- Appended run entry to `memory/logs/2026-08-09.md`.
-- No notification sent (dedup: no new items).
+
+Ran the heartbeat skill for the 2026-08-10 08:00 UTC slot. All priority checks green: no failed/stuck skills, heartbeat self-check healthy (last success ~12h ago, 203/203 runs), no open PRs, no urgent issues, no flagged memory items, dispatch ~1m late. No token-report article present → Token pulse section omitted.
+
+Files:
+- `memory/logs/2026-08-10.md` — created with the run log entry.
+- `docs/status.md` — regenerated (Overall 🟢 OK, updated 2026-08-10 08:01 UTC, next run 14:00 UTC).
+
+No notification sent (clean run, dedup rules satisfied).
