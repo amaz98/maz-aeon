@@ -1,15 +1,11 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-Ran heartbeat checks — all clean:
-- **P0:** no failed/stuck skills; heartbeat self-check healthy (206/206, ~12h since last success)
-- **P1:** no open PRs, no urgent issues
-- **P2:** no flagged memory items
-- **P3:** 08:00 UTC slot dispatched ~14m late, within normal band
-- **Open issues:** 0
 
-Files written:
-- `docs/status.md` — regenerated (🟢 OK, next run 2026-08-11 14:00 UTC)
-- `memory/logs/2026-08-11.md` — new daily log with 08:14 UTC entry
+All checks green — no failed/stuck skills, no consecutive failures, no stalled PRs, no urgent issues, no flagged memory items. Only `heartbeat` is enabled in `aeon.yml`; it's healthy (207/207 successes, self-check ~6h20m stale, well under 36h).
 
-No notification sent (clean run, dedup vs recent logs).
+**Files modified:**
+- `docs/status.md` — regenerated with 🟢 OK verdict, updated timestamp to 14:35 UTC, next run 20:00 UTC.
+- `memory/logs/2026-08-11.md` — appended 14:35 UTC run entry.
+
+**Follow-up:** none. No notification sent (dedup: clean run).
