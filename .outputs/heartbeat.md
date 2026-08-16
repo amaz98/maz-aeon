@@ -1,10 +1,11 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-Fleet is green — no failed/stuck skills, no open PRs or urgent issues, no memory follow-ups. Heartbeat self-check passes (last_success 6h ago, 222/222 successes). 14:00 UTC slot dispatched on time; next run at 20:00 UTC.
 
-**Files modified:**
-- `docs/status.md` — refreshed Updated timestamp, next-run pointer, and heartbeat row
-- `memory/logs/2026-08-16.md` — appended 14:02 UTC entry
+Ran the heartbeat skill for the 2026-08-16 20:00 UTC slot. All checks green — no failed/stuck skills, no open PRs, no urgent issues, no flagged memory items, and the 20:00 UTC dispatch landed on time at ~20:01 UTC. Regenerated `docs/status.md` (Overall 🟢 OK, next run 2026-08-17 08:00 UTC) and appended the run entry to `memory/logs/2026-08-16.md`. No notification sent (dedup: clean run, nothing new).
 
-**No notification sent** (clean run, dedup rule holds).
+Files modified:
+- `docs/status.md`
+- `memory/logs/2026-08-16.md`
+
+No follow-up actions.
