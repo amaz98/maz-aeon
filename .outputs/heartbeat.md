@@ -1,14 +1,7 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-
-- **P0:** No failed/stuck skills. heartbeat self-check OK (last success 2026-08-17 08:25 UTC, ~5h50m ago). No consecutive failures; no chronic failures (on-chain-monitor is disabled).
-- **P1:** No open PRs, no urgent issues.
-- **P2:** No flagged memory items.
-- **P3:** 14:00 UTC slot dispatched on time. Next scheduled: heartbeat at 20:00 UTC.
-- **Status page:** Overall 🟢 OK — regenerated `docs/status.md`.
-- **Notification:** Skipped (clean run, dedup satisfied — last notify ~1146h ago).
-
-**Files modified:**
-- `docs/status.md` — refreshed with 14:15 UTC timestamp
-- `memory/logs/2026-08-17.md` — appended 14:15 UTC entry
+- Ran all heartbeat checks — P0/P1/P2/P3 all clean. No failed/stuck skills; heartbeat self-check healthy (last success 6h21m ago, 226/226 runs successful). No open PRs, no urgent issues, no flagged memory items. 20:00 UTC slot dispatched on time.
+- Regenerated `docs/status.md` — overall 🟢 OK, next run heartbeat at 2026-08-18 08:00 UTC. No token-report articles present, so Token pulse section omitted per spec.
+- Appended `heartbeat (20:36 UTC)` entry to `memory/logs/2026-08-17.md`.
+- No notification sent (nothing needs attention).
