@@ -1,7 +1,9 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-- P0/P1/P2/P3: all clean. Only enabled skill is `heartbeat`; last success 2026-08-17 20:37 UTC (~12h ago), success_rate 1.0 over 227 runs, consecutive_failures 0. No open PRs, no urgent issues, no flagged memory items, no open tracker issues.
-- Regenerated `docs/status.md` (🟢 OK, next run heartbeat 2026-08-18 14:00 UTC).
-- Appended today's log entry to `memory/logs/2026-08-18.md`.
-- No notification sent (nothing needs attention).
+- All P0–P3 checks green: no failed/stuck skills, no PRs, no urgent issues, no flagged memory, 14:00 UTC slot on time.
+- heartbeat self-check OK (last_success 08:50 UTC, ~5h40m ago); 228 runs, 100% success rate.
+- No `articles/token-report-*.md` exists → Token pulse section omitted.
+- Regenerated `docs/status.md` (Overall 🟢 OK, next run 20:00 UTC).
+- Appended 14:30 UTC entry to `memory/logs/2026-08-18.md`.
+- No notification sent (dedup: nothing new to report).
