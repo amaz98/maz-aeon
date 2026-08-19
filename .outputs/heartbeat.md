@@ -1,10 +1,7 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-Ran heartbeat checks — all clean. No failed/stuck skills, no PRs, no urgent issues, no flagged memory items. heartbeat self-check healthy (last success 6h ago, 100% rate over 229 runs).
-
-Files modified:
-- `docs/status.md` — refreshed with 20:34 UTC timestamp, next run 2026-08-19 08:00 UTC
-- `memory/logs/2026-08-18.md` — appended 20:34 UTC entry
-
-No notification sent (clean run, dedup rule satisfied).
+- **P0/P1/P2/P3:** all clean. heartbeat self-check green (last success ~11h49m ago), no failed/stuck skills, no open PRs or urgent issues, no flagged memory items, 08:00 UTC slot dispatched on time.
+- **Open issues:** 0.
+- **Files modified:** `docs/status.md` (regenerated), `memory/logs/2026-08-19.md` (log entry appended).
+- **No notification** sent — clean run, and last notify was ~1188h ago so no dedup concern.
