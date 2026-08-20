@@ -1,8 +1,13 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-- All checks green: no failed/stuck skills, heartbeat self-check healthy (last success ~5h43m ago, 234/234 successes), no open PRs, no urgent issues, no flagged memory items, 0 open issues.
-- The 14:00 UTC dispatch slot fired on schedule; next run is heartbeat at 20:00 UTC.
-- Regenerated `docs/status.md` (Overall: 🟢 OK, Updated 14:19 UTC).
-- Appended a `heartbeat (14:19 UTC)` entry to `memory/logs/2026-08-20.md`.
-- No notification sent — clean run, nothing new to surface.
+
+Ran the heartbeat checks for the 2026-08-20 20:00 UTC slot — all green:
+- **P0:** no failed/stuck skills, heartbeat self-check healthy (last_success ~6h ago).
+- **P1:** no open PRs, no urgent issues.
+- **P2:** nothing flagged in MEMORY.md.
+- **P3:** 20:00 UTC slot dispatched on time; next run is heartbeat at 2026-08-21 08:00 UTC.
+- **Open issues:** 0.
+- No `articles/token-report-*.md` → Token pulse section omitted.
+
+**Files modified:** `docs/status.md` (regenerated), `memory/logs/2026-08-20.md` (appended log entry). No notification needed — clean run.
