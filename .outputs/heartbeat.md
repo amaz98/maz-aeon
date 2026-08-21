@@ -1,7 +1,15 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-- P0/P1/P2/P3 all clean: heartbeat self-check OK (last_success ~11.5h ago), no failed/stuck skills, no open PRs or urgent issues, no flagged memory items, on-time 08:00 UTC dispatch.
-- Regenerated `docs/status.md` with Overall 🟢 OK, updated timestamp (2026-08-21 08:09 UTC), and next run at 14:00 UTC.
-- Appended `memory/logs/2026-08-21.md` with the run's findings.
-- No notification sent — clean run, nothing new to surface.
+Ran heartbeat 14:00 UTC slot on 2026-08-21. All checks clean:
+- P0: no failed/stuck skills, no consecutive failures, self-check OK (~6h since last success).
+- P1: 0 open PRs, 0 urgent issues.
+- P2: no flagged memory items.
+- P3: 14:00 slot dispatched on time.
+- Open issues: 0.
+
+Files modified:
+- `docs/status.md` — refreshed to 2026-08-21 14:08 UTC, next run 20:00 UTC.
+- `memory/logs/2026-08-21.md` — appended 14:08 UTC heartbeat entry.
+
+No notification sent — clean run.
