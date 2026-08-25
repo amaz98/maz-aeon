@@ -1,4 +1,10 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-Clean heartbeat run. All P0–P3 checks green: no failed/stuck skills, no open PRs or urgent issues, no flagged memory items, no missing dispatches (heartbeat is the only enabled skill). Regenerated `docs/status.md` (🟢 OK, next run at 20:00 UTC) and appended the run entry to `memory/logs/2026-08-25.md`. No notification sent.
+Clean run — no P0/P1/P2/P3 flags. Heartbeat self-check green (last_success ~5h13m ago; 250/250 successes). No open PRs, no urgent issues, no open tracker issues, no token report available.
+
+Files modified:
+- `docs/status.md` — regenerated (Overall 🟢 OK; next run 2026-08-26 08:00 UTC)
+- `memory/logs/2026-08-25.md` — appended 20:10 UTC entry
+
+No notification sent (nothing to report).
