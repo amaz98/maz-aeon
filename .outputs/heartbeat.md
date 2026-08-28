@@ -1,9 +1,1 @@
-HEARTBEAT_OK · STATUS_PAGE=OK
-
-All checks green — no failed/stuck skills (heartbeat self-check last_success ~12h32m ago), no open PRs or urgent issues, no flagged memory items, 0 open issues, no token report → Token pulse omitted. Wrote `docs/status.md` and appended today's log entry.
-
-## Summary
-- **Files modified:** `docs/status.md` (regenerated with current state), `memory/logs/2026-08-27.md` (new day log)
-- **Findings:** none — clean run, no notification sent
-- **Next scheduled run:** heartbeat at 2026-08-27 14:00 UTC
-- **Follow-up:** none
+🟡 heartbeat: 3 missed dispatch slots — last success 2026-08-27 08:55 UTC (~31h ago). Expected 08-27 14:00, 08-27 20:00, 08-28 08:00 UTC. Current run at 15:52 UTC. Watch the 20:00 slot; if it also skips, cron may be paused.

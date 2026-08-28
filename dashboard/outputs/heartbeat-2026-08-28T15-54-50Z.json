@@ -1,0 +1,146 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert_warning",
+        "separator1",
+        "stack_stats",
+        "separator2",
+        "stack_times",
+        "separator3",
+        "stack_advisory"
+      ]
+    },
+    "alert_warning": {
+      "type": "Alert",
+      "props": {
+        "title": "3 Missed Dispatch Slots",
+        "type": "warning"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_missed",
+        "stat_lastrun",
+        "stat_currentrun"
+      ]
+    },
+    "stat_missed": {
+      "type": "Stat",
+      "props": {
+        "label": "Missed Slots",
+        "value": "3"
+      }
+    },
+    "stat_lastrun": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Success",
+        "value": "2026-08-27 08:55 UTC",
+        "delta": "~31h ago"
+      }
+    },
+    "stat_currentrun": {
+      "type": "Stat",
+      "props": {
+        "label": "Current Run",
+        "value": "15:52 UTC"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_times": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_expected",
+        "time1",
+        "time2",
+        "time3"
+      ]
+    },
+    "heading_expected": {
+      "type": "Heading",
+      "props": {
+        "text": "Expected Dispatch Times",
+        "level": "h3"
+      }
+    },
+    "time1": {
+      "type": "Text",
+      "props": {
+        "text": "2026-08-27 14:00 UTC",
+        "variant": "body"
+      }
+    },
+    "time2": {
+      "type": "Text",
+      "props": {
+        "text": "2026-08-27 20:00 UTC",
+        "variant": "body"
+      }
+    },
+    "time3": {
+      "type": "Text",
+      "props": {
+        "text": "2026-08-28 08:00 UTC",
+        "variant": "body"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_advisory": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_advisory",
+        "text_advisory"
+      ]
+    },
+    "heading_advisory": {
+      "type": "Heading",
+      "props": {
+        "text": "Advisory",
+        "level": "h3"
+      }
+    },
+    "text_advisory": {
+      "type": "Text",
+      "props": {
+        "text": "Watch the 20:00 slot; if it also skips, cron may be paused.",
+        "variant": "body"
+      }
+    }
+  }
+}
