@@ -1,0 +1,127 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert_warning",
+        "separator1",
+        "slots_section",
+        "separator2",
+        "metrics_section",
+        "separator3",
+        "recovery_alert"
+      ]
+    },
+    "alert_warning": {
+      "type": "Alert",
+      "props": {
+        "title": "Dispatch Health Degraded",
+        "message": "Multiple slot anomalies detected with extended gap since last success",
+        "type": "warning"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "slots_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "slots_heading",
+        "slot_0800",
+        "slot_1400"
+      ]
+    },
+    "slots_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dispatch Slots",
+        "level": "h3"
+      }
+    },
+    "slot_0800": {
+      "type": "Text",
+      "props": {
+        "text": "08:00 UTC: Skipped"
+      }
+    },
+    "slot_1400": {
+      "type": "Text",
+      "props": {
+        "text": "14:00 UTC: ~1.5h late"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "metrics_heading",
+        "stat_last_success",
+        "stat_cadence",
+        "threshold_text"
+      ]
+    },
+    "metrics_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Health Metrics",
+        "level": "h3"
+      }
+    },
+    "stat_last_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Success",
+        "value": "17.9h ago"
+      }
+    },
+    "stat_cadence": {
+      "type": "Stat",
+      "props": {
+        "label": "Expected Cadence",
+        "value": "6h"
+      }
+    },
+    "threshold_text": {
+      "type": "Badge",
+      "props": {
+        "text": ">2x threshold exceeded",
+        "variant": "destructive"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "recovery_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Recovery Watch",
+        "message": "Monitor 20:00 UTC slot for recovery",
+        "type": "info"
+      }
+    }
+  }
+}
