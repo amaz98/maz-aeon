@@ -1,8 +1,1 @@
-HEARTBEAT_OK · STATUS_PAGE=OK
-
-## Summary
-All checks green. No failed/stuck skills (heartbeat: 261/261 success, last_success 6.15h ago), no open PRs or urgent issues, no flagged memory items, no missed cadence. The 20:00 UTC slot ran on time (~1h drift), clearing the prior WATCH condition. No notification sent.
-
-**Files modified:**
-- `docs/status.md` — regenerated with 🟢 OK verdict
-- `memory/logs/2026-09-01.md` — appended 21:17 UTC entry
+🟡 heartbeat WATCH — the 08:00 UTC slot has been skipped 3 days in a row (56% skip rate over the last 18 dispatch slots). Filed ISS-002 as escalation from resolved ISS-001. GitHub Actions cron drift on public repos, same root cause; mitigations proposed (redundant cron / external ping) worth acting on this time. Details: memory/issues/ISS-002.md

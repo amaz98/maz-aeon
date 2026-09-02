@@ -1,0 +1,133 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert_main",
+        "separator_1",
+        "stack_details"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "WATCH — Cron dispatch drift detected",
+        "message": "The 08:00 UTC slot has been skipped 3 days in a row"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_skiprate",
+        "stack_issue_ref",
+        "separator_2",
+        "heading_root_cause",
+        "text_root_cause",
+        "link_issue_details",
+        "separator_3",
+        "heading_mitigations",
+        "text_mitigations_list",
+        "text_action_priority"
+      ]
+    },
+    "stat_skiprate": {
+      "type": "Stat",
+      "props": {
+        "label": "Skip rate over last 18 dispatch slots",
+        "value": "56%"
+      }
+    },
+    "stack_issue_ref": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_issue",
+        "text_escalation"
+      ]
+    },
+    "badge_issue": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-002",
+        "variant": "destructive"
+      }
+    },
+    "text_escalation": {
+      "type": "Text",
+      "props": {
+        "text": "Escalation from resolved ISS-001"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_root_cause": {
+      "type": "Heading",
+      "props": {
+        "text": "Root Cause",
+        "level": "h3"
+      }
+    },
+    "text_root_cause": {
+      "type": "Text",
+      "props": {
+        "text": "GitHub Actions cron drift on public repos (same root cause as ISS-001)"
+      }
+    },
+    "link_issue_details": {
+      "type": "Link",
+      "props": {
+        "label": "View full issue details",
+        "href": "memory/issues/ISS-002.md"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_mitigations": {
+      "type": "Heading",
+      "props": {
+        "text": "Proposed Mitigations",
+        "level": "h3"
+      }
+    },
+    "text_mitigations_list": {
+      "type": "Text",
+      "props": {
+        "text": "Redundant cron / External ping"
+      }
+    },
+    "text_action_priority": {
+      "type": "Text",
+      "props": {
+        "text": "Worth acting on this time",
+        "variant": "lead"
+      }
+    }
+  }
+}
