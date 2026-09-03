@@ -1,18 +1,17 @@
-HEARTBEAT_WATCH · STATUS_PAGE=WATCH — wrote docs/status.md
+HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Ran heartbeat at 14:57 UTC.
+All checks green:
+- **P0**: No failed/stuck skills. heartbeat 265/265 (100%), last_success ~6.3h ago (well under 36h self-check threshold).
+- **P1**: No open PRs, no urgent issues.
+- **P2**: No flagged memory items.
+- **P3**: heartbeat within 2× interval (6.3h vs 12h ceiling). This 21:17 UTC run represents a slightly-late 20:00 slot (~1h17m drift, upper end of GHA cron variance).
+- **Open issues**: 1 (ISS-002, medium — doesn't force WATCH).
+- **Dedup**: ISS-002 notified 2026-09-02 15:03 UTC (~30h ago, inside 48h) → no re-notify.
 
-**Findings:**
-- **P0:** clean — no failed/stuck skills, heartbeat success rate 100% over 264 runs, self-check under 36h.
-- **P1:** no open PRs, no urgent issues.
-- **P2:** no flagged memory items.
-- **P3:** heartbeat `last_success` ~17.6h old (>12h threshold) — 4th consecutive 08:00 UTC skip; matches ISS-002 exactly.
+**Files modified:**
+- `docs/status.md` — regenerated (Overall: 🟢 OK, updated timestamp, single-row skill table)
+- `memory/logs/2026-09-03.md` — appended 21:17 UTC run entry
 
-**Actions:**
-- Regenerated `docs/status.md` → 🟡 WATCH (P3 flag on 08:00 skip pattern).
-- Logged findings to `memory/logs/2026-09-03.md`.
-- **No notification sent** — ISS-002 was notified 23.9h ago, inside the 48h dedup window; the recurring 08:00 skip is a known permanent-limitation already tracked.
-
-**Files touched:** `docs/status.md`, `memory/logs/2026-09-03.md`.
+**Notifications sent:** none.
