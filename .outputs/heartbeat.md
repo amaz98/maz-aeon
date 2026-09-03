@@ -1,11 +1,18 @@
-HEARTBEAT_OK · STATUS_PAGE=OK
+HEARTBEAT_WATCH · STATUS_PAGE=WATCH — wrote docs/status.md
 
 ## Summary
 
-All P0–P3 checks clean at 21:18 UTC. 20:00 UTC slot dispatched with typical ~1h drift (matches yesterday's recovery pattern after morning skip). ISS-002 remains open but medium severity — does not force WATCH. No re-notify (ISS-002 filing 6h ago is inside 48h dedup window).
+Ran heartbeat at 14:57 UTC.
 
-**Files modified:**
-- `docs/status.md` — refreshed: 🟢 OK, updated 2026-09-02 21:18 UTC, next run 2026-09-03 08:00 UTC.
-- `memory/logs/2026-09-02.md` — appended 21:18 UTC heartbeat entry.
+**Findings:**
+- **P0:** clean — no failed/stuck skills, heartbeat success rate 100% over 264 runs, self-check under 36h.
+- **P1:** no open PRs, no urgent issues.
+- **P2:** no flagged memory items.
+- **P3:** heartbeat `last_success` ~17.6h old (>12h threshold) — 4th consecutive 08:00 UTC skip; matches ISS-002 exactly.
 
-**Follow-ups:** none this run. Watch 2026-09-03 08:00 UTC slot — if it skips again, that's a 4th consecutive morning skip and worth adding a `*/30` compensator per ISS-002's mitigation list.
+**Actions:**
+- Regenerated `docs/status.md` → 🟡 WATCH (P3 flag on 08:00 skip pattern).
+- Logged findings to `memory/logs/2026-09-03.md`.
+- **No notification sent** — ISS-002 was notified 23.9h ago, inside the 48h dedup window; the recurring 08:00 skip is a known permanent-limitation already tracked.
+
+**Files touched:** `docs/status.md`, `memory/logs/2026-09-03.md`.
