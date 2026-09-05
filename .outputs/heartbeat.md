@@ -1,16 +1,16 @@
-HEARTBEAT_WATCH · STATUS_PAGE=WATCH
+HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Ran the heartbeat skill's ambient checks:
+Ran heartbeat checks — all clean:
+- **P0:** no failed/stuck skills; heartbeat 268/268 success; self-check ~6.5h ago (well under 36h).
+- **P1:** no open PRs, no urgent issues.
+- **P2:** nothing flagged in MEMORY.md.
+- **P3:** heartbeat last_success 6.5h ago (interval 12h threshold) — not stale; today's 08:00 slot recovered.
+- **Open issues:** 1 (ISS-002, medium) — does not force WATCH.
 
-- **P0** — clean. heartbeat: 267/267 success, 0 consecutive failures. on-chain-monitor disabled (<5 runs, not chronic).
-- **P1** — no open PRs, no urgent issues.
-- **P2** — no flagged memory items.
-- **P3** — heartbeat `last_success` is ~18h old (>12h threshold); yesterday's 20:00 UTC slot skipped. Positive side: today's **08:00 UTC slot did dispatch** (this run at ~08:34 UTC), breaking the 4-day 08:00 skip streak ISS-002 tracks.
-- **Open issues:** 1 (ISS-002, medium/permanent-limitation — no re-notification, ISS-002 appears in last-48h logs).
+**Files modified:**
+- `docs/status.md` — regenerated with verdict 🟢 OK, next run 20:00 UTC.
+- `memory/logs/2026-09-05.md` — appended 15:07 UTC run entry.
 
-**Notification:** not sent (dedup + known limitation).
-**Files written:**
-- `docs/status.md` — regenerated (Overall: 🟡 WATCH, 1 open issue, next run 14:00 UTC).
-- `memory/logs/2026-09-05.md` — new daily log with this run's findings.
+No notification sent (all green).
