@@ -2,10 +2,16 @@ HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Ambient heartbeat run at 20:40 UTC — all clear. No failed/stuck skills, no open PRs or urgent issues, no flagged memory items. Today's 14:00 UTC slot was skipped (extending the ISS-002 GHA-cron variance pattern beyond just the 08:00 slot), but last_success is ~11h old — under the 12h P3 staleness threshold, so no flag fires and no notification sent. Regenerated `docs/status.md` with 🟢 OK verdict and appended the run entry to `memory/logs/2026-09-06.md`.
+Ran the heartbeat skill. All P0–P3 checks clean; overall verdict 🟢 OK.
 
-Files modified:
-- `docs/status.md` — refreshed status page
-- `memory/logs/2026-09-06.md` — appended 20:40 UTC run log
+- **P0**: heartbeat 272/272 success, last success 2026-09-06 20:41 UTC (~13h ago). on-chain-monitor disabled and below chronic threshold.
+- **P1/P2**: no open PRs, no urgent issues, no flagged memory items.
+- **P3**: 08:00 slot dispatched ~107min late but not skipped — within GHA cron drift on the overnight boundary. ISS-002 skip streak did not extend.
+- **Open issues**: 1 (ISS-002, medium/permanent-limitation) — informational only.
+- **Notification**: not sent (all green, dedup covers ISS-002 pattern).
 
-Follow-up: none required. The 14:00 skip is worth watching if it recurs; ISS-002 already tracks this class of variance.
+**Files modified:**
+- `docs/status.md` — regenerated (🟢 OK, updated 2026-09-07 09:47 UTC, next run 14:00 UTC).
+- `memory/logs/2026-09-07.md` — new file with today's heartbeat entry.
+
+**Follow-ups:** none.
