@@ -1,17 +1,9 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
+All green: no failed/stuck skills (heartbeat 273/273 success), no PRs, no urgent issues, no flagged memory items. This run is the 14:00 UTC slot arriving ~80min late (normal GHA drift). Refreshed `docs/status.md` and appended log entry to `memory/logs/2026-09-07.md`. No notification sent.
+
 ## Summary
-
-Ran the heartbeat skill. All P0–P3 checks clean; overall verdict 🟢 OK.
-
-- **P0**: heartbeat 272/272 success, last success 2026-09-06 20:41 UTC (~13h ago). on-chain-monitor disabled and below chronic threshold.
-- **P1/P2**: no open PRs, no urgent issues, no flagged memory items.
-- **P3**: 08:00 slot dispatched ~107min late but not skipped — within GHA cron drift on the overnight boundary. ISS-002 skip streak did not extend.
-- **Open issues**: 1 (ISS-002, medium/permanent-limitation) — informational only.
-- **Notification**: not sent (all green, dedup covers ISS-002 pattern).
-
-**Files modified:**
-- `docs/status.md` — regenerated (🟢 OK, updated 2026-09-07 09:47 UTC, next run 14:00 UTC).
-- `memory/logs/2026-09-07.md` — new file with today's heartbeat entry.
-
-**Follow-ups:** none.
+- Ran heartbeat priority checks — all clear
+- Updated `docs/status.md` (Overall 🟢 OK, Updated 15:20 UTC, next run 20:00 UTC)
+- Appended 15:20 UTC entry to `memory/logs/2026-09-07.md`
+- No follow-ups needed
