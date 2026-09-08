@@ -1,9 +1,16 @@
 HEARTBEAT_OK · STATUS_PAGE=OK
 
-All green: no failed/stuck skills (heartbeat 273/273 success), no PRs, no urgent issues, no flagged memory items. This run is the 14:00 UTC slot arriving ~80min late (normal GHA drift). Refreshed `docs/status.md` and appended log entry to `memory/logs/2026-09-07.md`. No notification sent.
-
 ## Summary
-- Ran heartbeat priority checks — all clear
-- Updated `docs/status.md` (Overall 🟢 OK, Updated 15:20 UTC, next run 20:00 UTC)
-- Appended 15:20 UTC entry to `memory/logs/2026-09-07.md`
-- No follow-ups needed
+Ran the heartbeat skill. All checks green:
+- P0: no failed/stuck skills; heartbeat 274/274 success; self-check 18h ago (under 36h).
+- P1/P2: no open PRs, no urgent issues, nothing flagged in MEMORY.md.
+- P3: 2026-09-07 20:00 UTC slot was skipped — extends ISS-002 pattern beyond just the 08:00 slot bias. Dedup covers it (same permanent-limitation class already logged in last 48h).
+
+**Files modified:**
+- `docs/status.md` — regenerated (🟢 OK, 1 open issue).
+- `memory/logs/2026-09-08.md` — created with this run's findings.
+- `memory/logs/2026-09-07.md` — corrected total_runs count in 15:20 UTC entry (was 273, actually 274).
+
+**Notification:** not sent (dedup — all green + known ISS-002 pattern).
+
+**Follow-up:** ISS-002 remains open; consider implementing the redundant `*/30` compensator cron or external ping if 20:00 skips also become chronic.
