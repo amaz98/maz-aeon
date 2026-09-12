@@ -1,0 +1,159 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert_main",
+        "separator_1",
+        "stack_main"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "title": "🟡 Status Page: WATCH",
+        "message": "2 slots skipped yesterday (2026-09-11 14:00 UTC, 20:00 UTC); today's dispatch ~72min late",
+        "type": "warning"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_issue",
+        "section_dispatch",
+        "section_performance"
+      ]
+    },
+    "section_issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_issue",
+        "text_issue_id",
+        "text_issue_desc"
+      ]
+    },
+    "heading_issue": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue",
+        "level": "h3"
+      }
+    },
+    "text_issue_id": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-002: Skip pattern extended beyond the 08:00 slot",
+        "variant": "body"
+      }
+    },
+    "text_issue_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Caused skips at 2026-09-11 14:00 UTC and 20:00 UTC",
+        "variant": "caption"
+      }
+    },
+    "section_dispatch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_dispatch",
+        "text_slot_time",
+        "text_actual_dispatch",
+        "text_delay_amount"
+      ]
+    },
+    "heading_dispatch": {
+      "type": "Heading",
+      "props": {
+        "text": "Today's Dispatch",
+        "level": "h3"
+      }
+    },
+    "text_slot_time": {
+      "type": "Text",
+      "props": {
+        "text": "Expected slot: 08:00 UTC (2026-09-12)",
+        "variant": "body"
+      }
+    },
+    "text_actual_dispatch": {
+      "type": "Text",
+      "props": {
+        "text": "Actually dispatched: 09:12 UTC",
+        "variant": "body"
+      }
+    },
+    "text_delay_amount": {
+      "type": "Text",
+      "props": {
+        "text": "Delay: ~72 minutes",
+        "variant": "caption"
+      }
+    },
+    "section_performance": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_perf",
+        "stat_success",
+        "text_cause",
+        "badge_cause"
+      ]
+    },
+    "heading_perf": {
+      "type": "Heading",
+      "props": {
+        "text": "Performance & Root Cause",
+        "level": "h3"
+      }
+    },
+    "stat_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Skill success rate (once dispatched)",
+        "value": "100%",
+        "delta": "283/283 runs"
+      }
+    },
+    "text_cause": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause: GitHub Actions cron scheduler drop—not a skill failure",
+        "variant": "muted"
+      }
+    },
+    "badge_cause": {
+      "type": "Badge",
+      "props": {
+        "text": "GHA cron drop",
+        "variant": "destructive"
+      }
+    }
+  }
+}
