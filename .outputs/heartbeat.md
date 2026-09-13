@@ -1,11 +1,19 @@
-HEARTBEAT_OK · STATUS_PAGE=OK
+HEARTBEAT_OK · STATUS_PAGE=WATCH
 
 ## Summary
 
-Ran heartbeat priority checks and regenerated the public status page. No P0/P1/P2/P3 flags fired — heartbeat's last success is ~11h27m old (under the 12h `2× interval` threshold), no failed/stuck skills, no open PRs, no urgent issues, no flagged memory items. Today's 14:00 UTC slot was skipped (net-new since the 09:12 log entry), continuing the ISS-002 pattern, but dedup covers it — the same pattern was notified this morning.
+Ran heartbeat check at 2026-09-13 14:29 UTC.
+
+**Findings:**
+- **P0:** clean — heartbeat 285/285 success, no failed/stuck skills.
+- **P1:** clean — no open PRs, no urgent issues.
+- **P2:** clean — no flagged memory items.
+- **P3:** flag fired — heartbeat last_success 17h45m ago (>12h = 2× 6h min slot interval). Today's 08:00 UTC slot skipped; this 14:00 slot dispatched ~29min late. Continues ISS-002 pattern.
+
+**Notification:** NOT SENT — ISS-002 pattern already notified 2026-09-12 09:12 UTC, inside the 48h dedup window.
 
 **Files modified:**
-- `docs/status.md` — regenerated (🟡 WATCH → 🟢 OK, updated timestamps and skill table)
-- `memory/logs/2026-09-12.md` — appended 20:42 UTC heartbeat entry
+- `docs/status.md` — regenerated (🟡 WATCH, 1 open issue, next run 20:00 UTC)
+- `memory/logs/2026-09-13.md` — created with today's heartbeat entry
 
-**Follow-up:** ISS-002 remains open; the 14:00 skip today extends the recent skipped-slot pattern from yesterday. If it repeats through 2026-09-13, worth re-notifying and considering the redundant-cron mitigation proposed in ISS-002.
+**Follow-up:** None required. ISS-002 remains open as a permanent GHA-cron-drift limitation; no fresh escalation.
