@@ -2,14 +2,15 @@ STATUS_PAGE=WATCH — wrote docs/status.md
 
 ## Summary
 
-Heartbeat run at 2026-09-14 14:08 UTC:
-- **P0**: clean — heartbeat 287/287 successes, no failed or stuck skills, self-check 16h18m < 36h threshold.
-- **P1/P2**: no open PRs, no urgent issues, no flagged memory items.
-- **P3 flag fired**: last_success 16h18m > 12h (2× 6h min slot) threshold. Today's 08:00 UTC slot was skipped by GHA; this run is the 14:00 slot ~8min late. Continues the ISS-002 pattern.
-- **Notification**: NOT SENT — same-class skip already documented in yesterday's 14:29 UTC log entry (~23h ago, within 48h dedup window).
-- **Status page**: wrote `docs/status.md` with 🟡 WATCH verdict.
-- **Log**: appended `memory/logs/2026-09-14.md`.
+Heartbeat run at 2026-09-15 15:41 UTC (2026-09-15 14:00 slot dispatching ~1h41m late).
 
-Files modified: `docs/status.md`, `memory/logs/2026-09-14.md`.
+- **P0/P1/P2:** all clean.
+- **P3:** flag fired — last_success 25h32m stale (>12h threshold). Two consecutive GHA slot skips: 2026-09-14 20:00 UTC and 2026-09-15 08:00 UTC. Same-class continuation of ISS-002.
+- **Overall verdict:** 🟡 WATCH (driven by P3).
+- **Notification:** not sent (ISS-002 pattern already logged 2026-09-14 14:08 UTC, within 48h dedup window). Flagged in today's log that if the 2026-09-15 20:00 slot also skips, next heartbeat should re-notify regardless of dedup.
 
-Follow-up: none — ISS-002 remains a known permanent GHA limitation. Auto-commit step will land the changes on `main`.
+**Files modified:**
+- `docs/status.md` — regenerated (WATCH verdict, updated timestamp, next scheduled run 2026-09-15 20:00 UTC).
+- `memory/logs/2026-09-15.md` — new log entry.
+
+**Follow-ups:** none new. ISS-002 remains open; mitigation options (redundant cron slots, external `workflow_dispatch` ping) already proposed in the issue.
