@@ -1,0 +1,135 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-watch",
+        "alert-main",
+        "sep1",
+        "stat-staleness",
+        "sep2",
+        "stack-pattern",
+        "sep3",
+        "stat-fleet"
+      ]
+    },
+    "badge-watch": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "alert-main": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Consecutive scheduled slots skipped",
+        "message": "2 consecutive scheduled slots skipped by GitHub Actions: 2026-09-15 20:00 UTC and 2026-09-16 08:00 UTC"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stat-staleness": {
+      "type": "Stat",
+      "props": {
+        "label": "Last success staleness (P3 threshold: 12h)",
+        "value": "23h",
+        "delta": "+11h over threshold",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-pattern": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-pattern",
+        "text-p1",
+        "text-p2",
+        "text-p3"
+      ]
+    },
+    "heading-pattern": {
+      "type": "Heading",
+      "props": {
+        "text": "Pattern analysis",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-p1": {
+      "type": "Text",
+      "props": {
+        "text": "Second consecutive double-skip pattern detected",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-p2": {
+      "type": "Text",
+      "props": {
+        "text": "Same class as ISS-002",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-p3": {
+      "type": "Text",
+      "props": {
+        "text": "Prediction: If 2026-09-16 20:00 UTC also skips, severity bump likely warranted",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stat-fleet": {
+      "type": "Stat",
+      "props": {
+        "label": "Fleet health",
+        "value": "289 runs",
+        "delta": "100% success rate when dispatched",
+        "trend": "up"
+      },
+      "children": []
+    }
+  }
+}
