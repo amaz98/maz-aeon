@@ -1,16 +1,18 @@
-HEARTBEAT_OK · STATUS_PAGE=OK
+HEARTBEAT_OK · STATUS_PAGE=OK — wrote docs/status.md
 
 ## Summary
 
-Ran the heartbeat skill. All checks clean:
-- **P0:** no failed/stuck skills; heartbeat success_rate 1.0 over 292 runs; self-check 5h14m stale (well under 36h)
-- **P1:** no open PRs, no urgent issues
-- **P2:** no flagged memory items
-- **P3:** heartbeat's 14:00 slot dispatching ~15min late — well under the 12h double-slot threshold
-- **Overall:** 🟢 OK (1 open medium-severity issue ISS-002 does not force WATCH)
+Ran heartbeat checks — everything green.
+
+- **P0:** No failed/stuck skills. heartbeat 293/293 successes, last success 7h18m ago.
+- **P1:** No open PRs, no urgent issues.
+- **P2:** No flagged memory items.
+- **P3:** No missed slots. Current run is the 20:00 UTC slot dispatching ~1h34m late (within tolerance).
+- **Overall status:** 🟢 OK (1 open issue ISS-002, medium — not WATCH-forcing).
+- **Notification:** not sent (nothing needs attention).
 
 **Files modified:**
-- `docs/status.md` — regenerated (Updated 2026-09-17 14:15 UTC, next run 20:00 UTC)
-- `memory/logs/2026-09-17.md` — appended 14:15 UTC entry
+- `docs/status.md` — regenerated (Updated: 2026-09-17 21:34 UTC, Next: 2026-09-18 08:00 UTC).
+- `memory/logs/2026-09-17.md` — appended 21:34 UTC heartbeat entry.
 
-**Notification:** not sent — nothing needs attention.
+**Follow-up:** none. ISS-002 (recurring 08:00 UTC slot skips) remains open but did not fire this window — the 08:00 slot dispatched late at 09:00 rather than being skipped.
