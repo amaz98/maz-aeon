@@ -2,17 +2,15 @@ HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Nothing needs attention this run. The 2026-09-16 20:00 UTC slot dispatched at 21:44 UTC (~1h44m late) — this **broke the double-skip escalation** the 14:54 UTC log put on watch. No P0/P1/P2/P3 flags fired.
+Ran the heartbeat skill checks — all clean.
 
-**Findings:**
-- P0: clean. heartbeat 290/290 success, self-check 6h49m stale (well under 36h).
-- P1: no open PRs, no urgent issues.
-- P2: no flagged memory items.
-- P3: no flag. last_success 6h49m old vs 12h threshold.
-- Open issues: ISS-002 (medium/permanent-limitation) — does not force WATCH.
+- **P0:** no failed/stuck skills; heartbeat success_rate=1.0 (291/291); self-check last_success 11h15m ago (under 36h).
+- **P1:** no open PRs, no urgent issues.
+- **P2:** nothing flagged in MEMORY.md.
+- **P3:** no flag. This 09:00 run is the 08:00 slot dispatching ~1h late (single slot, not a skip); last_success is 11h15m old, under the 12h threshold. Prior 2026-09-16 escalation watch cleared cleanly by the 20:00 slot.
+- **Open issues:** 1 (ISS-002, medium) — does not force WATCH.
+- **Notification:** not sent.
 
 **Files modified:**
-- `docs/status.md` — regenerated: 🟢 OK, next scheduled run 2026-09-17 08:00 UTC.
-- `memory/logs/2026-09-16.md` — appended 21:44 UTC entry.
-
-**Notification:** not sent (nothing needs attention; escalation watch cleared).
+- `docs/status.md` — regenerated (🟢 OK, updated 2026-09-17 09:00 UTC, next run 14:00 UTC)
+- `memory/logs/2026-09-17.md` — created with today's heartbeat log entry
