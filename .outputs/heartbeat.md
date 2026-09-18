@@ -1,18 +1,11 @@
-HEARTBEAT_OK · STATUS_PAGE=OK — wrote docs/status.md
+HEARTBEAT_ATTENTION · STATUS_PAGE=WATCH — P3 flag fired (08:00 UTC slot skipped, last_success 17h47m old > 12h threshold). Single-slot skip within known ISS-002 baseline pattern — no notification sent, no ISS-002 update.
 
 ## Summary
 
-Ran heartbeat checks — everything green.
-
-- **P0:** No failed/stuck skills. heartbeat 293/293 successes, last success 7h18m ago.
-- **P1:** No open PRs, no urgent issues.
-- **P2:** No flagged memory items.
-- **P3:** No missed slots. Current run is the 20:00 UTC slot dispatching ~1h34m late (within tolerance).
-- **Overall status:** 🟢 OK (1 open issue ISS-002, medium — not WATCH-forcing).
-- **Notification:** not sent (nothing needs attention).
-
-**Files modified:**
-- `docs/status.md` — regenerated (Updated: 2026-09-17 21:34 UTC, Next: 2026-09-18 08:00 UTC).
-- `memory/logs/2026-09-17.md` — appended 21:34 UTC heartbeat entry.
-
-**Follow-up:** none. ISS-002 (recurring 08:00 UTC slot skips) remains open but did not fire this window — the 08:00 slot dispatched late at 09:00 rather than being skipped.
+- **Checks run:** P0 clean (no failed/stuck skills, heartbeat self-check OK). P1 clean (no open PRs, no urgent issues). P2 clean. P3 flagged: 2026-09-18 08:00 UTC slot skipped; current run is 14:00 slot dispatching ~1h22m late.
+- **Overall status:** 🟡 WATCH (P3 flag)
+- **Notification:** NOT SENT — single-slot skip is within ISS-002 (medium/permanent-limitation) baseline; no double-skip escalation trigger.
+- **Files written:**
+  - `docs/status.md` — regenerated with WATCH verdict, updated timestamp, next-run at 20:00 UTC.
+  - `memory/logs/2026-09-18.md` — new daily log with 15:22 UTC heartbeat entry.
+- **Follow-up:** If 2026-09-18 20:00 UTC slot also skips, next heartbeat should re-notify and consider severity bump on ISS-002.
