@@ -1,20 +1,22 @@
-HEARTBEAT_OK · STATUS_PAGE=OK
+STATUS_PAGE=WATCH — wrote docs/status.md
 
 ## Summary
 
-Heartbeat ambient check ran at 21:15 UTC (20:00 slot ~1h15m late).
+Ran heartbeat at 2026-09-19 14:29 UTC.
 
-**Findings:** Nothing needs attention.
-- **P0:** heartbeat healthy (295/295 successes, self-check 5h51m fresh vs 36h threshold). No failed/stuck skills.
-- **P1:** 0 open PRs, 0 urgent issues.
-- **P2:** No flagged memory items.
-- **P3:** No flag — last_success 5h51m < 12h threshold. Today's slot pattern (08:00 skipped, 14:00 late, 20:00 now dispatching) — the 15:22 UTC escalation watch clears cleanly.
-- **Open issues:** 1 (ISS-002 medium, permanent-limitation) — does not force WATCH.
+**Findings:**
+- **P0:** clean. No failed/stuck skills; heartbeat 100% success over 296 runs.
+- **P1:** no open PRs, no urgent issues.
+- **P2:** no flagged memory items.
+- **P3 flag fired:** heartbeat `last_success` = 2026-09-18 21:16 UTC (~17h13m ago) > 12h threshold (2× min slot interval). Root cause: 2026-09-19 08:00 UTC slot skipped — single-slot skip, same class as **ISS-002**. Not a double-skip escalation (yesterday's 20:00 slot dispatched cleanly).
+- **Open issues:** 1 (ISS-002, medium/permanent-limitation).
+
+**Overall:** 🟡 WATCH (driven by the P3 flag).
+
+**Notification:** NOT SENT — deduped against the 2026-09-18 15:22 UTC log entry, which already surfaced the same single-slot skip pattern within the 48h window.
 
 **Files modified:**
-- `docs/status.md` — regenerated (🟢 OK, next run 2026-09-19 08:00 UTC).
-- `memory/logs/2026-09-18.md` — appended 21:15 UTC entry.
+- `docs/status.md` — regenerated with 🟡 WATCH verdict, next scheduled run set to 2026-09-19 20:00 UTC, no token pulse (no `articles/token-report-*.md`).
+- `memory/logs/2026-09-19.md` — created with today's heartbeat entry.
 
-**Notification:** NOT SENT (single-slot lateness within ISS-002 baseline).
-
-**Follow-up:** Continue watching for 08:00 UTC skip pattern per ISS-002; no action needed today.
+**Follow-up watch:** if the 2026-09-19 20:00 UTC slot also skips, next heartbeat should re-notify and consider a severity bump on ISS-002.
