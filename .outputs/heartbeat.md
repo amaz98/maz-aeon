@@ -1,22 +1,13 @@
-STATUS_PAGE=WATCH — wrote docs/status.md
+HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Ran heartbeat at 2026-09-19 14:29 UTC.
-
-**Findings:**
-- **P0:** clean. No failed/stuck skills; heartbeat 100% success over 296 runs.
-- **P1:** no open PRs, no urgent issues.
-- **P2:** no flagged memory items.
-- **P3 flag fired:** heartbeat `last_success` = 2026-09-18 21:16 UTC (~17h13m ago) > 12h threshold (2× min slot interval). Root cause: 2026-09-19 08:00 UTC slot skipped — single-slot skip, same class as **ISS-002**. Not a double-skip escalation (yesterday's 20:00 slot dispatched cleanly).
-- **Open issues:** 1 (ISS-002, medium/permanent-limitation).
-
-**Overall:** 🟡 WATCH (driven by the P3 flag).
-
-**Notification:** NOT SENT — deduped against the 2026-09-18 15:22 UTC log entry, which already surfaced the same single-slot skip pattern within the 48h window.
+Ran the heartbeat skill. All checks clean — no failed/stuck skills, no consecutive_failures ≥3, no chronic failures, no open PRs, no urgent issues, no flagged memory items. heartbeat.last_success is 7h13m old (well under the 12h P3 threshold and 36h self-check threshold). Today's slot pattern: 08:00 skipped (known ISS-002 pattern), 14:00 dispatched ~29m late, 20:00 dispatching ~1h42m late — single-slot lateness within tolerance, escalation watch from the 14:29 log cleared cleanly. Overall status = 🟢 OK (ISS-002 is medium severity, does not force WATCH).
 
 **Files modified:**
-- `docs/status.md` — regenerated with 🟡 WATCH verdict, next scheduled run set to 2026-09-19 20:00 UTC, no token pulse (no `articles/token-report-*.md`).
-- `memory/logs/2026-09-19.md` — created with today's heartbeat entry.
+- `docs/status.md` — regenerated public status page (🟢 OK, Updated 2026-09-19 21:42 UTC, Next: heartbeat at 2026-09-20 08:00 UTC)
+- `memory/logs/2026-09-19.md` — appended run log entry
 
-**Follow-up watch:** if the 2026-09-19 20:00 UTC slot also skips, next heartbeat should re-notify and consider a severity bump on ISS-002.
+**Notification:** NOT SENT (nothing needs attention).
+
+**Follow-ups:** None. ISS-002 remains open; today's 20:00 slot dispatched, so no double-skip escalation.
