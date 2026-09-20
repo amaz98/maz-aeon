@@ -1,0 +1,94 @@
+{
+  "root": "card_heartbeat",
+  "state": {},
+  "elements": {
+    "card_heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat — 2026-09-20",
+        "description": "Scheduler drift detected"
+      },
+      "children": [
+        "alert_main",
+        "sep_1",
+        "metrics_stack",
+        "sep_2",
+        "details_stack"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Double-skip: 08:00 + 14:00 UTC slots missed",
+        "message": "ISS-002 class. Dispatching at 20:00 UTC (~1h14m late). Root cause: GHA scheduler drift on public repo."
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "metrics_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_total_runs",
+        "stat_success_rate",
+        "stat_lateness"
+      ]
+    },
+    "stat_total_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Total runs",
+        "value": "298"
+      }
+    },
+    "stat_success_rate": {
+      "type": "Stat",
+      "props": {
+        "label": "Success rate",
+        "value": "100%"
+      }
+    },
+    "stat_lateness": {
+      "type": "Stat",
+      "props": {
+        "label": "Lateness",
+        "value": "~1h14m"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "details_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_health",
+        "text_condition"
+      ]
+    },
+    "text_health": {
+      "type": "Text",
+      "props": {
+        "text": "Heartbeat skill itself is healthy.",
+        "variant": "body"
+      }
+    },
+    "text_condition": {
+      "type": "Text",
+      "props": {
+        "text": "Monitor: If 2026-09-21 08:00 UTC also skips, next heartbeat should consider severity bump.",
+        "variant": "caption"
+      }
+    }
+  }
+}
