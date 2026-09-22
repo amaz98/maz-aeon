@@ -1,0 +1,208 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert",
+        "sep1",
+        "missed_section",
+        "sep2",
+        "current_section",
+        "sep3",
+        "threshold_section",
+        "sep4",
+        "issue_section",
+        "sep5",
+        "watch_section"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 DEGRADED",
+        "message": "heartbeat quad-skip",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "missed_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "missed_head",
+        "missed_text"
+      ]
+    },
+    "missed_head": {
+      "type": "Heading",
+      "props": {
+        "text": "Missed Dispatches",
+        "level": "h3"
+      }
+    },
+    "missed_text": {
+      "type": "Text",
+      "props": {
+        "text": "Four consecutive GHA slot dispatches missed: 2026-09-21 08:00, 14:00, 20:00 + 2026-09-22 08:00",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "current_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "current_head",
+        "current_metrics"
+      ]
+    },
+    "current_head": {
+      "type": "Heading",
+      "props": {
+        "text": "Current Status",
+        "level": "h3"
+      }
+    },
+    "current_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_run",
+        "stat_success"
+      ]
+    },
+    "stat_run": {
+      "type": "Stat",
+      "props": {
+        "label": "Current Run",
+        "value": "14:00 slot",
+        "delta": "~1h39m late"
+      }
+    },
+    "stat_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Success",
+        "value": "42h stale",
+        "trend": "down"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "threshold_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "threshold_head",
+        "threshold_text"
+      ]
+    },
+    "threshold_head": {
+      "type": "Heading",
+      "props": {
+        "text": "Threshold Status",
+        "level": "h3"
+      }
+    },
+    "threshold_text": {
+      "type": "Text",
+      "props": {
+        "text": "P0 self-check threshold: 36h. Current staleness exceeds threshold by 6 hours.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issue_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "issue_head",
+        "issue_badge"
+      ]
+    },
+    "issue_head": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue Tracking",
+        "level": "h3"
+      }
+    },
+    "issue_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-002: medium → high",
+        "variant": "destructive"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watch_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch_head",
+        "watch_text"
+      ]
+    },
+    "watch_head": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch Point",
+        "level": "h3"
+      }
+    },
+    "watch_text": {
+      "type": "Text",
+      "props": {
+        "text": "Monitoring 2026-09-22 20:00 UTC. If that slot also skips, escalate to critical and roll out redundant-cron / external-ping mitigations.",
+        "variant": "body"
+      }
+    }
+  }
+}
