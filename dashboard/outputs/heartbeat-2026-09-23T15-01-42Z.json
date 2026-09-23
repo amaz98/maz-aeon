@@ -1,0 +1,181 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "issue-alert",
+        "separator-1",
+        "content-stack"
+      ]
+    },
+    "issue-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "🟡 WATCH — New double-skip after quad-skip recovery",
+        "message": "Missed slots at 2026-09-22 20:00 UTC and 2026-09-23 08:00 UTC. Currently ~59m late on 2026-09-23 14:00 slot."
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "timeline-section",
+        "metrics-section",
+        "context-section",
+        "separator-2",
+        "watch-alert"
+      ]
+    },
+    "timeline-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "timeline-heading",
+        "timeline-table"
+      ]
+    },
+    "timeline-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Timeline",
+        "level": "h3"
+      }
+    },
+    "timeline-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Slot (UTC)",
+          "Status"
+        ],
+        "rows": [
+          [
+            "2026-09-22 20:00",
+            "Missed"
+          ],
+          [
+            "2026-09-23 08:00",
+            "Missed"
+          ],
+          [
+            "2026-09-23 14:00",
+            "Running ~59m late"
+          ]
+        ]
+      }
+    },
+    "metrics-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "metrics-heading",
+        "metrics-row"
+      ]
+    },
+    "metrics-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Metrics",
+        "level": "h3"
+      }
+    },
+    "metrics-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "skip-rate-stat",
+        "severity-badge"
+      ]
+    },
+    "skip-rate-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Skip rate (8-slot window)",
+        "value": "75%",
+        "trend": "up"
+      }
+    },
+    "severity-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-002: high",
+        "variant": "destructive"
+      }
+    },
+    "context-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "context-heading",
+        "context-items"
+      ]
+    },
+    "context-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Context",
+        "level": "h3"
+      }
+    },
+    "context-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "context-1",
+        "context-2"
+      ]
+    },
+    "context-1": {
+      "type": "Text",
+      "props": {
+        "text": "Streak broken by 2026-09-22 14:00 late-run at 15:39 UTC yesterday"
+      }
+    },
+    "context-2": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-002 remains at high severity (not escalating to critical due to recovery)"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "watch-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Watch: 2026-09-23 20:00 UTC slot",
+        "message": "If this slot skips, escalate + pursue redundant-cron / external-ping mitigations"
+      }
+    }
+  }
+}
