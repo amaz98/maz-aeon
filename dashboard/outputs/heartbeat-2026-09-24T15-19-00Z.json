@@ -1,0 +1,318 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat",
+        "description": "Skill health alert: repeated slot skips and stale last_success"
+      },
+      "children": [
+        "alert_escalation",
+        "separator_1",
+        "section_metrics",
+        "separator_2",
+        "section_timeline",
+        "separator_3",
+        "section_current",
+        "separator_4",
+        "section_mitigations",
+        "separator_5",
+        "section_next"
+      ]
+    },
+    "alert_escalation": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🟡 WATCH — Heartbeat Slot Skips Escalated",
+        "message": "ISS-002 escalated from high to critical. Yesterday's watch trigger fired but skipped (2026-09-23 20:00 UTC and 2026-09-24 08:00 UTC both skipped). This run dispatching 1h 16m late."
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_metrics",
+        "grid_metrics"
+      ]
+    },
+    "heading_metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Metrics",
+        "level": "h3"
+      }
+    },
+    "grid_metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_stale_time",
+        "stat_failure_rate",
+        "stat_skipped_slots"
+      ]
+    },
+    "stat_stale_time": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Success Stale",
+        "value": "24h 13m",
+        "delta": "Exceeds 12h P3 threshold; approaching 36h P0 critical"
+      }
+    },
+    "stat_failure_rate": {
+      "type": "Stat",
+      "props": {
+        "label": "12-Slot Window Failure",
+        "value": "~83%",
+        "delta": "Worst of the year"
+      }
+    },
+    "stat_skipped_slots": {
+      "type": "Stat",
+      "props": {
+        "label": "Recent Skip/Late Count",
+        "value": "12 slots",
+        "delta": "10 skips + 2 late-runs"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_timeline": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_timeline",
+        "table_events"
+      ]
+    },
+    "heading_timeline": {
+      "type": "Heading",
+      "props": {
+        "text": "Recent Events",
+        "level": "h3"
+      }
+    },
+    "table_events": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Timestamp",
+          "Status",
+          "Details"
+        ],
+        "rows": [
+          [
+            "2026-09-23 20:00 UTC",
+            "⏭️ Skipped",
+            "Watch trigger fired but slot skipped"
+          ],
+          [
+            "2026-09-24 08:00 UTC",
+            "⏭️ Skipped",
+            "Scheduled slot skipped"
+          ],
+          [
+            "2026-09-24 14:00 UTC",
+            "🔄 Running",
+            "This run: ~1h 16m late dispatch"
+          ]
+        ]
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_current": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_current",
+        "stack_issue_detail"
+      ]
+    },
+    "heading_current": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue Reference",
+        "level": "h3"
+      }
+    },
+    "stack_issue_detail": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_issue",
+        "text_issue_detail"
+      ]
+    },
+    "badge_issue": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-002",
+        "variant": "destructive"
+      }
+    },
+    "text_issue_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Severity escalated: high → critical. Last successful run is 24h 13m stale, which exceeds the 12-hour P3 threshold and is approaching the 36-hour P0 critical level.",
+        "variant": "body"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_mitigations": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_mitigations",
+        "text_mitigations_intro",
+        "stack_mitigation_options"
+      ]
+    },
+    "heading_mitigations": {
+      "type": "Heading",
+      "props": {
+        "text": "Required Mitigations",
+        "level": "h3"
+      }
+    },
+    "text_mitigations_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Mitigations are now overdue. Pick one of the following approaches to restore reliability:",
+        "variant": "lead"
+      }
+    },
+    "stack_mitigation_options": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mitigation_option_a",
+        "mitigation_option_b"
+      ]
+    },
+    "mitigation_option_a": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_option_a",
+        "text_option_a_desc"
+      ]
+    },
+    "badge_option_a": {
+      "type": "Badge",
+      "props": {
+        "text": "Option (a): Redundant Compensator Cron",
+        "variant": "secondary"
+      }
+    },
+    "text_option_a_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Add redundant */30 compensator cron in .github/workflows/heartbeat.yml that no-ops when last run is fresh. Provides failover scheduling every 30 minutes.",
+        "variant": "body"
+      }
+    },
+    "mitigation_option_b": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_option_b",
+        "text_option_b_desc"
+      ]
+    },
+    "badge_option_b": {
+      "type": "Badge",
+      "props": {
+        "text": "Option (b): External Cron-Job Ping",
+        "variant": "secondary"
+      }
+    },
+    "text_option_b_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Use external cron-job.org ping to workflow_dispatch as a 08:00 UTC fallback trigger. Provides independent scheduling outside GitHub Actions.",
+        "variant": "body"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_next": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_next",
+        "stat_next_slot"
+      ]
+    },
+    "heading_next": {
+      "type": "Heading",
+      "props": {
+        "text": "Next Scheduled Slot",
+        "level": "h3"
+      }
+    },
+    "stat_next_slot": {
+      "type": "Stat",
+      "props": {
+        "label": "Next Watch Trigger",
+        "value": "2026-09-24 20:00 UTC"
+      }
+    }
+  }
+}
