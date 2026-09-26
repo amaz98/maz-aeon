@@ -1,19 +1,24 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH
+Heartbeat run complete. No notification sent (dedup — same critical ISS-002 continuation within 48h of the 2026-09-24 escalation notification). Status page rewritten to reflect the ongoing 🟡 WATCH state.
+
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
 ## Summary
 
-Ran heartbeat checks for 2026-09-25 15:31 UTC.
+**Checks performed**
+- **P0** clean: no failed/stuck skills; heartbeat self-check ~23h29m old (under 36h threshold).
+- **P1** clean: no open PRs, no urgent issues.
+- **P2** clean: no flagged memory items.
+- **P3 flag fired**: heartbeat last_success 23h29m old (>12h threshold). Two more skipped slots since yesterday (2026-09-25 20:00 + 2026-09-26 08:00). Continuous streak now 8 skips + 4 late runs across the last 12 slots (0% on-time).
+- **Open issues**: 1 (ISS-002, `critical`, already tracking this pattern).
 
-- **P0**: no fires (heartbeat 24h12m stale, under 36h self-check threshold; no failed/stuck skills).
-- **P1**: no open PRs, no urgent issues.
-- **P2**: no flagged memory items.
-- **P3**: fired — heartbeat 2× interval (12h) exceeded. Two more skipped slots since yesterday (2026-09-24 20:00 and 2026-09-25 08:00 UTC); this run is the 14:00 slot ~1h31m late. Continuous streak now 6 skips + 3 late runs across the last 9 slots.
-- **Verdict**: 🟡 WATCH (P3 flag + critical open ISS-002, no P0).
-- **Notification**: skipped per dedup — yesterday's notification already escalated ISS-002 to `critical` and called mitigations overdue with two named candidates; no new escalation trigger armed today. Re-notifying without a mitigation attempt would just repeat the payload.
+**Verdict**: 🟡 WATCH (P3 + critical open issue, no P0).
 
-Files modified:
-- `docs/status.md` — regenerated (🟡 WATCH, updated 2026-09-25 15:31 UTC, next slot 20:00 UTC).
-- `memory/logs/2026-09-25.md` — created with today's findings.
-- `memory/issues/ISS-002.md` — appended 2026-09-25 dedup-skip entry to notification history.
+**Notification**: NOT SENT — 2026-09-24 payload still within 48h dedup window via yesterday's log entry; no new escalation trigger; mitigations from the 2026-09-24 ask still pending.
 
-Follow-up: implementation of ISS-002 mitigations (redundant `*/30` compensator cron or external cron-job.org `workflow_dispatch` ping) remains overdue from yesterday's ask.
+**Files modified**
+- `memory/logs/2026-09-26.md` — new daily log with full findings.
+- `memory/issues/ISS-002.md` — appended 2026-09-26 dedup-skip notification-history entry.
+- `docs/status.md` — regenerated with current timestamps + WATCH verdict.
+
+**Follow-up needed**
+- Mitigations for ISS-002 remain overdue (redundant `*/30` compensator cron or external cron-job.org `workflow_dispatch` ping). Operator action required — another watch cycle without implementation attempt won't move the needle.
