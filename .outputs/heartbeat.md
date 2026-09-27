@@ -1,12 +1,8 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
+Heartbeat complete. `HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
 ## Summary
-
-Ran `skills/heartbeat/SKILL.md` at 2026-09-27 08:34 UTC (the 08:00 slot dispatching ~34m late).
-
-- **P0/P1/P2/P3:** all clear. Heartbeat self-check fine (~11h2m since last success, under both 12h P3 and 36h P0 thresholds). No open PRs, no urgent issues, no flagged memory items.
-- **Positive signal:** the 08:00 UTC slot dispatched — first time since 2026-09-20 (six consecutive 08:00 skips broken). Consecutive-dispatched-slot streak now at 3, one short of the 4-slot severity-downgrade threshold flagged in yesterday's log.
-- **Overall status:** 🟡 WATCH — driven solely by open `critical` ISS-002; severity held at `critical` for one more slot. If 2026-09-27 14:00 UTC also dispatches, next heartbeat downgrades to `high`.
-- **Notification:** skipped (positive signal, no new degradation trigger, mitigations still pending — re-notifying would just be noise).
-- **Files modified:** `docs/status.md`, `memory/issues/ISS-002.md`, `memory/logs/2026-09-27.md` (new).
-- **Follow-up:** operator mitigations from the 2026-09-24 ask (redundant `*/30` compensator cron / external `workflow_dispatch` ping) still unimplemented; the underlying pattern is easing on its own regardless.
+- **P0/P1/P2/P3 all clear.** heartbeat self-check green (last_success ~5h42m ago, 306/306 successes). No open PRs or urgent issues. No flagged memory items. Only heartbeat is enabled and it dispatched this slot ~18m late.
+- **ISS-002 severity downgraded `critical` → `high`** per yesterday's pre-flagged 4-slot recovery threshold. The consecutive-dispatched-slot streak reached 4 (2026-09-26 14:00 late + 20:00 late + 2026-09-27 08:00 late + 2026-09-27 14:00 late), and the recurring 08:00 UTC skip cadence broke on 2026-09-27. Trailing 12-slot skip rate down 83% → 66%.
+- **Files modified:** `memory/issues/ISS-002.md` (severity + history), `memory/issues/INDEX.md` (severity column), `docs/status.md` (refreshed with new severity), `memory/logs/2026-09-27.md` (log appended).
+- **Notification:** not sent — positive-signal continuation, no new degradation trigger, and the preceding notification (2026-09-24 15:16 UTC, ~71h ago) already carried the mitigation ask that's still deferred to the operator.
+- **Follow-up:** if 2026-09-27 20:00 UTC slot also dispatches, next heartbeat should consider a further downgrade `high` → `medium`.
