@@ -1,0 +1,180 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat WATCH",
+        "description": "ISS-002 escalated to HIGH severity"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert-escalation",
+        "sep-1",
+        "heading-current-status",
+        "text-run-info",
+        "stack-metrics",
+        "sep-2",
+        "heading-triple-skip",
+        "text-triple-skip",
+        "sep-3",
+        "heading-mitigations",
+        "stack-mitigations",
+        "sep-4",
+        "heading-reference",
+        "link-issue"
+      ]
+    },
+    "alert-escalation": {
+      "type": "Alert",
+      "props": {
+        "title": "Severity Escalated",
+        "message": "medium → high",
+        "type": "warning"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-current-status": {
+      "type": "Heading",
+      "props": {
+        "text": "Current Status",
+        "level": "h3"
+      }
+    },
+    "text-run-info": {
+      "type": "Text",
+      "props": {
+        "text": "This run is 2026-09-29 08:00 firing ~1h6m late. Last successful run was 35h30m ago (P3 flag, just under 36h P0 self-check threshold).",
+        "variant": "body"
+      }
+    },
+    "stack-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-staleness",
+        "stat-skip-rate"
+      ]
+    },
+    "stat-staleness": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Success Staleness",
+        "value": "35h30m",
+        "delta": "P3 flag, approaching P0 threshold (36h)"
+      }
+    },
+    "stat-skip-rate": {
+      "type": "Stat",
+      "props": {
+        "label": "Trailing 12-slot Skip Rate",
+        "value": "42%",
+        "delta": "5 skips + 7 late-runs"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-triple-skip": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-09-28 Triple-Skip Event",
+        "level": "h3"
+      }
+    },
+    "text-triple-skip": {
+      "type": "Text",
+      "props": {
+        "text": "Three consecutive missed runs at 08:00, 14:00, and 20:00 broke the 5-slot recovery streak celebrated on 2026-09-27.",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-mitigations": {
+      "type": "Heading",
+      "props": {
+        "text": "Named Mitigation Candidates",
+        "level": "h3"
+      }
+    },
+    "stack-mitigations": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-compensator",
+        "badge-workflow-dispatch",
+        "text-mitigation-status"
+      ]
+    },
+    "badge-compensator": {
+      "type": "Badge",
+      "props": {
+        "text": "Redundant */30 compensator cron",
+        "variant": "outline"
+      }
+    },
+    "badge-workflow-dispatch": {
+      "type": "Badge",
+      "props": {
+        "text": "External cron-job.org workflow_dispatch ping",
+        "variant": "outline"
+      }
+    },
+    "text-mitigation-status": {
+      "type": "Text",
+      "props": {
+        "text": "Both remain overdue — they were not implemented after the 2026-09-27 downgrade was deemed premature.",
+        "variant": "caption"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-reference": {
+      "type": "Heading",
+      "props": {
+        "text": "Reference",
+        "level": "h3"
+      }
+    },
+    "link-issue": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ISS-002 Full Details",
+        "href": "memory/issues/ISS-002.md"
+      }
+    }
+  }
+}
