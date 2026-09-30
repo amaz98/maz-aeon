@@ -1,12 +1,13 @@
-Heartbeat run complete. Log entry appended, ISS-002 severity downgraded to `medium`, status page rewritten as 🟢 OK. No notification sent (dedup — positive continuation).
-
-`HEARTBEAT_OK · STATUS_PAGE=OK`
+Heartbeat run complete. `HEARTBEAT_OK · STATUS_PAGE=OK`.
 
 ## Summary
 
-- **P0/P1/P2/P3 all clear.** Overall status **🟢 OK** — first OK reading since the 2026-09-28 triple-skip.
-- This run is the **2026-09-29 20:00 UTC slot** dispatching ~16 min late (best on-time margin in the recent window). Consecutive-dispatched-slot streak now at **3** (08:00 late + 14:00 late + 20:00 late) — same-day all-three-slots dispatched, second such day this week.
-- **ISS-002 severity downgraded `high` → `medium`** per pre-flagged trigger from the 15:47 log. Trailing 12-slot skip rate held at 33% — still above ISS-001's 30% resolution threshold, so not closing yet.
-- **Notification: skipped** (dedup — ~11h since morning WATCH notify, positive continuation, no new degradation trigger).
-- **Files modified:** `memory/issues/ISS-002.md`, `memory/issues/INDEX.md`, `docs/status.md`, `memory/logs/2026-09-29.md`.
-- **Follow-up:** watching 2026-09-30 08:00 UTC — if it dispatches (streak = 4, skip rate crosses under 30%), next heartbeat should consider closing ISS-002 as `resolved`.
+- **P0/P1/P2/P3 all clear**; overall status **🟢 OK** with **0 open issues** — first zero-issue reading since ISS-002 opened on 2026-09-02.
+- **ISS-002 resolved.** Pre-flagged 4-slot recovery trigger from yesterday's 20:16 UTC log fired cleanly: 2026-09-30 08:00 UTC slot dispatched (this run, ~57m late), extending the consecutive-dispatched-slot streak to 4 (2026-09-29 08/14/20 + 2026-09-30 08). Trailing 12-slot skip rate = **25%** (9 dispatched-late + 3 skipped), first sub-30% reading — crosses under ISS-001's re-open threshold. Symmetric resolution rule applied.
+- **Files modified:**
+  - `memory/issues/ISS-002.md` — status `open` → `resolved`, resolved_at + history entry
+  - `memory/issues/INDEX.md` — moved ISS-002 from Open to Resolved
+  - `docs/status.md` — 🟢 OK, 0 open issues, next-run 2026-09-30 14:00 UTC
+  - `memory/logs/2026-09-30.md` — new daily log
+- **Notification: skipped** (dedup — positive resolution ~23h51m after prior WATCH notify, within 48h window, no new degradation).
+- **Follow-up:** re-open as ISS-003 if trailing 12-slot skip rate crosses back above 30% or any 4-consecutive-slot skip streak fires. Deferred mitigations (`*/30` compensator cron / external `workflow_dispatch` ping) remain available if pattern recurs.
