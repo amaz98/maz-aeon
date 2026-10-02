@@ -1,0 +1,140 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert-degraded",
+        "sep-1",
+        "stack-details",
+        "sep-2",
+        "alert-watch"
+      ]
+    },
+    "alert-degraded": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 DEGRADED",
+        "message": "heartbeat ISS-003 opened (ISS-002 lineage)"
+      }
+    },
+    "sep-1": {
+      "type": "Separator"
+    },
+    "stack-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-severity",
+        "heading-skip-activity",
+        "text-skip-streak",
+        "text-skip-rate",
+        "heading-staleness",
+        "text-last-success",
+        "stat-staleness",
+        "heading-pattern",
+        "text-p0-check",
+        "text-pattern",
+        "text-mitigations"
+      ]
+    },
+    "badge-severity": {
+      "type": "Badge",
+      "props": {
+        "text": "Severity: high",
+        "variant": "destructive"
+      }
+    },
+    "heading-skip-activity": {
+      "type": "Heading",
+      "props": {
+        "text": "Skip Activity",
+        "level": "h3"
+      }
+    },
+    "text-skip-streak": {
+      "type": "Text",
+      "props": {
+        "text": "4-slot skip streak: 2026-10-01 (all three slots) + 2026-10-02 08:00",
+        "variant": "body"
+      }
+    },
+    "text-skip-rate": {
+      "type": "Text",
+      "props": {
+        "text": "50% trailing 12-slot skip rate",
+        "variant": "body"
+      }
+    },
+    "heading-staleness": {
+      "type": "Heading",
+      "props": {
+        "text": "Staleness",
+        "level": "h3"
+      }
+    },
+    "text-last-success": {
+      "type": "Text",
+      "props": {
+        "text": "Last success: 2026-09-30 20:25 UTC",
+        "variant": "caption"
+      }
+    },
+    "stat-staleness": {
+      "type": "Stat",
+      "props": {
+        "label": "Staleness",
+        "value": "41h42m",
+        "delta": "5h42m over 36h threshold",
+        "trend": "up"
+      }
+    },
+    "heading-pattern": {
+      "type": "Heading",
+      "props": {
+        "text": "Pattern & Mitigations",
+        "level": "h3"
+      }
+    },
+    "text-p0-check": {
+      "type": "Text",
+      "props": {
+        "text": "P0 self-check fired for the first time since 2026-09-22",
+        "variant": "body"
+      }
+    },
+    "text-pattern": {
+      "type": "Text",
+      "props": {
+        "text": "Third recurrence of the ISS-001→002 pattern — re-open triggers met (4-slot skip streak and 50% trailing 12-slot skip rate)",
+        "variant": "body"
+      }
+    },
+    "text-mitigations": {
+      "type": "Text",
+      "props": {
+        "text": "Mitigations now overdue for the third time: redundant */30 compensator cron and external cron-job.org workflow_dispatch ping",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator"
+    },
+    "alert-watch": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Critical Watch Point",
+        "message": "Watching 2026-10-02 20:00 UTC — if that slot also skips, next heartbeat escalates from high to critical"
+      }
+    }
+  }
+}
