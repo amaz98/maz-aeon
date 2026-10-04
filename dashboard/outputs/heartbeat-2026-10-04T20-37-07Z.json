@@ -1,0 +1,179 @@
+{
+  "root": "card_heartbeat",
+  "state": {},
+  "elements": {
+    "card_heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat Health Status",
+        "description": "Critical system monitoring alert"
+      },
+      "children": [
+        "header_stack",
+        "sep1",
+        "metrics_section",
+        "sep2",
+        "details_section",
+        "sep3",
+        "action_alert"
+      ]
+    },
+    "header_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_degraded",
+        "badge_critical",
+        "badge_issue"
+      ]
+    },
+    "badge_degraded": {
+      "type": "Badge",
+      "props": {
+        "text": "🔴 DEGRADED",
+        "variant": "destructive"
+      }
+    },
+    "badge_critical": {
+      "type": "Badge",
+      "props": {
+        "text": "Escalated: high → critical",
+        "variant": "destructive"
+      }
+    },
+    "badge_issue": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-003",
+        "variant": "outline"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "metrics_heading",
+        "metrics_grid"
+      ]
+    },
+    "metrics_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Health Metrics",
+        "level": "h3"
+      }
+    },
+    "metrics_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_last_success",
+        "stat_skip_streak",
+        "progress_skip_rate",
+        "stat_blackouts"
+      ]
+    },
+    "stat_last_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Success Age",
+        "value": "54 hours",
+        "delta": "Stale since 2026-10-02 14:10 UTC",
+        "trend": "down"
+      }
+    },
+    "stat_skip_streak": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive Skip Slots",
+        "value": "6",
+        "delta": "2026-10-02 20:00 → 2026-10-04 14:00",
+        "trend": "down"
+      }
+    },
+    "progress_skip_rate": {
+      "type": "Progress",
+      "props": {
+        "label": "Trailing 12-Slot Skip Rate",
+        "value": 83,
+        "max": 100
+      }
+    },
+    "stat_blackouts": {
+      "type": "Stat",
+      "props": {
+        "label": "Full-Day Blackouts",
+        "value": "2",
+        "trend": "down"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "details_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "details_heading",
+        "detail_trigger",
+        "detail_recurrence"
+      ]
+    },
+    "details_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Escalation Details",
+        "level": "h3"
+      }
+    },
+    "detail_trigger": {
+      "type": "Text",
+      "props": {
+        "text": "Pre-flagged escalation trigger has fired",
+        "variant": "body"
+      }
+    },
+    "detail_recurrence": {
+      "type": "Text",
+      "props": {
+        "text": "Third recurrence detected. Mitigations are hard-overdue.",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Action Required — Deadline: 2026-10-05 08:00 UTC",
+        "message": "Add a compensator cron or external workflow_dispatch ping before deadline. Failure will trigger manual dispatch and page the owner.",
+        "type": "warning"
+      }
+    }
+  }
+}

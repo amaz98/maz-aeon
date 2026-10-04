@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected | Affected Skills |
 |----|-------|----------|----------|----------|-----------------|
-| [ISS-003](ISS-003.md) | Recurring heartbeat dispatch slot skips (ISS-002 lineage) | high | permanent-limitation | 2026-10-02 | heartbeat |
+| [ISS-003](ISS-003.md) | Recurring heartbeat dispatch slot skips (ISS-002 lineage) | critical | permanent-limitation | 2026-10-02 | heartbeat |
 
 ## Resolved
 
