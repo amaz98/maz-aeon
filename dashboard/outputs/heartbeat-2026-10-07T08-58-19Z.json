@@ -1,0 +1,186 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "Health check and monitoring"
+      },
+      "children": [
+        "header-stack",
+        "sep-1",
+        "content-stack",
+        "sep-2",
+        "alert-critical"
+      ]
+    },
+    "header-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-status",
+        "text-timestamp"
+      ]
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "DEGRADED",
+        "variant": "destructive"
+      }
+    },
+    "text-timestamp": {
+      "type": "Text",
+      "props": {
+        "text": "2026-10-07 08:00",
+        "variant": "muted"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issue-text",
+        "dispatch-stat",
+        "staleness-stat",
+        "skip-rate-stat",
+        "severity-text",
+        "mitigation-text",
+        "blackout-section",
+        "recovery-section"
+      ]
+    },
+    "issue-text": {
+      "type": "Text",
+      "props": {
+        "text": "Issue: ISS-003 regression",
+        "variant": "body"
+      }
+    },
+    "dispatch-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Dispatch latency",
+        "value": "~55m late"
+      }
+    },
+    "staleness-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "last_success staleness",
+        "value": "47h",
+        "delta": "+11h over 36h threshold",
+        "trend": "down"
+      }
+    },
+    "skip-rate-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Trailing 12-slot skip rate",
+        "value": "75%"
+      }
+    },
+    "severity-text": {
+      "type": "Text",
+      "props": {
+        "text": "Severity: critical (ceiling)",
+        "variant": "body"
+      }
+    },
+    "mitigation-text": {
+      "type": "Text",
+      "props": {
+        "text": "Mitigations: four-recurrences overdue",
+        "variant": "body"
+      }
+    },
+    "blackout-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blackout-label",
+        "blackout-period"
+      ]
+    },
+    "blackout-label": {
+      "type": "Text",
+      "props": {
+        "text": "5-slot blackout period",
+        "variant": "lead"
+      }
+    },
+    "blackout-period": {
+      "type": "Text",
+      "props": {
+        "text": "2026-10-05 14:00 → 2026-10-06 20:00",
+        "variant": "body"
+      }
+    },
+    "recovery-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "recovery-label",
+        "recovery-detail",
+        "streak-stat"
+      ]
+    },
+    "recovery-label": {
+      "type": "Text",
+      "props": {
+        "text": "Previous recovery attempt (2026-10-05)",
+        "variant": "lead"
+      }
+    },
+    "recovery-detail": {
+      "type": "Text",
+      "props": {
+        "text": "2 late dispatches — did not sustain",
+        "variant": "body"
+      }
+    },
+    "streak-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolution streak",
+        "value": "0",
+        "delta": "reset (was on track for 4)",
+        "trend": "down"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-critical": {
+      "type": "Alert",
+      "props": {
+        "title": "P0 Self-Check & Next Action Required",
+        "message": "P0 self-check fires again. If the 2026-10-07 14:00 UTC slot skips, next heartbeat should manual-workflow_dispatch as a stopgap and page the operator.",
+        "type": "error"
+      }
+    }
+  }
+}
