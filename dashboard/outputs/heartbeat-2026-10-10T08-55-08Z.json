@@ -1,0 +1,157 @@
+{
+  "root": "heartbeat_card",
+  "state": {},
+  "elements": {
+    "heartbeat_card": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "main_alert",
+        "sep1",
+        "metrics_stack",
+        "sep2",
+        "details_stack"
+      ]
+    },
+    "main_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 Heartbeat DEGRADED — ISS-003 regression",
+        "message": "Status transitioned from 🟡 WATCH to 🔴 DEGRADED. Severity: critical. Operator action required.",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "metrics_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blackout_heading",
+        "blackout_text",
+        "p0_stat",
+        "resolution_stat",
+        "skip_rate_stat"
+      ]
+    },
+    "blackout_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3-Slot Blackout",
+        "level": "h3"
+      }
+    },
+    "blackout_text": {
+      "type": "Text",
+      "props": {
+        "text": "Formed on 2026-10-09: 08:00 + 14:00 + 20:00 all skipped",
+        "variant": "body"
+      }
+    },
+    "p0_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "P0 Self-Check Stale Time",
+        "value": "36h 25m",
+        "delta": "36h threshold exceeded by 25m",
+        "trend": "down"
+      }
+    },
+    "resolution_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolution Streak",
+        "value": "1 of 4",
+        "delta": "Reset from 2 → 0",
+        "trend": "down"
+      }
+    },
+    "skip_rate_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Trailing 12-Slot Skip Rate",
+        "value": "58.3%",
+        "delta": "7 skipped of 12 slots",
+        "trend": "down"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "details_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "timestamp_text",
+        "mitigation_heading",
+        "mitigation_items"
+      ]
+    },
+    "timestamp_text": {
+      "type": "Text",
+      "props": {
+        "text": "Current run: 2026-10-10 08:52 UTC",
+        "variant": "caption"
+      }
+    },
+    "mitigation_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Mitigations Required",
+        "level": "h3"
+      }
+    },
+    "mitigation_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "m1",
+        "m2",
+        "m3",
+        "m4"
+      ]
+    },
+    "m1": {
+      "type": "Text",
+      "props": {
+        "text": "Six-recurrences overdue — operator action required",
+        "variant": "body"
+      }
+    },
+    "m2": {
+      "type": "Text",
+      "props": {
+        "text": "Redundant ×5 compensator cron",
+        "variant": "body"
+      }
+    },
+    "m3": {
+      "type": "Text",
+      "props": {
+        "text": "External workflow_dispatch ping, or",
+        "variant": "body"
+      }
+    },
+    "m4": {
+      "type": "Text",
+      "props": {
+        "text": "Substantive weekly commit to lift scheduling priority",
+        "variant": "body"
+      }
+    }
+  }
+}
