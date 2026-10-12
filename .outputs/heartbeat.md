@@ -1,10 +1,14 @@
-`HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md`
+Heartbeat run complete.
+
+HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
 
 ## Summary
 
-- **P0 self-check CLEARS** — heartbeat `last_success` 2026-10-10 15:02 UTC → 23h13m stale, well under 36h threshold. No failed/stuck skills. No open PRs. No urgent issues. No flagged memory items.
-- **Dispatch state** — 2026-10-10 20:00 UTC and 2026-10-11 08:00 UTC both skipped (2-slot blackout, one short of the 3-slot escalation threshold); this run (2026-10-11 14:00 UTC slot) dispatched late at 14:15 — smallest lateness of the current ISS-003 cycle.
-- **ISS-003 (open, critical) oscillation holds.** Resolution streak regressed 2 → 0 → 1 of 4 — the hoped-for 10-10 14:00 + 10-10 20:00 "best pair" never formed. Trailing 12-slot skip rate flat at 50% (6/12); window-edge swap identical in skip/dispatch mix. Overall status page **🟡 WATCH → 🟡 WATCH** per the pre-flagged hold-🟡 branch from the 10-10 14:59 filing (no P0 fire + no 3-slot blackout).
-- **Files modified**: `memory/issues/ISS-003.md` (root_cause narrative + observation table + notification history extended), `docs/status.md` (fresh timestamp, last-run bumped to 2026-10-10 15:02 UTC, next-run bumped to 2026-10-11 20:00 UTC), `memory/logs/2026-10-11.md` (new file for today).
-- **Notification**: NOT sent (dedup — previous notify ~29h23m ago within 48h window; state matches pre-flagged hold-🟡 branch; no P0 fire, no 3-slot blackout, no severity movement).
-- **Follow-up**: ISS-003 mitigations remain **six-recurrences overdue**. Watching 2026-10-11 20:00 UTC — a dispatch advances streak to 2 of 4 and drops skip rate to 41.7%; a skip forms a 3-slot blackout across 10-10 20:00 + 10-11 08:00 + 10-11 20:00, at which point the next heartbeat should actually fire the manual `workflow_dispatch` stopgap this time instead of just naming it — the escalation path has been pre-named across five filings without manual intervention.
+- **P0 self-check CLEARS** — last_success 2026-10-11T14:18:53Z, 18h9m stale (< 36h). No failed/stuck/degraded skills.
+- **P1/P2/P3 clear** — no PRs, no urgent issues, no flagged memory, this run IS the 2026-10-12 08:00 UTC slot.
+- **Dispatch pattern:** 2026-10-11 20:00 skipped (single-slot), 2026-10-12 08:00 dispatched late at 08:28 (~28m). Resolution streak 1 → 0 → 1 of 4. Trailing 12-slot skip rate flat at **50%** — sixth consecutive reading at exactly 50% (stuck at plateau).
+- **Overall status:** 🟡 WATCH → 🟡 WATCH (open critical ISS-003 gates away from OK).
+- **Correction:** the 10-11 14:15 UTC filing's "3-slot blackout forming across 10-10 20:00 + 10-11 08:00 + 10-11 20:00" wording was a definitional error — those three skips are NOT consecutive (10-11 14:00 dispatched between), so the pre-flagged `workflow_dispatch` fire condition did not trigger.
+- **Notify suppressed** — previous notify ~47h36m ago (within 48h dedup window by ~24m), state matches pre-flagged hold-🟡 branch, no new escalation.
+- Files modified: `docs/status.md`, `memory/issues/ISS-003.md`, `memory/logs/2026-10-12.md`.
+- Follow-up: watching 2026-10-12 14:00 UTC — a dispatch there finally shifts the skip-rate plateau to 41.7% (first movement in six readings).
