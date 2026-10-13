@@ -1,0 +1,193 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "Service status monitoring"
+      },
+      "children": [
+        "alert_degraded",
+        "sep1",
+        "section_blackout",
+        "sep2",
+        "section_escalation",
+        "sep3",
+        "section_metrics",
+        "sep4",
+        "section_resolution"
+      ]
+    },
+    "alert_degraded": {
+      "type": "Alert",
+      "props": {
+        "title": "DEGRADED",
+        "message": "heartbeat 3-slot blackout with recovery delay",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_blackout": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_blackout",
+        "text_blackout_details"
+      ]
+    },
+    "heading_blackout": {
+      "type": "Heading",
+      "props": {
+        "text": "Blackout Timeline",
+        "level": "h3"
+      }
+    },
+    "text_blackout_details": {
+      "type": "Text",
+      "props": {
+        "text": "3-slot blackout:\n• 10-12 14:00 — skipped\n• 10-12 20:00 — skipped\n• 10-13 08:00 — skipped\n\nRecovered at 15:03 UTC (1h3m late)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_escalation": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_escalation",
+        "issue_badge",
+        "text_escalation_details"
+      ]
+    },
+    "heading_escalation": {
+      "type": "Heading",
+      "props": {
+        "text": "ISS-003 Escalation",
+        "level": "h3"
+      }
+    },
+    "issue_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "First Attempt Failed",
+        "variant": "destructive"
+      }
+    },
+    "text_escalation_details": {
+      "type": "Text",
+      "props": {
+        "text": "Pre-flagged gh workflow run stopgap returned HTTP 403.\n\nRoot cause: .github/workflows/aeon.yml has actions: read + issues: read permissions, not write. Self-dispatch and self-issue-filing paths are structurally blocked from inside the runner.\n\nSix prior filings' 'actually fire this time' promises were non-executable. The escalation lineage has been a dead-letter loop."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_metrics",
+        "stat_skip_rate",
+        "text_metrics_detail"
+      ]
+    },
+    "heading_metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Metrics",
+        "level": "h3"
+      }
+    },
+    "stat_skip_rate": {
+      "type": "Stat",
+      "props": {
+        "label": "Trailing 12-slot skip rate",
+        "value": "58.3%",
+        "delta": "50% → 58.3%",
+        "trend": "up"
+      }
+    },
+    "text_metrics_detail": {
+      "type": "Text",
+      "props": {
+        "text": "First ratio movement in 7 readings"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_resolution": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_resolution",
+        "text_resolution_details",
+        "list_options"
+      ]
+    },
+    "heading_resolution": {
+      "type": "Heading",
+      "props": {
+        "text": "Required Resolution",
+        "level": "h3"
+      }
+    },
+    "text_resolution_details": {
+      "type": "Text",
+      "props": {
+        "text": "Operator action required. Choose one of the following options:"
+      }
+    },
+    "list_options": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opt1",
+        "opt2",
+        "opt3"
+      ]
+    },
+    "opt1": {
+      "type": "Text",
+      "props": {
+        "text": "1. Grant actions: write + issues: write on aeon.yml"
+      }
+    },
+    "opt2": {
+      "type": "Text",
+      "props": {
+        "text": "2. Provide a PAT secret with repo scope"
+      }
+    },
+    "opt3": {
+      "type": "Text",
+      "props": {
+        "text": "3. Implement one of three originally proposed mitigations: redundant cron / external ping / substantive weekly commit"
+      }
+    }
+  }
+}
