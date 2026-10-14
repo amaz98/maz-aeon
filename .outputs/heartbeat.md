@@ -1,18 +1,13 @@
-Heartbeat run complete. HEARTBEAT_OK · STATUS_PAGE=WATCH.
+HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
 
 ## Summary
 
-**Verdict:** 🟡 WATCH (down from 🔴 DEGRADED) · notify suppressed by dedup.
-
-- **P0 clears** — heartbeat `last_success` 5h27m stale (freshest reading of this incident cycle), 326/326 runs, zero consecutive failures.
-- **P1/P2/P3 clear** — no PRs, no urgent issues, no flagged memory items; this run IS the 2026-10-13 20:00 UTC slot dispatching ~37m late.
-- **ISS-003 recovery branch** — 2026-10-13 20:00 UTC slot dispatched on its own, resolving the pre-flagged "dispatches-on-its-own" branch of the 15:03 filing. Resolution streak advances **1 → 2 of 4** (first back-to-back pair since 10-10 08:52 + 14:59). Trailing 12-slot skip rate drops **58.3% → 50%** (window-edge swap: 10-09 20:00 ❌ ages out, 10-13 20:00 ✅ enters). Severity held at critical pending full 4-slot streak + skip rate <30%.
-- **Structural-blocker finding stands** — workflow `actions: read` + `issues: read` still block the self-dispatch stopgap and self-issue-filing escalation paths. Not retested (slot self-dispatched), but still requires operator-side action for the next incident cycle.
-- **Notification SUPPRESSED** — previous notify was 5h34m ago (well inside 48h dedup window); state improving on every axis, no new regression signal.
-
-**Files modified:**
-- `docs/status.md` — 🔴 → 🟡 WATCH, timestamp 2026-10-13 20:37 UTC, next-run 2026-10-14 08:00 UTC
-- `memory/issues/ISS-003.md` — observation table extended with 10-13 20:00 ✅, root_cause + notification history appended with full streak-advance entry
-- `memory/logs/2026-10-13.md` — appended 20:37 UTC entry
-
-**Follow-up:** operator must still raise workflow permissions (`actions: write` + `issues: write`), add a PAT secret with `repo` scope, or implement one of the three mitigations (redundant cron / external ping / substantive weekly commit). Watching 2026-10-14 08:00 UTC — a dispatch takes the streak to 3 of 4 and drops skip rate below 50% for the first time since 10-10 14:59.
+- **P0 self-check CLEARS.** heartbeat last_success 12h47m stale (comfortable under 36h threshold). No failed/stuck skills; no API degradation; on-chain-monitor's 0.5 success rate below the 5-run chronic-failure gate.
+- **P1/P2 clear.** No open PRs, no urgent issues, no flagged memory items.
+- **P3 borderline-fires-into-clear.** This run IS the 2026-10-14 08:00 UTC slot dispatching late at 09:27 (~1h27m late — **new worst-lateness of this incident cycle**). Bundled into ISS-003.
+- **ISS-003 streak-of-three milestone.** Resolution streak advances 2 → 3 of 4 — **first streak-of-three of this incident cycle** (10-13 14 ✅ + 10-13 20 ✅ + 10-14 08 ✅). Trailing 12-slot skip rate holds flat at 50% (window-edge swap dispatch-for-dispatch). Noted correction to the 10-13 20:37 UTC filing's "drops to 41.7%" projection — the sliding window ages by slot position, not skip/dispatch nature, so the actual aged-out slot (10-10 08) was a dispatch. Severity held at critical pending skip rate <30%.
+- Structural-blocker finding (workflow `actions: read` + `issues: read` block self-dispatch stopgap + self-issue-filing) stands — not retested, not needed, still operator-side only.
+- Overall status: **🟡 WATCH (unchanged)** — open critical ISS-003 gates away from 🟢, no P0 fire to push to 🔴.
+- Notification: **NOT sent** (dedup; previous ~18h24m ago; state matches pre-flagged streak-advance branch; dominant signal improving).
+- Files created/modified: `memory/logs/2026-10-14.md` (new), `memory/issues/ISS-003.md` (root_cause + observation table + notification history extended), `docs/status.md` (fresh timestamp, last-run bumped to 2026-10-13 20:40 UTC, next-run 2026-10-14 14:00 UTC).
+- Follow-up: operator-side permission fix / PAT / mitigation still outstanding. Watching 2026-10-14 14:00 UTC — if that dispatches, streak = 4/4 (streak portion satisfied for first time this cycle) but skip rate still binding; earliest arithmetically-possible severity downgrade is 10-15 14:00 UTC under best-case continued-dispatch assumption.
