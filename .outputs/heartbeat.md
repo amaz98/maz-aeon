@@ -1,15 +1,12 @@
-All three files updated: `docs/status.md`, `memory/issues/ISS-003.md`, `memory/logs/2026-10-15.md`.
+All three updates landed. Final log line:
 
-Final verdict: `HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md`
+HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
 
 ## Summary
 
-- **P0 clears** (last_success 19h11m stale vs 36h threshold — comfortable clear). This run IS the 2026-10-15 08:00 UTC slot dispatching ~1h52m late at 09:52 UTC — **new worst-lateness of this incident cycle**, exceeding the prior 1h27m worst from 10-14 09:27.
-- **ISS-003 streak-portion milestone undone one slot after satisfaction.** The 2026-10-14 20:00 UTC slot skipped, resetting the resolution streak 4 → 0 → 1 of 4. The 10-14 14:38 UTC "streak-of-four, severity-downgrade streak-portion satisfied for the first time this cycle" milestone proved to be a single-slot peak. The 14:38 UTC filing's "earliest arithmetically-possible severity downgrade at 10-15 20:00" projection is now unreachable.
-- **First ratio drop under 50% of this cycle.** Trailing 12-slot skip rate drops 50% → 41.7% (5/12) — first drop under 50% since 2026-10-10 14:59 UTC. Window-edge swap: 10-10 20 ❌ + 10-11 08 ❌ age out; 10-14 20 ❌ + 10-15 08 ✅ enter; net -1 skip. Still 1.39× the 30% re-open threshold.
-- **Overall status 🟡 WATCH (unchanged)** — neither pre-flagged 🔴-escalation trigger fired (P0 clear + 10-15 08:00 dispatched late, not skipped). Open critical ISS-003 still gates away from 🟢 OK.
-- **Mixed-signal reading** — streak axis regresses sharply, skip rate axis improves on the binding constraint.
-- Structural-blocker finding from 10-13 15:03 UTC stands — resolution still operator-side only (`actions: write` + `issues: write` permissions gap on `.github/workflows/aeon.yml`).
-- Files created/modified: `memory/issues/ISS-003.md`, `docs/status.md`, `memory/logs/2026-10-15.md`.
-- Notification: **NOT sent** (dedup — ~42h49m since prior notify, inside 48h window by ~5h11m; matches pre-flagged skip-resets-streak branch; no new 🔴 trigger).
-- Follow-up: operator-side permission fix / PAT / mitigation still outstanding. Watching 2026-10-15 14:00 UTC.
+- **P0 self-check CLEARS** at 2026-10-15 14:38 UTC — last_success 4h43m stale (freshest P0 reading of this incident cycle). No failed/stuck skills, no urgent PRs or issues, no flagged memory items.
+- **P3 clears**: this run is the 2026-10-15 14:00 UTC slot dispatching ~38m late — pre-flagged streak-advance branch of the 09:52 UTC filing resolved exactly as projected.
+- **ISS-003 state**: streak rebuilds 1 → 2 of 4 (first streak-of-two since the 10-14 20:00 reset). Trailing 12-slot skip rate holds flat at 41.7% on the dispatch-for-dispatch window-edge swap (10-11 14 ✅ out, 10-15 14 ✅ in), matching the 09:52 UTC projection exactly. Severity held at critical. Status page: 🟡 WATCH (unchanged — open critical ISS-003 still gates away from 🟢 OK).
+- **Notification**: NOT sent (dedup — previous notify 2026-10-13 15:03 UTC was ~47h35m ago, still inside 48h window by ~25m — narrowest dedup clearance of this cycle; state matches pre-flagged dispatches-on-its-own branch; dominant signal improving).
+- **Files modified**: `memory/issues/ISS-003.md` (root_cause + observation table + notification history extended), `docs/status.md` (regenerated — fresh timestamp, last-run bumped to 09:55 UTC, next-run 20:00 UTC), `memory/logs/2026-10-15.md` (14:38 UTC entry appended).
+- **Follow-up**: Operator-side permission fix / PAT / mitigation on `.github/workflows/aeon.yml` (`actions: write` + `issues: write`) still outstanding — structural-blocker finding from 10-13 15:03 UTC stands. Watching 10-15 20:00 UTC: dispatch → streak 3/4 + first ratio drop below 41.7% of this cycle (to 33.3%); skip → streak resets but P0 won't fire from a single skip.
