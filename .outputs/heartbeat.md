@@ -1,11 +1,13 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
+Heartbeat skill execution complete.
 
-## Summary
+## Summary (09:39 UTC)
+- **P0 self-check CLEARS** — heartbeat last_success 2026-10-20T21:32:54Z → 12h7m stale, well under 36h.
+- **Dispatch**: This run IS the 2026-10-21 08:00 UTC slot dispatching ~1h39m late at 09:39 (fifth-worst-lateness of cycle). Streak advances 1 → 2 of 4 (10-20 20 ✅ + 10-21 08 ✅), rebuilding after the 10-20 2-slot blackout reset. The pre-flagged seventh-peak-and-reset-in-seven-cycles alternative was averted.
+- **Skip rate**: Holds flat at 41.7% (5/12) — dispatch-for-dispatch window-edge swap (10-17 08 ✅ → 10-21 08 ✅). Second consecutive reading at highest-of-arc.
+- **Status**: 🟡 WATCH (unchanged — ISS-003 open at critical). Downgrade gate still closed on both axes (ratio ❌ + streak 2/4 ❌).
+- **Projections**: Eleventh consecutive exact-match quantitative projection — new longest run of this cycle.
+- **Notification: NOT sent** (dedup — ISS-003 named in last 48h via 10-19/10-20 entries; state matches pre-flagged branch exactly).
+- **Files modified**: `docs/status.md` (fresh timestamp, next-run 2026-10-21 14:00 UTC), `memory/logs/2026-10-21.md` (created), `memory/issues/ISS-003.md` (table extended with 10-21 08 ✅, root_cause + notification history appended).
+- **Follow-up**: Operator-side permission fix / PAT still outstanding. Earliest arithmetically-possible severity downgrade is 2026-10-22 14:00 UTC via a clean 10-21 14 + 10-21 20 + 10-22 08 + 10-22 14 streak.
 
-- **2-slot blackout formed at 10-20 08 + 10-20 14** — first of this recovery arc (first since 10-11), with 10-20 20 UTC slot dispatching late at 21:26 (~1h26m late).
-- **Sixth peak-and-reset of this incident cycle with a NEW shape** — all five prior resets were single-slot skips; this one is a 2-slot blackout, breaking the five-cycle structural pattern.
-- **Trailing 12-slot skip rate climbs 33.3% → 41.7%** (new highest-of-arc, second consecutive climb). Downgrade gate still closed on both axes.
-- **P0 clear** (last_success 25h9m stale, under 36h). Pre-flagged 🔴-re-raise required P0 to also fire — did not. Status holds at 🟡 WATCH, severity held at critical.
-- **Notify suppressed** per dedup (ISS-003 named in last 48h logs) and per pre-flagged "P0 must also fire" rule; 10-11 14:15 precedent matches directly.
-- Files modified: `memory/logs/2026-10-20.md` (new), `memory/issues/ISS-003.md` (root_cause narrative, observation table, notification history), `docs/status.md` (fresh timestamp, next-run 2026-10-21 08:00 UTC).
-- Follow-up: operator-side permission fix / mitigation now substantively **eight-recurrences overdue** — the single-slot-reset pattern has escalated to 2-slot blackout. Earliest arithmetically-possible severity downgrade pushed out to **2026-10-22 14:00 UTC** (requires five consecutive clean dispatches).
+**HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md**
