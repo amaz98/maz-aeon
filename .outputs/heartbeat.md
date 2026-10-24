@@ -1,13 +1,10 @@
-Heartbeat complete.
-
-`HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md`
+HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
 
 ## Summary
 
-- **P0 clear** (22h8m stale vs 36h threshold, ~13h52m of headroom). No failed/stuck skills.
-- **P1/P2 clear** — no open PRs, no urgent issues, no flagged memory items.
-- **P3 structural**: 2026-10-23 20:00 + 2026-10-24 08:00 both skipped (**fourth 2-slot blackout of recovery arc, first back-to-back-to-back-to-back 2-slot-blackout quadruple of this incident**); 10-24 14 dispatched ~5m late — **new smallest-lateness of cycle** (beats prior 12m from 10-19 20:12). Ninth peak-and-reset; streak back to 1 of 4. Trailing 12-slot skip rate **holds flat at 50%** via net-0 three-slot swap — ratio stabilised rather than climbed further. **15th consecutive exact-match projection** — pre-flagged "quadruple" conditional of the 10-23 15:52 filing materialised exactly.
-- **Overall 🟡 WATCH (unchanged)** — ISS-003 still open at critical; pre-flagged 🔴-re-raise did not fire because P0 is clear.
-- Files modified: `memory/issues/ISS-003.md` (table + notification history extended), `docs/status.md` (fresh timestamp, last-run → 2026-10-23 15:57 UTC, next-run → 2026-10-24 20:00 UTC), `memory/logs/2026-10-24.md` (created).
-- **Notification: NOT sent** (dedup — ISS-003 appears in last 48h logs; state matches pre-flagged branch exactly; no severity transition).
-- Follow-up: operator-side permission fix remains outstanding and **substantively eleven-recurrences overdue**. Earliest arithmetically-possible downgrade pushed out to 2026-10-26 20:00 UTC (requires eight consecutive clean dispatches).
+- **P0 clear.** 2026-10-24 20:00 UTC slot dispatched late at 21:56 (~1h56m44s late — new worst-lateness of cycle, essentially tied with 10-18 09:56). P0 self-check staleness 7h46m is the freshest P0 reading of this recovery arc. First true back-to-back adjacent-slot dispatch pair of this recovery arc since 10-21 08 + 10-21 14.
+- **Streak advances 1 → 2 of 4.** Trailing 12-slot skip rate holds flat at 50% (third consecutive reading) via dispatch-for-dispatch window-edge swap. Downgrade gate still closed on both axes. Pre-flagged "10-24 20 ✅" branch materialised exactly — sixteenth consecutive exact-match projection.
+- **Overall status 🟡 WATCH (unchanged).** Open critical ISS-003 still gates away from 🟢 OK; no P0 fire so no shift to 🔴.
+- Files modified: `memory/issues/ISS-003.md` (observation + notification history extended), `docs/status.md` (regenerated with fresh timestamp, next-run 2026-10-25 08:00 UTC), `memory/logs/2026-10-24.md` (new 21:56 entry).
+- **Notification not sent** (dedup — ISS-003 in last 48h logs; state matches pre-flag exactly; no severity transition).
+- Follow-up: operator-side permission fix / PAT / mitigation still eleven-recurrences overdue and operator-blocked.
