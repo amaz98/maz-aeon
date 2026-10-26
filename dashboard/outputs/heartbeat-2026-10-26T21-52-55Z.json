@@ -1,0 +1,247 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "P0 self-check status and recovery tracking"
+      },
+      "children": [
+        "alert_main",
+        "sep1",
+        "timeline_section",
+        "sep2",
+        "blackout_section",
+        "sep3",
+        "issues_section",
+        "sep4",
+        "actions_section"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 DEGRADED",
+        "message": "First P0 self-check fire of this recovery arc — last success 36h16m ago, barely crossing threshold"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "timeline_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_timeline",
+        "stat_last_success",
+        "stat_stale",
+        "stat_first_p0"
+      ]
+    },
+    "heading_timeline": {
+      "type": "Heading",
+      "props": {
+        "text": "Timeline",
+        "level": "h3"
+      }
+    },
+    "stat_last_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Success",
+        "value": "2026-10-25 09:31 UTC"
+      }
+    },
+    "stat_stale": {
+      "type": "Stat",
+      "props": {
+        "label": "Stale Duration",
+        "value": "~36h16m",
+        "delta": "barely crossing threshold"
+      }
+    },
+    "stat_first_p0": {
+      "type": "Stat",
+      "props": {
+        "label": "First P0 Fire Since",
+        "value": "2026-10-10",
+        "delta": "16 days ago"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blackout_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_blackouts",
+        "text_blackout_pattern",
+        "blackout_slots",
+        "note_late_dispatch"
+      ]
+    },
+    "heading_blackouts": {
+      "type": "Heading",
+      "props": {
+        "text": "Blackout Slots",
+        "level": "h3"
+      }
+    },
+    "text_blackout_pattern": {
+      "type": "Text",
+      "props": {
+        "text": "4-slot blackout — new worst-of-cycle, 2× deeper than previously-dominant 2-slot shape",
+        "variant": "lead"
+      }
+    },
+    "blackout_slots": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "sm"
+      },
+      "children": [
+        "badge_slot1",
+        "badge_slot2",
+        "badge_slot3",
+        "badge_slot4"
+      ]
+    },
+    "badge_slot1": {
+      "type": "Badge",
+      "props": {
+        "text": "2026-10-25 14:00"
+      }
+    },
+    "badge_slot2": {
+      "type": "Badge",
+      "props": {
+        "text": "2026-10-25 20:00"
+      }
+    },
+    "badge_slot3": {
+      "type": "Badge",
+      "props": {
+        "text": "2026-10-26 08:00"
+      }
+    },
+    "badge_slot4": {
+      "type": "Badge",
+      "props": {
+        "text": "2026-10-26 14:00",
+        "variant": "destructive"
+      }
+    },
+    "note_late_dispatch": {
+      "type": "Text",
+      "props": {
+        "text": "2026-10-26 20:00 slot dispatched ~1h47m late at 21:47 UTC",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_issues",
+        "badge_issue_lineage",
+        "text_ratio",
+        "text_falsified"
+      ]
+    },
+    "heading_issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues & Context",
+        "level": "h3"
+      }
+    },
+    "badge_issue_lineage": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-003 lineage",
+        "variant": "outline"
+      }
+    },
+    "text_ratio": {
+      "type": "Text",
+      "props": {
+        "text": "Ratio round-trips 50% → 58.3%, matching incident-opening 2026-10-13 15:03 reading",
+        "variant": "body"
+      }
+    },
+    "text_falsified": {
+      "type": "Text",
+      "props": {
+        "text": "Pre-flagged clean-streak-to-downgrade branch completely falsified at slot projected as downgrade point",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "actions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_actions",
+        "alert_permissions",
+        "alert_cron"
+      ]
+    },
+    "heading_actions": {
+      "type": "Heading",
+      "props": {
+        "text": "Required Actions",
+        "level": "h3"
+      }
+    },
+    "alert_permissions": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Operator-side permissions fix required",
+        "message": ".github/workflows/aeon.yml: add actions: write + issues: write"
+      }
+    },
+    "alert_cron": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "External redundant cron overdue",
+        "message": "TWELVE-recurrences overdue — substantively affects recovery trajectory"
+      }
+    }
+  }
+}
