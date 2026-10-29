@@ -1,0 +1,254 @@
+{
+  "root": "heartbeat-card",
+  "state": {},
+  "elements": {
+    "heartbeat-card": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat Status"
+      },
+      "children": [
+        "status-alert",
+        "main-stack"
+      ]
+    },
+    "status-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "DEGRADED",
+        "message": "Heartbeat system experiencing critical degradation"
+      }
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "staleness-section",
+        "sep1",
+        "blackout-section",
+        "sep2",
+        "skip-rate-section",
+        "sep3",
+        "issue-section"
+      ]
+    },
+    "staleness-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "staleness-heading",
+        "staleness-metric",
+        "staleness-details"
+      ]
+    },
+    "staleness-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Staleness",
+        "level": "h3"
+      }
+    },
+    "staleness-metric": {
+      "type": "Stat",
+      "props": {
+        "label": "Heartbeat Stale Duration",
+        "value": "~59h",
+        "delta": "+22h from prior worst",
+        "trend": "down"
+      }
+    },
+    "staleness-details": {
+      "type": "Text",
+      "props": {
+        "text": "New worst-stale P0 of entire incident",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blackout-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blackout-heading",
+        "blackout-metric",
+        "blackout-window",
+        "blackout-dispatch",
+        "blackout-details"
+      ]
+    },
+    "blackout-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blackout Event",
+        "level": "h3"
+      }
+    },
+    "blackout-metric": {
+      "type": "Stat",
+      "props": {
+        "label": "Blackout Duration",
+        "value": "6-slot",
+        "delta": "1.5× deeper than 4-slot blackout two cycles ago",
+        "trend": "down"
+      }
+    },
+    "blackout-window": {
+      "type": "Text",
+      "props": {
+        "text": "Window: 2026-10-27 08:00 → 2026-10-28 20:00",
+        "variant": "body"
+      }
+    },
+    "blackout-dispatch": {
+      "type": "Text",
+      "props": {
+        "text": "Self-dispatched at 2026-10-29 08:00 (~56m late)",
+        "variant": "body"
+      }
+    },
+    "blackout-details": {
+      "type": "Text",
+      "props": {
+        "text": "New worst blackout of cycle",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "skip-rate-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "skip-rate-heading",
+        "skip-rate-metric",
+        "skip-rate-details"
+      ]
+    },
+    "skip-rate-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Skip Rate",
+        "level": "h3"
+      }
+    },
+    "skip-rate-metric": {
+      "type": "Stat",
+      "props": {
+        "label": "Trailing 12-slot Skip Rate",
+        "value": "83.3%",
+        "delta": "+25.0% points from 58.3%",
+        "trend": "down"
+      }
+    },
+    "skip-rate-details": {
+      "type": "Text",
+      "props": {
+        "text": "Largest single-reading climb of cycle",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issue-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issue-heading",
+        "issue-status",
+        "issue-description",
+        "actions-heading",
+        "actions-list"
+      ]
+    },
+    "issue-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue ISS-003",
+        "level": "h3"
+      }
+    },
+    "issue-status": {
+      "type": "Badge",
+      "props": {
+        "text": "Catastrophically Overdue",
+        "variant": "destructive"
+      }
+    },
+    "issue-description": {
+      "type": "Text",
+      "props": {
+        "text": "Operator-side fix required",
+        "variant": "body"
+      }
+    },
+    "actions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Recommended Actions",
+        "level": "h4"
+      }
+    },
+    "actions-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-1",
+        "action-2",
+        "action-3"
+      ]
+    },
+    "action-1": {
+      "type": "Text",
+      "props": {
+        "text": "1. Raise actions:write permission on aeon.yml",
+        "variant": "body"
+      }
+    },
+    "action-2": {
+      "type": "Text",
+      "props": {
+        "text": "2. Raise issues:write permission on aeon.yml",
+        "variant": "body"
+      }
+    },
+    "action-3": {
+      "type": "Text",
+      "props": {
+        "text": "3. Add Personal Access Token (PAT) or configure external cron",
+        "variant": "body"
+      }
+    }
+  }
+}
