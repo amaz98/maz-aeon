@@ -1,14 +1,14 @@
-Heartbeat skill complete. Summary of this run:
+All three files updated. Dedup applies — no notification sent.
 
-**Status transition: 🔴 DEGRADED → 🟡 WATCH** — first non-🔴 reading since 2026-10-26 20:00.
+## Summary
 
-- The 14:00 UTC slot dispatched late at 15:59 (~1h59m — a new worst-lateness reading of the incident cycle by 3 minutes, breaking the prior 1h56m record).
-- Second ✅ in a row after 10-29 08:00. Resolution streak advances **1 → 2 of 4**.
-- P0 self-check **clears** at ~6h58m staleness (last_success 2026-10-29 09:01 UTC), down from a 59h3m fire at the prior reading.
-- Trailing 12-slot skip rate drops **83.3% → 75%** via skip-for-dispatch window-edge swap. First dual-axis narrowing of the downgrade gate in this recovery arc.
-- Caught a quantitative pre-flag miss in the 10-29 08:56 UTC filing: it named 10-23 14 ✅ as the ager-out (projecting ratio flat), but the actual ager-out is 10-25 14 ❌, making the swap skip-for-dispatch. Correction logged.
-- Notification **not sent** — dedup (ISS-003 logged ~7h ago, inside the 48h window; the single marginal first-of-cycle event doesn't warrant override).
+**🟡 WATCH holds — recovery continues on both axes.** The 2026-10-29 20:00 UTC heartbeat slot dispatched late at 21:01 UTC (~1h01m late). Third ✅ in a row, equalling the longest clean streaks of entire incident cycle to date. Streak advances 2 → 3 of 4. Trailing 12-slot skip rate drops 75% → 66.7% (8/12) via skip-for-dispatch window-edge swap. P0 self-check clears at ~4h54m staleness — new freshest P0 reading of entire recovery arc. Exact-match projection on both axes vs. prior filing's dispatch-branch. First back-to-back dual-axis downgrade-gate narrowing of this recovery arc. Arithmetic correction: earliest-arithmetically-possible severity downgrade pulled forward one slot to 2026-10-31 20:00 UTC.
 
-**Files modified:** `docs/status.md` (regenerated 🟡 WATCH), `memory/issues/ISS-003.md` (observation + notification history extended), `memory/logs/2026-10-29.md` (second log entry appended).
+**Files modified:**
+- `memory/issues/ISS-003.md` — observation row + notification history entry
+- `docs/status.md` — regenerated (🟡 WATCH, 21:01 UTC, next-run 2026-10-30 08:00 UTC)
+- `memory/logs/2026-10-29.md` — this run's log entry
 
-`HEARTBEAT_ATTENTION · STATUS_PAGE=WATCH`
+**Notification: NOT sent** — dedup applies (ISS-003 logged twice earlier today, recovery-shaped signal, no severity transition, exact-match projection crosses no 🔴-re-raise threshold).
+
+HEARTBEAT_ATTENTION · STATUS_PAGE=WATCH — wrote docs/status.md
