@@ -1,0 +1,243 @@
+{
+  "root": "card_heartbeat",
+  "state": {},
+  "elements": {
+    "card_heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert_main",
+        "sep1",
+        "stack_status",
+        "sep2",
+        "stack_patterns",
+        "sep3",
+        "stack_recovery",
+        "sep4",
+        "stack_action"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 DEGRADED",
+        "message": "Heartbeat 41h22m stale",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_status",
+        "badges_status",
+        "stat_staleness",
+        "text_blackout",
+        "stat_dispatch"
+      ]
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "Current Status",
+        "level": "h2"
+      }
+    },
+    "badges_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_p0",
+        "badge_recovery",
+        "badge_transition"
+      ]
+    },
+    "badge_p0": {
+      "type": "Badge",
+      "props": {
+        "text": "P0 FIRES",
+        "variant": "destructive"
+      }
+    },
+    "badge_recovery": {
+      "type": "Badge",
+      "props": {
+        "text": "3rd of recovery arc",
+        "variant": "secondary"
+      }
+    },
+    "badge_transition": {
+      "type": "Badge",
+      "props": {
+        "text": "🟡→🔴 transition",
+        "variant": "secondary"
+      }
+    },
+    "stat_staleness": {
+      "type": "Stat",
+      "props": {
+        "label": "Heartbeat staleness",
+        "value": "41h22m",
+        "trend": "down"
+      }
+    },
+    "text_blackout": {
+      "type": "Text",
+      "props": {
+        "text": "4-slot blackout 10-30 08 → 10-31 08 (equals previously-second-deepest-of-cycle)",
+        "variant": "body"
+      }
+    },
+    "stat_dispatch": {
+      "type": "Stat",
+      "props": {
+        "label": "10-31 14 slot dispatch latency",
+        "value": "28m late",
+        "delta": "+28m",
+        "trend": "down"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_patterns": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_patterns",
+        "text_status_transitions",
+        "alert_falsification",
+        "stat_ratio",
+        "text_streak"
+      ]
+    },
+    "heading_patterns": {
+      "type": "Heading",
+      "props": {
+        "text": "Pattern Analysis",
+        "level": "h2"
+      }
+    },
+    "text_status_transitions": {
+      "type": "Text",
+      "props": {
+        "text": "Status transitions 🟡→🔴 (second 🔴 transition of recovery arc)",
+        "variant": "body"
+      }
+    },
+    "alert_falsification": {
+      "type": "Alert",
+      "props": {
+        "title": "Branch Falsification",
+        "message": "The 10-29 21:01 UTC filing's pre-flagged 'clean 10-30 08 → 10-31 20 streak to earliest-downgrade at 10-31 20' branch is COMPLETELY FALSIFIED at the first slot. Twelfth peak-and-reset in twelve cycles with NEW shape 'streak-of-three terminated by 4-slot blackout'.",
+        "type": "error"
+      }
+    },
+    "stat_ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Trailing 12-slot ratio (symmetric 5-slot window-edge swap)",
+        "value": "66.7%",
+        "delta": "held flat"
+      }
+    },
+    "text_streak": {
+      "type": "Text",
+      "props": {
+        "text": "Streak resets 3 → 0 → 1 of 4. New ratio-stability shape across a blackout.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_recovery": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_recovery",
+        "text_recovery_date",
+        "stat_streak_requirement",
+        "text_consecutive_false"
+      ]
+    },
+    "heading_recovery": {
+      "type": "Heading",
+      "props": {
+        "text": "Recovery Timeline",
+        "level": "h2"
+      }
+    },
+    "text_recovery_date": {
+      "type": "Text",
+      "props": {
+        "text": "Earliest-arithmetically-possible severity downgrade: 2026-11-03 08:00 UTC",
+        "variant": "lead"
+      }
+    },
+    "stat_streak_requirement": {
+      "type": "Stat",
+      "props": {
+        "label": "Clean streak requirement",
+        "value": "8 slots"
+      }
+    },
+    "text_consecutive_false": {
+      "type": "Text",
+      "props": {
+        "text": "Two consecutive clean-streak-to-downgrade branches now falsified at or near their very first slot.",
+        "variant": "muted"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_action": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_action"
+      ]
+    },
+    "alert_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Operator-Side Fix Required",
+        "message": "FOURTEEN-recurrences overdue and catastrophically blocked from self-remediation. Fix required: actions:write + issues:write on aeon.yml, or PAT, or external cron/ping.",
+        "type": "error"
+      }
+    }
+  }
+}
