@@ -1,18 +1,16 @@
-HEARTBEAT_ATTENTION · STATUS_PAGE=WATCH — wrote docs/status.md
+Heartbeat executed. Summary:
 
 ## Summary
+- **🟡 WATCH holds** — 2026-11-01 20:00 UTC slot skipped silently (fourteenth peak-and-reset in fourteen cycles, exactly as pre-flagged by 11-01 14:06 UTC filing); 2026-11-02 08:00 UTC slot dispatched late at 08:31 (~31m late). P0 self-check clears at ~18h18m staleness.
+- **New structural landmark**: 4-slot pure-alternation leading segment (❌✅❌✅ across 11-01 08 → 11-02 08) — **first instance in the entire incident cycle**. First four-in-a-row 🟡 WATCH run of entire incident cycle.
+- **Third consecutive exact-match-projection reading** — longest streak of this recovery arc, tying the only prior triplet of entire incident cycle.
+- **Trailing 12-slot skip rate holds FLAT at 50%** via dispatch-for-dispatch window-edge swap — a NEW ratio-stability shape (orthogonal to the earlier flat-ratio-across-blackout shape).
+- Files modified:
+  - `memory/issues/ISS-003.md` — observation table +2 rows (11-01 20 ❌, 11-02 08 ✅); notification history +1 entry
+  - `memory/logs/2026-11-02.md` — created
+  - `docs/status.md` — regenerated (🟡 WATCH, 08:31 UTC, next-run 14:00 UTC, open issues 1 × critical)
+- **Notification NOT sent via `./notify`** — dedup applies (recovery-shaped signal, pre-flagged skip-branch exactly realised, no P0 fire or severity escalation; three ISS-003 entries in last 48h of logs).
+- Minor cosmetic: within ISS-003.md the two new observation rows and the new notification history entry are not in strict chronological file order (date labels are self-identifying; dedup/status generation unaffected).
+- Follow-up: operator-side permission fix / PAT / external cron / ping remains **catastrophically overdue** (fourteenth consecutive peak-and-reset). Watching 2026-11-02 14:00 UTC.
 
-**🟡 WATCH holds — recovery sub-arc continues on the exact pre-flagged skip-branch.** The 2026-11-01 08:00 UTC slot skipped silently (no heartbeat ran). The 2026-11-01 14:00 UTC slot dispatched late at 14:06 (~6m late — the fastest post-skip late-dispatch of the entire recovery arc). P0 self-check CLEARS at ~16h5m staleness (last_success 2026-10-31 22:01 UTC). Streak resets 2 → 0 → 1 of 4 via the 11-01 08 skip + 11-01 14 dispatch. Trailing 12-slot skip rate drops 58.3% → 50% — first sub-58% reading since 10-26 20:00 UTC six readings ago.
-
-**Thirteenth peak-and-reset in thirteen cycles** with the pre-flagged NEW shape "2-slot clean segment after 4-slot blackout terminated by single skip at 08:00 slot" — exactly as pre-flagged at the 10-31 21:53 UTC filing. Second consecutive exact-match-projection reading. The potential repeating-sub-pattern of "deepening blackout followed by a 2-slot clean segment" is falsified (10-29 arc extended to 3 slots; 10-31 arc terminated at 2 slots).
-
-**Status page: 🟡 WATCH holds** — third consecutive 🟡 reading, first three-in-a-row 🟡 run of this sub-arc. Severity in INDEX.md remains **critical** at ceiling. Earliest arithmetically-possible severity downgrade pushed out from 2026-11-03 08:00 UTC → 2026-11-03 14:00 UTC (one slot later). Streak-portion satisfies two slots ahead of ratio-portion for the first time in this recovery arc.
-
-**Notification: NOT sent** — dedup applies (ISS-003 logged at 10-31 14:28 UTC and 10-31 21:53 UTC, both well inside 48h; signal is recovery-shaped with pre-flagged skip-branch exactly realised; no 🔴-re-raise, no P0 fire, no severity transition).
-
-**Files modified**:
-- `memory/issues/ISS-003.md` — observation table + notification history extended with the 11-01 08 ❌ + 11-01 14 ✅ rows and this run's NOT-sent dedup entry.
-- `docs/status.md` — regenerated (🟡 WATCH held, 14:06 UTC timestamp, next-run 2026-11-01 20:00 UTC, last-run 2026-10-31 22:01 UTC, open issues 1 × critical).
-- `memory/logs/2026-11-01.md` — created with the full heartbeat log entry.
-
-**Follow-up**: Operator-side permission fix / PAT / external cron / ping remains **catastrophically overdue** — thirteen consecutive peak-and-reset cycles with the shape mutating at each one is the clearest signal yet that recovery cannot self-sustain from inside the heartbeat runner. Watching 2026-11-01 20:00 UTC — a clean dispatch advances streak 1 → 2 of 4 and drops ratio to 41.7% (first sub-50% in seven readings); a skip would be the fourteenth peak-and-reset in fourteen cycles.
+`HEARTBEAT_ATTENTION · STATUS_PAGE=WATCH — wrote docs/status.md`
