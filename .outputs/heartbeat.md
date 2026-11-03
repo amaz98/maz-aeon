@@ -1,14 +1,11 @@
-Heartbeat run complete.
+Heartbeat skill executed. The 2026-11-03 14:00 UTC slot skipped silently; the 20:00 UTC slot dispatched late at 21:51 (~1h51m late). This is the **sixteenth peak-and-reset in sixteen cycles**, with the pre-flagged NEW shape realised exactly on the skip-branch. P0 self-check clears at 13h34m staleness; trailing 12-slot skip rate drops 58.3% → 50%; **fifth consecutive exact-match-projection reading** — longest streak of entire incident cycle by 2 slots.
 
-**HEARTBEAT_ATTENTION · STATUS_PAGE=WATCH — wrote docs/status.md**
-
-## Summary (08:12 UTC)
-- **🟡 WATCH holds** — recovery sub-arc extends with the shallowest fresh blackout (2-slot) of the entire recovery arc on the exact pre-flagged skip-branch. 2026-11-02 14:00 and 20:00 UTC slots both skipped silently; 2026-11-03 08:00 dispatched late at 08:12 (~12m late — fastest post-blackout late-dispatch of this recovery arc).
-- **Fifteenth peak-and-reset in fifteen cycles** with the pre-flagged NEW shape, matching the 11-02 08:31 UTC filing's skip-branch exactly. Recovery arc now shows a monotonically-shortening blackout depth sequence (6 → 4 → 2) — NEW macro-shape of entire incident cycle.
-- **P0 self-check CLEARS at ~23h32m staleness** — fifth P0 clear of this recovery arc, **the stalest P0 clear of the entire arc** (closest P0 has come to firing without firing since 10-13 15:03 UTC). Trailing 12-slot skip rate drops 66.7% → 58.3% at this reading via skip-for-dispatch swap.
-- **Fourth consecutive exact-match-projection reading** — longest of this recovery arc AND of the entire incident cycle (beats the prior-longest triplet six cycles ago by one slot).
-- **First five-in-a-row 🟡 run** of this sub-arc AND of the entire incident cycle.
-- **Earliest arithmetically-possible severity downgrade pushed out from 2026-11-03 20:00 UTC → 2026-11-05 08:00 UTC** (five slots later). Streak-portion satisfies three slots ahead of ratio-portion — **first time this recovery arc has shown a gap exceeding two slots** between the two gates.
-- Structural-blocker finding from 10-13 15:03 UTC is now **substantively FIFTEEN-recurrences overdue AND operator-blocked** — resolution unambiguously requires operator-side action (`actions: write` + `issues: write` on `.github/workflows/aeon.yml`, or a PAT, or a redundant external cron/ping).
-- Files created/modified: `memory/issues/ISS-003.md` (3 new observation rows + notification entry), `docs/status.md` (regenerated), `memory/logs/2026-11-03.md` (new).
-- Notification: **NOT sent via ./notify** — dedup applies (pre-flagged skip-branch realised; no 🔴 re-raise, no P0 fire, no severity transition).
+## Summary
+- **🟡 WATCH holds.** Sixteenth peak-and-reset in sixteen cycles with pre-flagged NEW shape exactly realised on the skip-branch; no P0 fire, no severity transition, no 🔴-re-raise.
+- **No ./notify sent** — dedup applies (ISS-003 present in last 48h logs via 11-02 08:31 and 11-03 08:12 entries; recovery-shaped signal with pre-flagged skip-branch exactly realised crosses no attention threshold).
+- Files modified:
+  - `docs/status.md` — regenerated with Overall 🟡 WATCH, Updated 2026-11-03 21:52 UTC, next-run 2026-11-04 08:00 UTC, last heartbeat 2026-11-03 08:17 UTC, 1 × critical open issue.
+  - `memory/logs/2026-11-03.md` — appended `### heartbeat (21:52 UTC)` section with full findings and `## Summary (21:52 UTC)` section.
+  - `memory/issues/ISS-003.md` — observation table extended with 11-03 14 ❌ and 11-03 20 ✅ rows; notification history extended with this run's NOT-sent dedup entry naming the sixteenth peak-and-reset, 8-slot composite leading segment (NEW shape of entire incident cycle), fifth consecutive exact-match projection (longest of entire incident cycle by 2 slots), first six-in-a-row 🟡 run, and watch triggers for 2026-11-04 08:00 UTC.
+- Follow-up: operator-side mitigation (permissions raise / PAT / external cron / redundant cron) remains **catastrophically overdue** — sixteen consecutive peak-and-reset cycles and a five-reading exact-match-projection streak signal that the oscillation is deeply entrenched and cannot self-correct from inside the heartbeat runner.
+- `HEARTBEAT_ATTENTION · STATUS_PAGE=WATCH — wrote docs/status.md`
