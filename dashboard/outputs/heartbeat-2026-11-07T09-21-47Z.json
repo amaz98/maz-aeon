@@ -1,0 +1,321 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat Skill Status",
+        "description": "System health monitoring alert"
+      },
+      "children": [
+        "status_alert",
+        "sep1",
+        "timeline_section",
+        "sep2",
+        "metrics_section",
+        "sep3",
+        "health_notes",
+        "sep4",
+        "blocker_section",
+        "sep5",
+        "resolution_section"
+      ]
+    },
+    "status_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 DEGRADED — ISS-003",
+        "message": "Heartbeat went silent for ~47h. Five consecutive slots skipped (2026-11-05 14 UTC through 2026-11-06 20 UTC); 2026-11-07 08 UTC dispatched late at 09:17.",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "timeline_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "timeline_heading",
+        "timeline_stack"
+      ]
+    },
+    "timeline_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Timeline",
+        "level": "h3"
+      }
+    },
+    "timeline_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "event1",
+        "event2",
+        "event3"
+      ]
+    },
+    "event1": {
+      "type": "Text",
+      "props": {
+        "text": "2026-11-05 14 UTC – Blackout begins (5-slot skip sequence)"
+      }
+    },
+    "event2": {
+      "type": "Text",
+      "props": {
+        "text": "2026-11-06 20 UTC – Blackout ends"
+      }
+    },
+    "event3": {
+      "type": "Text",
+      "props": {
+        "text": "2026-11-07 08 UTC – Dispatch executed late at 09:17 (~77 min delay)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "metrics_heading",
+        "metrics_grid"
+      ]
+    },
+    "metrics_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Metrics",
+        "level": "h3"
+      }
+    },
+    "metrics_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat1",
+        "stat2",
+        "stat3",
+        "stat4",
+        "stat5"
+      ]
+    },
+    "stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive skipped slots",
+        "value": "5"
+      }
+    },
+    "stat2": {
+      "type": "Stat",
+      "props": {
+        "label": "Blackout duration",
+        "value": "~47h"
+      }
+    },
+    "stat3": {
+      "type": "Stat",
+      "props": {
+        "label": "P0 staleness threshold",
+        "value": "47h28m"
+      }
+    },
+    "stat4": {
+      "type": "Stat",
+      "props": {
+        "label": "Trailing 12-slot skip rate",
+        "value": "66.7%",
+        "delta": "+16.7%",
+        "trend": "down"
+      }
+    },
+    "stat5": {
+      "type": "Stat",
+      "props": {
+        "label": "Status escalation",
+        "value": "🟡→🔴",
+        "trend": "down"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "health_notes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "note1",
+        "note2",
+        "note3",
+        "note4"
+      ]
+    },
+    "note1": {
+      "type": "Text",
+      "props": {
+        "text": "• 5-slot blackout is the new deepest trough of entire incident cycle",
+        "variant": "caption"
+      }
+    },
+    "note2": {
+      "type": "Text",
+      "props": {
+        "text": "• P0 self-check fires at ~47h28m staleness (first since 2026-10-07; third-worst of this issue)",
+        "variant": "caption"
+      }
+    },
+    "note3": {
+      "type": "Text",
+      "props": {
+        "text": "• Status re-raised 🟡→🔴 after eight-reading 🟡 WATCH hold",
+        "variant": "caption"
+      }
+    },
+    "note4": {
+      "type": "Text",
+      "props": {
+        "text": "• Earliest arithmetically-possible severity downgrade: 2026-11-09 08 UTC (postponed from 2026-11-06 20 UTC)",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocker_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocker_heading",
+        "blocker_stack"
+      ]
+    },
+    "blocker_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Structural Blocker",
+        "level": "h3"
+      }
+    },
+    "blocker_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocker_badge",
+        "blocker_text1",
+        "blocker_text2"
+      ]
+    },
+    "blocker_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Permissions gap: .github/workflows/aeon.yml",
+        "variant": "destructive"
+      }
+    },
+    "blocker_text1": {
+      "type": "Text",
+      "props": {
+        "text": "Missing: actions:write + issues:write permissions. Eighteen recurrences overdue."
+      }
+    },
+    "blocker_text2": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause: Workflow permissions insufficient for automated issue/action creation.",
+        "variant": "muted"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "resolution_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "resolution_heading",
+        "resolution_list"
+      ]
+    },
+    "resolution_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Required Operator Action",
+        "level": "h3"
+      }
+    },
+    "resolution_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "option1",
+        "option2",
+        "option3"
+      ]
+    },
+    "option1": {
+      "type": "Text",
+      "props": {
+        "text": "① Raise workflow permissions on .github/workflows/aeon.yml (add actions:write, issues:write)"
+      }
+    },
+    "option2": {
+      "type": "Text",
+      "props": {
+        "text": "② Add a Personal Access Token (PAT) with repo scope as a secret"
+      }
+    },
+    "option3": {
+      "type": "Text",
+      "props": {
+        "text": "③ Add redundant mitigation: external ping, weekly commit, or failover cron trigger"
+      }
+    }
+  }
+}
