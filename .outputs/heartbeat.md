@@ -1,23 +1,16 @@
-Heartbeat complete. Overall status page transitions 🔴 DEGRADED → 🟡 WATCH.
+HEARTBEAT_ATTENTION · STATUS_PAGE=WATCH — wrote docs/status.md
 
 ## Summary
 
-**Reading:** 2026-11-07 15:46 UTC — the 14:00 UTC slot dispatched ~1h46m late, resolving the pre-flagged clean-dispatch branch of the 11-07 09:17 UTC filing exactly on both axes.
+**🟡 WATCH holds — nineteenth peak-and-reset in nineteen cycles via a single-slot skip.** The 2026-11-07 20:00 UTC slot skipped silently; 2026-11-08 08:00 UTC dispatched late at 09:20 (~1h20m late). Streak nets 2 → 0 → 1 of 4; trailing-12 skip rate climbs 58.3% → 66.7%, exactly matching the 11-07 15:46 UTC filing's pre-flagged skip-branch arithmetic on both axes. Ratio returns to (ties) the sub-arc peak first set at 11-07 09:17 UTC.
 
-**Key findings:**
-- Streak advances 1 → 2 of 4 (first clean back-to-back ✅ pair of the post-18th-reset sub-arc: 11-07 08 + 11-07 14)
-- Trailing 12-slot skip rate drops 66.7% → 58.3% via skip-for-dispatch swap
-- P0 self-check CLEARS at ~6h24m staleness — freshest P0 clear of this filing's recovery arc
-- Overall status 🔴 DEGRADED → 🟡 WATCH
-- First dual-axis narrowing reading of this sub-arc
-- Earliest both-gates-simultaneous severity downgrade pulled in to 2026-11-09 20:00 UTC (streak at 11-08 08, ratio at 11-09 20 — widest gate-gap of entire recovery arc)
-- ISS-003 remains open at critical ceiling; structural blocker (actions: write / issues: write permissions on aeon.yml) still operator-blocked after 18 recurrences
+**P0 clears at ~17h28m staleness** (~18h32m headroom under 36h). Status page 🟡 WATCH holds; severity in INDEX.md remains critical at ceiling. Earliest arithmetically-possible severity downgrade pushed from 11-09 20 UTC → **2026-11-10 08:00 UTC** (streak-portion at 11-09 08, ratio-portion at 11-10 08, gap narrows to 3 slots).
 
 **Files modified:**
-- `memory/issues/ISS-003.md` — observations table + notification history extended
-- `docs/status.md` — regenerated at 🟡 WATCH
-- `memory/logs/2026-11-07.md` — appended second heartbeat entry + summary
+- `memory/logs/2026-11-08.md` (new — this heartbeat entry)
+- `memory/issues/ISS-003.md` (observation table +2 rows: 11-07 20 ❌, 11-08 08 ✅; notification history +1 NOT-sent dedup entry with 11-08 14 watch triggers)
+- `docs/status.md` (regenerated — 🟡 WATCH at 09:20 UTC, next-run 11-08 14:00 UTC, open issues 1 × critical)
 
-**Notification:** NOT sent via `./notify` — dedup applies (prior SENT notify 6h29m ago inside 48h window; this reading is a recovery-shaped positive signal with no new structural axis).
+**Notification:** NOT sent via `./notify` — dedup applies (pre-flagged skip-branch landed exactly; ratio ties rather than exceeds sub-arc peak; P0 clears comfortably; 🟡 WATCH holds; previous notify ~24h04m ago inside 48h window).
 
-`HEARTBEAT_ATTENTION · STATUS_PAGE=WATCH`
+**Follow-up:** Operator-side action remains catastrophically overdue — nineteen consecutive peak-and-reset cycles and no in-runner mechanism to break the loop. Resolution requires raising `actions: write` + `issues: write` on `.github/workflows/aeon.yml`, providing a PAT with `repo` scope, or implementing redundant cron / external ping / substantive weekly commit mitigation. Watching 2026-11-08 14:00 UTC — clean dispatch drops ratio to 58.3% and advances streak 1 → 2; skip is the twentieth peak-and-reset with ratio flat at 66.7%.
