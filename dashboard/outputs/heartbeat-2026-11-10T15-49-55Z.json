@@ -1,0 +1,192 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert_degraded",
+        "sep_1",
+        "stack_content"
+      ]
+    },
+    "alert_degraded": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 DEGRADED: P0",
+        "message": "heartbeat re-fires at ~43h stale (second of recovery arc; 2nd-worst behind 11-07's 47h28m)",
+        "type": "error"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_skip",
+        "section_blackout",
+        "section_dispatch",
+        "section_recovery",
+        "section_blocker"
+      ]
+    },
+    "section_skip": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_skip",
+        "text_skip"
+      ]
+    },
+    "heading_skip": {
+      "type": "Heading",
+      "props": {
+        "text": "Silent skip window",
+        "level": "h4"
+      }
+    },
+    "text_skip": {
+      "type": "Text",
+      "props": {
+        "text": "2026-11-09 08 → 2026-11-10 08 (all skipped silently)"
+      }
+    },
+    "section_blackout": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_blackout",
+        "stat_blackout",
+        "text_blackout_context",
+        "text_blackout_cycles"
+      ]
+    },
+    "heading_blackout": {
+      "type": "Heading",
+      "props": {
+        "text": "Blackout details",
+        "level": "h4"
+      }
+    },
+    "stat_blackout": {
+      "type": "Stat",
+      "props": {
+        "label": "Blackout slots",
+        "value": "4"
+      }
+    },
+    "text_blackout_context": {
+      "type": "Text",
+      "props": {
+        "text": "Ties prior 4-slot ceilings under the 5-slot absolute from 11-05/06"
+      }
+    },
+    "text_blackout_cycles": {
+      "type": "Text",
+      "props": {
+        "text": "21st peak-and-reset in 21 cycles"
+      }
+    },
+    "section_dispatch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_dispatch",
+        "text_dispatch_time",
+        "progress_ratio"
+      ]
+    },
+    "heading_dispatch": {
+      "type": "Heading",
+      "props": {
+        "text": "Latest dispatch",
+        "level": "h4"
+      }
+    },
+    "text_dispatch_time": {
+      "type": "Text",
+      "props": {
+        "text": "2026-11-10 14:43 (~1h43m late)"
+      }
+    },
+    "progress_ratio": {
+      "type": "Progress",
+      "props": {
+        "value": 58.3,
+        "max": 100,
+        "label": "Success ratio"
+      }
+    },
+    "section_recovery": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_recovery",
+        "text_downgrade",
+        "stat_gate_gap"
+      ]
+    },
+    "heading_recovery": {
+      "type": "Heading",
+      "props": {
+        "text": "Recovery arc timeline",
+        "level": "h4"
+      }
+    },
+    "text_downgrade": {
+      "type": "Text",
+      "props": {
+        "text": "Earliest downgrade: 2026-11-13 08 UTC — NEW widest gate-gap of recovery arc at 5 slots"
+      }
+    },
+    "stat_gate_gap": {
+      "type": "Stat",
+      "props": {
+        "label": "Gate-gap",
+        "value": "5 slots",
+        "delta": "NEW (widest)"
+      }
+    },
+    "section_blocker": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "alert_blocker"
+      ]
+    },
+    "alert_blocker": {
+      "type": "Alert",
+      "props": {
+        "title": "⚠️ Structural blocker",
+        "message": "actions/issues write perms on aeon.yml — 21-recurrences overdue and operator-blocked",
+        "type": "warning"
+      }
+    }
+  }
+}
