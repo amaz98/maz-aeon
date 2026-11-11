@@ -1,22 +1,10 @@
-HEARTBEAT_ATTENTION · STATUS_PAGE=WATCH — wrote docs/status.md
+HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
 
 ## Summary
 
-**🟡 WATCH downgrade.** 2026-11-10 20:00 UTC slot dispatched late at 21:27 (~1h27m late) — the pre-flagged clean-dispatch branch of the 11-10 15:43 UTC filing landed exact on both axes.
-
-- **Streak advances 1 → 2 of 4** (first back-to-back ✅ pair of post-21st-reset sub-arc).
-- **Ratio drops 58.3% → 50%** via -1 skip window-edge swap (11-06 20 ❌ ages out → 11-10 20 ✅ enters). **1.67× the 30% re-open threshold — NEW LOW MULTIPLIER of entire recovery arc**, below the prior 1.94× floor.
-- **P0 self-check CLEARS at ~5h37m staleness** (last_success refreshed to 15:50 UTC by prior run) — ~30h headroom under 36h threshold.
-- **Overall status page 🔴 DEGRADED → 🟡 WATCH** — second 🔴→🟡 downgrade of recovery arc. Downgrade gate narrows on both axes (first dual-axis narrowing of post-21st-reset sub-arc).
-- Shape: **NEW 30-slot composite leading segment** — extends prior 29-slot by a single tail ✅.
-- **Earliest-downgrade holds flat at 2026-11-13 08:00 UTC** — gap-between-gates holds flat at 5 slots.
-- ISS-003 structural-blocker (10-13 15:03 UTC): unchanged, twenty-one-recurrences overdue AND operator-blocked.
-
-**Files modified:**
-- `memory/issues/ISS-003.md` — new observation row (11-10 20 ✅) + notification history entry
-- `docs/status.md` — regenerated 🟡 WATCH at 21:27 UTC, next-run 11-11 08:00 UTC
-- `memory/logs/2026-11-10.md` — new heartbeat entry (second of the day)
-
-**Notification: NOT sent via `./notify`** — dedup applies. Pre-flagged clean-dispatch branch landed exact on both axes; recovery-shaped on every observable axis (NEW LOW multiplier is positive signal, P0 clears comfortably, 🔴→🟡 downgrade, both gates narrow); previous notify-sent 2026-11-10 15:43 UTC was ~5h44m ago, well inside the 48h dedup window.
-
-**Follow-up:** Watching 2026-11-11 08:00 UTC — clean dispatch advances streak 2 → 3 of 4 and holds ratio flat at 50%; a skip is the twenty-second peak-and-reset with ratio climbing 50% → 58.3% (would untie the new-low 1.67× multiplier).
+- **Clean dispatch for 2026-11-11 08:00 UTC slot at 08:12 UTC (~12m late — routine).** Pre-flagged clean-dispatch branch of the 2026-11-10 21:27 UTC filing landed exact on both axes. Streak advances 2 → 3 of 4 (first three-in-a-row ✅ streak of post-21st-reset sub-arc); ratio holds flat at 50% via dispatch-for-dispatch window-edge swap (11-07 08 ✅ → 11-11 08 ✅ net 0); 1.67× the 30% re-open threshold — ties the new-low multiplier of the entire recovery arc.
+- **P0 checks all clear**: heartbeat `last_success` is ~10h40m stale (well under 36h); no failed skills, no stuck skills, no `consecutive_failures >= 3`, no chronic failures. No stalled PRs or urgent issues. ISS-003 (critical, open, permanent-limitation) continues to hold overall status at 🟡 WATCH via the P2/P3 open-critical-issue gate; downgrade gate narrows on the streak axis (ratio holds flat) — first single-axis-narrowing reading of this post-21st-reset sub-arc.
+- **Earliest arithmetically-possible severity downgrade holds flat at 2026-11-13 08:00 UTC**; widest-of-arc gate-gap at 5 slots untied. Streak-portion of the downgrade gate satisfies in one slot from here at 2026-11-11 14:00 UTC via a clean dispatch.
+- Files modified: `memory/issues/ISS-003.md` (1 new observation row + 1 new notification-history entry), `docs/status.md` (regenerated 🟡 WATCH at 08:12 UTC, next-run 11-11 14:00 UTC), `memory/logs/2026-11-11.md` (new file).
+- **No notification sent** — dedup applies (recovery-shaped on every observable axis; previous notify-sent 2026-11-10 15:43 UTC is ~16h29m ago, inside 48h window).
+- **Follow-up**: operator-side mitigation of ISS-003 remains catastrophically overdue (twenty-one consecutive peak-and-reset cycles; structural-blocker from 2026-10-13 15:03 UTC unchanged — needs `actions: write` + `issues: write` on `.github/workflows/aeon.yml`, a PAT with `repo` scope, or redundant cron / external ping / substantive weekly commit). Watching 2026-11-11 14:00 UTC — clean dispatch satisfies streak-portion of downgrade gate (3 → 4 of 4); skip is the twenty-second peak-and-reset with ratio climbing 50% → 58.3%.
