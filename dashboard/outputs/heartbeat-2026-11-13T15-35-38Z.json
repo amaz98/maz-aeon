@@ -1,0 +1,258 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "alert-degraded",
+        "sep-1",
+        "incident-section",
+        "sep-2",
+        "metrics-section",
+        "sep-3",
+        "timeline-section",
+        "sep-4",
+        "action-section"
+      ]
+    },
+    "alert-degraded": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 DEGRADED: ISS-003 Re-raise",
+        "message": "Five-slot ceiling breached. Six consecutive slots skipped (11-11 14 → 11-13 08 UTC). Latest run 2026-11-13 14 UTC executed at 15:30 (1.5h late).",
+        "type": "error"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "incident-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-incident",
+        "incident-details"
+      ]
+    },
+    "heading-incident": {
+      "type": "Heading",
+      "props": {
+        "text": "Incident Classification",
+        "level": "h3"
+      }
+    },
+    "incident-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "detail-1",
+        "detail-2",
+        "detail-3"
+      ]
+    },
+    "detail-1": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW ABSOLUTE DEEPEST TROUGH of entire incident cycle",
+        "variant": "destructive"
+      }
+    },
+    "detail-2": {
+      "type": "Text",
+      "props": {
+        "text": "6-slot blackout exceeds 18th-reset ceiling (5 slots) by 1 slot",
+        "variant": "body"
+      }
+    },
+    "detail-3": {
+      "type": "Text",
+      "props": {
+        "text": "NEW WORST-EVER P0 fire: ~55h13m stale (vs prior worst 54h24m at 2026-10-04, +49m delta)",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-metrics",
+        "metrics-grid"
+      ]
+    },
+    "heading-metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Skip Rate & Escalation Metrics",
+        "level": "h3"
+      }
+    },
+    "metrics-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-12slot",
+        "stat-peak",
+        "stat-escalation",
+        "stat-previous"
+      ]
+    },
+    "stat-12slot": {
+      "type": "Stat",
+      "props": {
+        "label": "Trailing 12-slot skip rate",
+        "value": "66.7%",
+        "delta": "+16.7%",
+        "trend": "down"
+      }
+    },
+    "stat-peak": {
+      "type": "Stat",
+      "props": {
+        "label": "Hypothetical path peak",
+        "value": "75%",
+        "delta": "NEW HIGH",
+        "trend": "down"
+      }
+    },
+    "stat-escalation": {
+      "type": "Stat",
+      "props": {
+        "label": "Reset-shape escalation",
+        "value": "6-slot",
+        "delta": "+2 from 4-slot",
+        "trend": "down"
+      }
+    },
+    "stat-previous": {
+      "type": "Stat",
+      "props": {
+        "label": "Prior 12-slot skip rate",
+        "value": "50%",
+        "delta": "baseline",
+        "trend": "neutral"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "timeline-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-timeline",
+        "timeline-text"
+      ]
+    },
+    "heading-timeline": {
+      "type": "Heading",
+      "props": {
+        "text": "Severity Timeline",
+        "level": "h3"
+      }
+    },
+    "timeline-text": {
+      "type": "Text",
+      "props": {
+        "text": "Earliest severity downgrade: 2026-11-16 08 UTC (9 slots out from incident onset)",
+        "variant": "lead"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-actions",
+        "action-alert",
+        "action-items"
+      ]
+    },
+    "heading-actions": {
+      "type": "Heading",
+      "props": {
+        "text": "Required Operator Actions",
+        "level": "h3"
+      }
+    },
+    "action-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "OVERDUE: 22 Recurrences",
+        "message": "Operator action required to prevent further incidents",
+        "type": "error"
+      }
+    },
+    "action-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-1",
+        "action-2",
+        "action-3"
+      ]
+    },
+    "action-1": {
+      "type": "Text",
+      "props": {
+        "text": "Raise actions:write + issues:write permissions on .github/workflows/aeon.yml",
+        "variant": "body"
+      }
+    },
+    "action-2": {
+      "type": "Text",
+      "props": {
+        "text": "Add PAT (Personal Access Token) with repo scope",
+        "variant": "body"
+      }
+    },
+    "action-3": {
+      "type": "Text",
+      "props": {
+        "text": "Wire redundant cron / external ping for fallback monitoring",
+        "variant": "body"
+      }
+    }
+  }
+}
