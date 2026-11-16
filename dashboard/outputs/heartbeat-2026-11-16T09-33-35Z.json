@@ -1,0 +1,228 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert_main",
+        "sep1",
+        "details_stack"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-003 regression · P0",
+        "message": "Status page 🟡 WATCH → 🔴 DEGRADED",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "details_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "metrics_section",
+        "sep2",
+        "timeline_section",
+        "sep3",
+        "status_section",
+        "sep4",
+        "blocker_section"
+      ]
+    },
+    "metrics_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "metric_title",
+        "staleness_stat",
+        "last_success_text",
+        "fires_text",
+        "ratio_stat"
+      ]
+    },
+    "metric_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Metrics",
+        "level": "h3"
+      }
+    },
+    "staleness_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Self-check fires at staleness",
+        "value": "~42h18m"
+      }
+    },
+    "last_success_text": {
+      "type": "Text",
+      "props": {
+        "text": "Last success: 2026-11-14 15:07 UTC"
+      }
+    },
+    "fires_text": {
+      "type": "Text",
+      "props": {
+        "text": "Fourth P0 fire of recovery arc"
+      }
+    },
+    "ratio_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Trailing 12-slot ratio",
+        "value": "58.3%",
+        "delta": "+8.3%",
+        "trend": "up"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "timeline_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "timeline_title",
+        "cycles_text",
+        "blackout_text",
+        "dispatch_text",
+        "streak_text"
+      ]
+    },
+    "timeline_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Timeline & Activity",
+        "level": "h3"
+      }
+    },
+    "cycles_text": {
+      "type": "Text",
+      "props": {
+        "text": "Twenty-three peak-and-reset cycles in 23 cycles via 4-slot blackout"
+      }
+    },
+    "blackout_text": {
+      "type": "Text",
+      "props": {
+        "text": "4-slot blackout (11-14 20 through 11-15 20 skipped silently)"
+      }
+    },
+    "dispatch_text": {
+      "type": "Text",
+      "props": {
+        "text": "11-16 08 dispatched late at 09:26"
+      }
+    },
+    "streak_text": {
+      "type": "Text",
+      "props": {
+        "text": "11-14 15:01 streak-gate satisfaction lasted exactly one slot"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "status_title",
+        "downgrade_text",
+        "untie_text",
+        "multiplier_text"
+      ]
+    },
+    "status_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Changes",
+        "level": "h3"
+      }
+    },
+    "downgrade_text": {
+      "type": "Text",
+      "props": {
+        "text": "Earliest severity downgrade pushed out to 2026-11-18 20:00 UTC"
+      }
+    },
+    "untie_text": {
+      "type": "Text",
+      "props": {
+        "text": "First-ever reading to UNTIE a previously-satisfied downgrade-gate axis"
+      }
+    },
+    "multiplier_text": {
+      "type": "Text",
+      "props": {
+        "text": "Unties the 1.67× new-low multiplier held for three readings"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocker_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocker_title",
+        "blocker_status_text",
+        "blocker_resolution_text"
+      ]
+    },
+    "blocker_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Structural Blocker",
+        "level": "h3"
+      }
+    },
+    "blocker_status_text": {
+      "type": "Text",
+      "props": {
+        "text": "Unchanged — twenty-three-recurrences-overdue AND operator-blocked"
+      }
+    },
+    "blocker_resolution_text": {
+      "type": "Text",
+      "props": {
+        "text": "Resolution requires operator-side action on .github/workflows/aeon.yml permissions, a PAT, or redundant cron / external ping / weekly substantive commit"
+      }
+    }
+  }
+}
