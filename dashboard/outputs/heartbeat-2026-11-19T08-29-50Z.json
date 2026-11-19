@@ -1,0 +1,288 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "🔴 Aeon Heartbeat DEGRADED",
+        "description": "ISS-003: Critical degradation detected — operator action required"
+      },
+      "children": [
+        "alert",
+        "sep1",
+        "metrics_grid",
+        "sep2",
+        "timeline_stack",
+        "sep3",
+        "ratio_section",
+        "sep4",
+        "action_section"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Critical Degradation",
+        "message": "24th peak-and-reset cycle with 8-slot blackout (11-16 14:00 → 11-18 20:00 UTC). Latest dispatch at 11-19 08:00 UTC (~20m late). P0 self-check fires at ~70h46m staleness — worst-ever by ~15h33m."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_blackout",
+        "stat_p0_staleness",
+        "stat_p0_threshold",
+        "stat_ratio_jump"
+      ]
+    },
+    "stat_blackout": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive Slots Skipped",
+        "value": "8",
+        "delta": "NEW ABSOLUTE DEEPEST",
+        "trend": "down"
+      }
+    },
+    "stat_p0_staleness": {
+      "type": "Stat",
+      "props": {
+        "label": "P0 Fire Staleness",
+        "value": "70h 46m",
+        "delta": "↑15h 33m from prior worst (55h 13m)",
+        "trend": "down"
+      }
+    },
+    "stat_p0_threshold": {
+      "type": "Stat",
+      "props": {
+        "label": "P0 Reading vs Threshold",
+        "value": "~2.0×",
+        "delta": "36h threshold exceeded",
+        "trend": "down"
+      }
+    },
+    "stat_ratio_jump": {
+      "type": "Stat",
+      "props": {
+        "label": "Trailing 12-slot Ratio Jump",
+        "value": "+25 pp",
+        "delta": "58.3% → 83.3% (1.5× prior largest)",
+        "trend": "down"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "timeline_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_timeline",
+        "event1",
+        "event2",
+        "event3",
+        "event4"
+      ]
+    },
+    "heading_timeline": {
+      "type": "Heading",
+      "props": {
+        "text": "Timeline of Events",
+        "level": "h3"
+      }
+    },
+    "event1": {
+      "type": "Text",
+      "props": {
+        "text": "2026-11-16 14:00 — 2026-11-18 20:00 UTC: 8-slot blackout period — all slots skipped silently",
+        "variant": "body"
+      }
+    },
+    "event2": {
+      "type": "Text",
+      "props": {
+        "text": "2026-11-13 15:30 UTC: Prior worst P0 fire (55h 13m staleness)",
+        "variant": "body"
+      }
+    },
+    "event3": {
+      "type": "Text",
+      "props": {
+        "text": "2026-11-18 14:00 — 2026-11-18 20:00 UTC: Hypothetical ratio-path peaked at 91.7% (first-ever reading above 3× the 30% threshold); three consecutive hypothetical P0 fires during blackout",
+        "variant": "body"
+      }
+    },
+    "event4": {
+      "type": "Text",
+      "props": {
+        "text": "2026-11-19 08:00 UTC: Latest dispatch executed (~20m late — routine)",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ratio_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_ratio",
+        "ratio_progress",
+        "ratio_text",
+        "ratio_text2",
+        "ratio_text3"
+      ]
+    },
+    "heading_ratio": {
+      "type": "Heading",
+      "props": {
+        "text": "Trailing 12-Slot Ratio Analysis",
+        "level": "h3"
+      }
+    },
+    "ratio_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 83.3,
+        "max": 100,
+        "label": "Current Ratio: 83.3% (target ≤30%)"
+      }
+    },
+    "ratio_text": {
+      "type": "Text",
+      "props": {
+        "text": "Previous high: 66.7% — exceeded by 16.7 pp (NEW HIGH at observation point)",
+        "variant": "body"
+      }
+    },
+    "ratio_text2": {
+      "type": "Text",
+      "props": {
+        "text": "Hypothetical peak: 91.7% (11-18 14 → 11-18 20 UTC) — first-ever reading above 3× the 30% threshold",
+        "variant": "body"
+      }
+    },
+    "ratio_text3": {
+      "type": "Text",
+      "props": {
+        "text": "Largest-ever single-reading jump: 25 pp (1.5× prior largest jump)",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_action",
+        "action_summary",
+        "recovery_text",
+        "action_list_heading",
+        "action_items",
+        "monitoring_text"
+      ]
+    },
+    "heading_action": {
+      "type": "Heading",
+      "props": {
+        "text": "Operator Action Required",
+        "level": "h3"
+      }
+    },
+    "action_summary": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Catastrophically Overdue",
+        "message": "24 consecutive peak-and-reset cycles with shape-ceiling now broken four times (4→5, 5→6, now 6→8). Fifth P0 fire of recovery arc."
+      }
+    },
+    "recovery_text": {
+      "type": "Text",
+      "props": {
+        "text": "Earliest severity downgrade requirement: 2026-11-21 20:00 UTC (9 slots / 3 full days of clean dispatches required)",
+        "variant": "lead"
+      }
+    },
+    "action_list_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Resolution Requires One of:",
+        "level": "h4"
+      }
+    },
+    "action_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_item1",
+        "action_item2",
+        "action_item3"
+      ]
+    },
+    "action_item1": {
+      "type": "Badge",
+      "props": {
+        "text": "1. Raise actions: write + issues: write permissions on .github/workflows/aeon.yml",
+        "variant": "outline"
+      }
+    },
+    "action_item2": {
+      "type": "Badge",
+      "props": {
+        "text": "2. Provide PAT with repo scope",
+        "variant": "outline"
+      }
+    },
+    "action_item3": {
+      "type": "Badge",
+      "props": {
+        "text": "3. Implement redundant cron / external ping / substantive weekly commit mitigation",
+        "variant": "outline"
+      }
+    },
+    "monitoring_text": {
+      "type": "Text",
+      "props": {
+        "text": "Watching 2026-11-19 14:00 UTC",
+        "variant": "muted"
+      }
+    }
+  }
+}
