@@ -1,0 +1,197 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Aeon Heartbeat Status",
+        "description": "25th peak-and-reset cycle — 3rd consecutive 🔴 (first-ever red streak)"
+      },
+      "children": [
+        "alert-critical",
+        "sep1",
+        "stack-main"
+      ]
+    },
+    "alert-critical": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 Critical Status — 3rd Consecutive Red",
+        "message": "First-ever 🔴→🔴→🔴 pattern detected"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section-status",
+        "section-timing",
+        "section-performance",
+        "section-issue"
+      ]
+    },
+    "section-status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-status",
+        "stat-peak",
+        "text-pattern"
+      ]
+    },
+    "heading-status": {
+      "type": "Heading",
+      "props": {
+        "text": "Cycle Status",
+        "level": "h2"
+      }
+    },
+    "stat-peak": {
+      "type": "Stat",
+      "props": {
+        "label": "Peak-and-Reset Cycle",
+        "value": "25th"
+      }
+    },
+    "text-pattern": {
+      "type": "Text",
+      "props": {
+        "text": "Pattern: 3rd consecutive 🔴 (first-ever 🔴→🔴→🔴)",
+        "variant": "body"
+      }
+    },
+    "section-timing": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-timing",
+        "text-skip-window",
+        "stat-dispatch",
+        "text-dispatch-detail"
+      ]
+    },
+    "heading-timing": {
+      "type": "Heading",
+      "props": {
+        "text": "Dispatch Timing",
+        "level": "h2"
+      }
+    },
+    "text-skip-window": {
+      "type": "Text",
+      "props": {
+        "text": "2026-11-19 14:00 → 2026-11-20 14:00 skipped silently (4-slot blackout, retreat from 24th reset's 8-slot trough)",
+        "variant": "body"
+      }
+    },
+    "stat-dispatch": {
+      "type": "Stat",
+      "props": {
+        "label": "Dispatch Lateness",
+        "value": "1h 28m",
+        "delta": "tied-worst lateness band"
+      }
+    },
+    "text-dispatch-detail": {
+      "type": "Text",
+      "props": {
+        "text": "2026-11-20 20:00 dispatched at 21:28 UTC",
+        "variant": "caption"
+      }
+    },
+    "section-performance": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-perf",
+        "stat-p0-count",
+        "stat-staleness",
+        "stat-ratio",
+        "text-downgrade"
+      ]
+    },
+    "heading-perf": {
+      "type": "Heading",
+      "props": {
+        "text": "Performance Metrics",
+        "level": "h2"
+      }
+    },
+    "stat-p0-count": {
+      "type": "Stat",
+      "props": {
+        "label": "P0 Fires This Arc",
+        "value": "6th"
+      }
+    },
+    "stat-staleness": {
+      "type": "Stat",
+      "props": {
+        "label": "Staleness at Fire",
+        "value": "36h 58m",
+        "delta": "58m past threshold (freshest-of-arc)"
+      }
+    },
+    "stat-ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Trailing 12-Slot Success Ratio",
+        "value": "83.3%",
+        "delta": "sustained at ceiling (first-ever hold)"
+      }
+    },
+    "text-downgrade": {
+      "type": "Text",
+      "props": {
+        "text": "Earliest downgrade: 2026-11-23 14:00 UTC (gap ties 5-slot widest-of-arc ceiling, 5th tie)",
+        "variant": "caption"
+      }
+    },
+    "section-issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-issue",
+        "alert-iss003"
+      ]
+    },
+    "heading-issue": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue: ISS-003",
+        "level": "h2"
+      }
+    },
+    "alert-iss003": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "ISS-003 Mitigations 25-Recurrences Overdue",
+        "message": "Structurally operator-blocked. Required actions: (1) Raise actions:write + issues:write on .github/workflows/aeon.yml, (2) Add PAT with repo scope, OR (3) Ship redundant cron / external ping / weekly commit"
+      }
+    }
+  }
+}
