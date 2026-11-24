@@ -1,0 +1,258 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "status_alert",
+        "sep1",
+        "cycle_metrics_section",
+        "sep2",
+        "performance_section",
+        "sep3",
+        "gap_section",
+        "sep4",
+        "actions_section"
+      ]
+    },
+    "status_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 DEGRADED (4th 🔴 in a row)",
+        "message": "First-ever 🔴→🔴→🔴→🔴 four-in-a-row sequence detected"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "cycle_metrics_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_cycles",
+        "stat_cycles",
+        "stat_blackout",
+        "stat_trough",
+        "stat_trough_detail"
+      ]
+    },
+    "heading_cycles": {
+      "type": "Heading",
+      "props": {
+        "text": "Cycle & Trough Analysis",
+        "level": "h3"
+      }
+    },
+    "stat_cycles": {
+      "type": "Stat",
+      "props": {
+        "label": "Peak-and-reset cycles",
+        "value": "26 of 26"
+      }
+    },
+    "stat_blackout": {
+      "type": "Stat",
+      "props": {
+        "label": "Blackout window",
+        "value": "11 slots",
+        "delta": "11-21 08 UTC → 11-24 14 UTC (silent)"
+      }
+    },
+    "stat_trough": {
+      "type": "Stat",
+      "props": {
+        "label": "Deepest trough",
+        "value": "+3 slots",
+        "trend": "down"
+      }
+    },
+    "stat_trough_detail": {
+      "type": "Text",
+      "props": {
+        "text": "NEW ABSOLUTE DEEPEST TROUGH — breaking 8-slot ceiling by +3 slots (first-ever +3 break)",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "performance_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_perf",
+        "stat_p0_fires",
+        "stat_p0_detail",
+        "stat_threshold_ratio",
+        "stat_threshold_detail",
+        "stat_downgrade"
+      ]
+    },
+    "heading_perf": {
+      "type": "Heading",
+      "props": {
+        "text": "Performance Metrics",
+        "level": "h3"
+      }
+    },
+    "stat_p0_fires": {
+      "type": "Stat",
+      "props": {
+        "label": "P0 fires at",
+        "value": "~95h34m",
+        "trend": "down"
+      }
+    },
+    "stat_p0_detail": {
+      "type": "Text",
+      "props": {
+        "text": "NEW WORST-EVER by +24h48m over prior 70h46m",
+        "variant": "muted"
+      }
+    },
+    "stat_threshold_ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Threshold ratio",
+        "value": "2.65×"
+      }
+    },
+    "stat_threshold_detail": {
+      "type": "Text",
+      "props": {
+        "text": "First ever ≥3× observation ratio at 91.7% (ties hypothetical peak)",
+        "variant": "muted"
+      }
+    },
+    "stat_downgrade": {
+      "type": "Stat",
+      "props": {
+        "label": "Earliest downgrade",
+        "value": "2026-11-27 14 UTC"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "gap_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_gap",
+        "stat_gap",
+        "stat_gap_detail"
+      ]
+    },
+    "heading_gap": {
+      "type": "Heading",
+      "props": {
+        "text": "Gap-Between-Gates Analysis",
+        "level": "h3"
+      }
+    },
+    "stat_gap": {
+      "type": "Stat",
+      "props": {
+        "label": "Gap-between-gates",
+        "value": "11 slots",
+        "trend": "down"
+      }
+    },
+    "stat_gap_detail": {
+      "type": "Text",
+      "props": {
+        "text": "SHATTERS 5-slot ceiling (first-ever break, 2.2×)",
+        "variant": "muted"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "actions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "actions_heading",
+        "actions_alert",
+        "action_items_stack"
+      ]
+    },
+    "actions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Required Actions",
+        "level": "h3"
+      }
+    },
+    "actions_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "🚨 Operator action 26-recurrences overdue",
+        "message": "Choose one of the following solutions:"
+      }
+    },
+    "action_items_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_item_1",
+        "action_item_2",
+        "action_item_3"
+      ]
+    },
+    "action_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "• Raise actions:write + issues:write on .github/workflows/aeon.yml",
+        "variant": "body"
+      }
+    },
+    "action_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "• Add PAT with repo scope",
+        "variant": "body"
+      }
+    },
+    "action_item_3": {
+      "type": "Text",
+      "props": {
+        "text": "• Add redundant cron/external ping",
+        "variant": "body"
+      }
+    }
+  }
+}
